@@ -761,6 +761,7 @@ Screen 组件接 callback props（`onEnter`、`onClose`、`onTabChange`、`onOpe
 | **Gallery Ripple + Multi-Focus 场景哲学**（当素材 20+ 同质+场景需表达「规模×深度」时优先用；含前置条件、技术配方、5 个可复用模式）| `references/hero-animation-case-study.md`（yy-design hero v9 蒸馏）|
 | ⭐ **Launch Film 工作流**（30 秒级品牌宣传片 / launch trailer / superbowl-tier ad / Apple 级别预期）：先写**万字 director's notes** 再做动画。含 5 大部分结构 + 触发判断 + 多视角并行策略 + 关键帧验证流程 | `references/launch-film-director-notes.md`（yy-md-html v2.0 launch film 蒸馏）|
 | ⭐ **多视角并行实验**（用户说「再做几个版本」「想看不同方向」/ 多平台分发 / 客户拍不了板）：6 位艺术家视角同时启动 subagent 各做独立版本 + 完成后 5 维度审校 | `references/multi-perspective-parallel-case-study.md`（yy-md-html v2.0 6 视角实战）|
+| **AI 品牌图片生成**（头像/Banner/OG/封面/海报，基于 VI 约束自动注入 prompt） | `scripts/generate-image.mjs`（7 个场景预设 + VI prompt 前后缀 + snap-to-8 尺寸安全）|
 
 ## 跨 Agent 环境适配说明
 
