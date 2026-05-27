@@ -1,0 +1,182 @@
+<!--
+  YY Design · 社交媒体 Banner 组件
+  
+  支持平台：
+  - Twitter/X: 1500×500
+  - 微信公众号: 900×383
+  - LinkedIn: 1584×396
+  - GitHub: 1280×640
+-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YY Design Social Banner</title>
+  <link rel="stylesheet" href="../yy-color-palette.css">
+  <link rel="stylesheet" href="../yy-typography.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      padding: 40px;
+      background: #e8e8e8;
+    }
+    
+    .banner {
+      position: relative;
+      overflow: hidden;
+      background: var(--yy-sumi);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    /* Twitter/X Banner */
+    .banner-twitter {
+      width: 1500px;
+      height: 500px;
+    }
+    
+    /* 微信公众号 Banner */
+    .banner-wechat {
+      width: 900px;
+      height: 383px;
+    }
+    
+    /* LinkedIn Banner */
+    .banner-linkedin {
+      width: 1584px;
+      height: 396px;
+    }
+    
+    /* GitHub Banner */
+    .banner-github {
+      width: 1280px;
+      height: 640px;
+    }
+    
+    .banner-content {
+      text-align: center;
+      z-index: 2;
+    }
+    
+    .banner-mark {
+      font-family: var(--yy-font-serif);
+      font-size: 120px;
+      font-weight: var(--yy-weight-semibold);
+      color: var(--yy-washi);
+      line-height: 1;
+      margin-bottom: 24px;
+    }
+    
+    .banner-mark .accent-dot {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      background: var(--yy-vermillion);
+      border-radius: 50%;
+      margin-left: 4px;
+      vertical-align: super;
+    }
+    
+    .banner-title {
+      font-family: var(--yy-font-sans);
+      font-size: 32px;
+      font-weight: var(--yy-weight-medium);
+      color: var(--yy-washi);
+      letter-spacing: 0.1em;
+      margin-bottom: 12px;
+    }
+    
+    .banner-tagline {
+      font-family: var(--yy-font-inter);
+      font-size: 16px;
+      font-weight: var(--yy-weight-regular);
+      color: var(--yy-sumi-400);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    
+    /* 装饰元素 */
+    .banner::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at 30% 50%, rgba(192, 57, 43, 0.05) 0%, transparent 50%);
+    }
+    
+    .banner::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, transparent 0%, var(--yy-vermillion) 50%, transparent 100%);
+      opacity: 0.5;
+    }
+    
+    /* 小尺寸适配 */
+    .banner-wechat .banner-mark {
+      font-size: 80px;
+    }
+    
+    .banner-wechat .banner-title {
+      font-size: 24px;
+    }
+    
+    .banner-wechat .banner-tagline {
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Twitter/X Banner -->
+  <div class="banner banner-twitter">
+    <div class="banner-content">
+      <div class="banner-mark">{翊}<span class="accent-dot"></span></div>
+      <div class="banner-title">翊行代码</div>
+      <div class="banner-tagline">Code, one stroke at a time.</div>
+    </div>
+  </div>
+  
+  <!-- 微信公众号 Banner -->
+  <div class="banner banner-wechat">
+    <div class="banner-content">
+      <div class="banner-mark">{翊}<span class="accent-dot"></span></div>
+      <div class="banner-title">翊行代码</div>
+      <div class="banner-tagline">Code, one stroke at a time.</div>
+    </div>
+  </div>
+  
+  <!-- LinkedIn Banner -->
+  <div class="banner banner-linkedin">
+    <div class="banner-content">
+      <div class="banner-mark">{翊}<span class="accent-dot"></span></div>
+      <div class="banner-title">翊行代码</div>
+      <div class="banner-tagline">Code, one stroke at a time.</div>
+    </div>
+  </div>
+  
+  <!-- GitHub Banner -->
+  <div class="banner banner-github">
+    <div class="banner-content">
+      <div class="banner-mark">{翊}<span class="accent-dot"></span></div>
+      <div class="banner-title">翊行代码</div>
+      <div class="banner-tagline">Code, one stroke at a time.</div>
+    </div>
+  </div>
+</body>
+</html>

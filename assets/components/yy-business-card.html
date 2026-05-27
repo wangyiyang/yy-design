@@ -1,0 +1,208 @@
+<!--
+  YY Design · 名片组件
+  
+  规格：90mm × 54mm (标准名片)
+  风格：极简、留白、墨黑配朱红
+-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YY Design Business Card</title>
+  <link rel="stylesheet" href="../yy-color-palette.css">
+  <link rel="stylesheet" href="../yy-typography.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #e8e8e8;
+      gap: 40px;
+      padding: 40px;
+      flex-wrap: wrap;
+    }
+    
+    .card {
+      width: 90mm;
+      height: 54mm;
+      background: var(--yy-washi);
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    
+    /* 正面 */
+    .card-front {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 12mm 10mm;
+    }
+    
+    .card-front .logo-section {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .card-front .logo-mark {
+      font-family: var(--yy-font-serif);
+      font-size: 24px;
+      font-weight: var(--yy-weight-semibold);
+      color: var(--yy-sumi);
+      line-height: 1;
+    }
+    
+    .card-front .logo-mark .accent-dot {
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      background: var(--yy-vermillion);
+      border-radius: 50%;
+      margin-left: 2px;
+      vertical-align: super;
+    }
+    
+    .card-front .name-section {
+      margin-top: auto;
+    }
+    
+    .card-front .name {
+      font-family: var(--yy-font-serif);
+      font-size: 18px;
+      font-weight: var(--yy-weight-semibold);
+      color: var(--yy-sumi);
+      letter-spacing: 0.05em;
+    }
+    
+    .card-front .title {
+      font-family: var(--yy-font-sans);
+      font-size: 10px;
+      font-weight: var(--yy-weight-regular);
+      color: var(--yy-sumi-400);
+      margin-top: 4px;
+      letter-spacing: 0.02em;
+    }
+    
+    .card-front .tagline {
+      font-family: var(--yy-font-inter);
+      font-size: 8px;
+      font-weight: var(--yy-weight-regular);
+      color: var(--yy-sumi-300);
+      letter-spacing: 0.05em;
+      margin-top: 8px;
+      text-transform: uppercase;
+    }
+    
+    /* 背面 */
+    .card-back {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 12mm 10mm;
+      background: var(--yy-sumi);
+    }
+    
+    .card-back .logo-mark {
+      font-family: var(--yy-font-serif);
+      font-size: 48px;
+      font-weight: var(--yy-weight-semibold);
+      color: var(--yy-washi);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    
+    .card-back .logo-mark .accent-dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background: var(--yy-vermillion);
+      border-radius: 50%;
+      margin-left: 2px;
+      vertical-align: super;
+    }
+    
+    .card-back .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      align-items: center;
+      margin-top: 12px;
+    }
+    
+    .card-back .contact-item {
+      font-family: var(--yy-font-inter);
+      font-size: 8px;
+      font-weight: var(--yy-weight-regular);
+      color: var(--yy-sumi-300);
+      letter-spacing: 0.03em;
+    }
+    
+    /* 装饰线 */
+    .accent-line {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent 0%, var(--yy-vermillion) 50%, transparent 100%);
+      opacity: 0.3;
+    }
+    
+    /* 朱红印章 */
+    .seal {
+      position: absolute;
+      bottom: 8mm;
+      right: 8mm;
+      width: 20px;
+      height: 20px;
+      border: 1.5px solid var(--yy-vermillion);
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .seal span {
+      font-family: var(--yy-font-serif);
+      font-size: 10px;
+      color: var(--yy-vermillion);
+      font-weight: var(--yy-weight-bold);
+    }
+  </style>
+</head>
+<body>
+  <!-- 正面 -->
+  <div class="card card-front">
+    <div class="logo-section">
+      <div class="logo-mark">{翊}<span class="accent-dot"></span></div>
+    </div>
+    <div class="name-section">
+      <div class="name">王翊仰</div>
+      <div class="title">架构师 / 技术总监</div>
+      <div class="tagline">Code, one stroke at a time.</div>
+    </div>
+    <div class="accent-line"></div>
+    <div class="seal"><span>翊</span></div>
+  </div>
+  
+  <!-- 背面 -->
+  <div class="card card-back">
+    <div class="logo-mark">{翊}<span class="accent-dot"></span></div>
+    <div class="contact-info">
+      <div class="contact-item">wangyiyang.cc</div>
+      <div class="contact-item">github.com/wangyiyang</div>
+      <div class="contact-item">wangyiyang.kk@gmail.com</div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!--
+  YY Design · Logo 组件
+  
+  主视觉：{翊}
+  花括号包裹一笔写就的「翊」字 + 一点朱红
+  
+  使用方式：
+  1. 直接嵌入 HTML
+  2. 截图保存为 PNG
+  3. 作为 SVG 使用
+-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YY Design Logo</title>
+  <link rel="stylesheet" href="../yy-color-palette.css">
+  <link rel="stylesheet" href="../yy-typography.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: var(--yy-washi);
+    }
+    
+    .logo-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+    }
+    
+    .logo-mark {
+      font-family: var(--yy-font-serif);
+      font-size: 120px;
+      font-weight: var(--yy-weight-semibold);
+      color: var(--yy-sumi);
+      line-height: 1;
+      letter-spacing: -0.05em;
+      position: relative;
+      display: inline-block;
+    }
+    
+    .logo-mark .bracket-left,
+    .logo-mark .bracket-right {
+      font-family: var(--yy-font-mono);
+      font-weight: var(--yy-weight-regular);
+      color: var(--yy-sumi);
+    }
+    
+    .logo-mark .char-yi {
+      /* 「翊」字使用书法字体效果 */
+      font-family: var(--yy-font-serif);
+      color: var(--yy-sumi);
+    }
+    
+    .logo-mark .accent-dot {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      background: var(--yy-vermillion);
+      border-radius: 50%;
+      margin-left: 4px;
+      vertical-align: super;
+    }
+    
+    .logo-text {
+      font-family: var(--yy-font-sans);
+      font-size: var(--yy-text-h3);
+      font-weight: var(--yy-weight-medium);
+      color: var(--yy-sumi);
+      letter-spacing: 0.1em;
+    }
+    
+    .logo-tagline {
+      font-family: var(--yy-font-inter);
+      font-size: var(--yy-text-small);
+      font-weight: var(--yy-weight-regular);
+      color: var(--yy-sumi-400);
+      letter-spacing: 0.05em;
+    }
+    
+    /* 变体：深色背景 */
+    .variant-dark {
+      background: var(--yy-sumi);
+    }
+    
+    .variant-dark .logo-mark,
+    .variant-dark .logo-mark .bracket-left,
+    .variant-dark .logo-mark .bracket-right,
+    .variant-dark .logo-mark .char-yi {
+      color: var(--yy-washi);
+    }
+    
+    .variant-dark .logo-text {
+      color: var(--yy-washi);
+    }
+    
+    .variant-dark .logo-tagline {
+      color: var(--yy-sumi-400);
+    }
+    
+    /* 变体：仅图标 */
+    .logo-icon-only .logo-mark {
+      font-size: 80px;
+    }
+    
+    .logo-icon-only .logo-text,
+    .logo-icon-only .logo-tagline {
+      display: none;
+    }
+    
+    /* 变体：横向排列 */
+    .logo-horizontal {
+      flex-direction: row;
+      align-items: center;
+      gap: 16px;
+    }
+    
+    .logo-horizontal .logo-mark {
+      font-size: 48px;
+    }
+    
+    .logo-horizontal .logo-text-group {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    
+    .logo-horizontal .logo-text {
+      font-size: var(--yy-text-body);
+    }
+    
+    .logo-horizontal .logo-tagline {
+      font-size: var(--yy-text-caption);
+    }
+  </style>
+</head>
+<body>
+  <div class="logo-container">
+    <div class="logo-mark">
+      <span class="bracket-left">{</span><span class="char-yi">翊</span><span class="bracket-right">}</span><span class="accent-dot"></span>
+    </div>
+    <div class="logo-text">翊行代码</div>
+    <div class="logo-tagline">Code, one stroke at a time.</div>
+  </div>
+</body>
+</html>

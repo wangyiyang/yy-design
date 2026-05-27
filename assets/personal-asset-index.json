@@ -1,0 +1,159 @@
+{
+  "_meta": {
+    "description": "王翊仰（Ian）个人素材索引 —— YY Design 品牌资产",
+    "version": "1.0",
+    "last_updated": "2026-05-27"
+  },
+
+  "identity": {
+    "real_name": "王翊仰",
+    "english_name": "Ian Wang",
+    "title": "架构师 / 技术总监",
+    "bio_short": "翊行代码 · 1 line code。长城汽车平台技术科科长，80+人团队管理者，大模型平台架构师。",
+    "bio_long": "王翊仰（Ian），1986年生，云南大学软件工程学士。现任长城汽车平台技术科科长（团队80+人）、项目总监、架构师。主导大模型平台、开放平台（日均调用300W+）、分布式任务调度平台（141条业务线，月调用2300万次）、长城云PaaS平台等核心项目。前联想研究院云计算高级研究员、乐视云计算开发工程师、InfoQ中国策划编辑。",
+    "avatar_url": "",
+    "source": "用户提供"
+  },
+
+  "contact": {
+    "email": "wangyiyang.kk@gmail.com",
+    "wechat_personal": "wangyiyang",
+    "source": "用户提供"
+  },
+
+  "social_media": {
+    "github": {
+      "url": "https://github.com/wangyiyang",
+      "username": "wangyiyang"
+    },
+    "weixin": {
+      "url": "",
+      "account": "翊行代码"
+    },
+    "zhihu": {
+      "url": "",
+      "username": "wangyiyang"
+    },
+    "x": {
+      "url": "",
+      "username": "wangyiyang"
+    },
+    "xiaohongshu": {
+      "url": "",
+      "username": "wangyiyang"
+    },
+    "source": "用户提供"
+  },
+
+  "websites": {
+    "main_site": {
+      "url": "https://wangyiyang.cc",
+      "description": "个人博客与技术主页",
+      "local_path": ""
+    },
+    "blog": {
+      "url": "https://wangyiyang.cc/blog",
+      "description": "技术博客",
+      "local_path": ""
+    }
+  },
+
+  "brand": {
+    "name": "翊行代码",
+    "english_name": "YY Design",
+    "tagline": "Code, one stroke at a time.",
+    "slogan": "翊行代码 · 1 line code",
+    "main_visual": "{翊}",
+    "dna": "简单 + 神秘",
+    "colors": {
+      "sumi": "#0A0A0A",
+      "washi": "#FAFAFA",
+      "vermillion": "#C0392B",
+      "gold": "#B8860B"
+    },
+    "fonts": {
+      "chinese_title": "Source Han Serif SC",
+      "chinese_body": "Source Han Sans SC",
+      "english": "Inter",
+      "code": "JetBrains Mono"
+    },
+    "vi_guidelines": "references/yy-vi-guidelines.md",
+    "source": "Notion: YY Personal Brand Prompt Kit"
+  },
+
+  "career": {
+    "current": {
+      "company": "长城汽车股份有限公司",
+      "title": "平台技术科科长 / 项目总监 / 架构师",
+      "since": "2019-08",
+      "team_size": "80+",
+      "projects": [
+        "大模型平台（架构师、产品经理）",
+        "开放平台（架构师，日均调用300W，高峰2000W）",
+        "分布式任务调度平台（项目总监，141条业务线，月调用2300万次）",
+        "长城云PaaS平台（架构师）",
+        "长城云存储网关（项目经理，104个业务线，每日请求270万次，SLA 6个9）"
+      ]
+    },
+    "previous": [
+      {
+        "company": "联想研究院",
+        "title": "云计算高级研究员",
+        "period": "2017-10 ~ 2019-08"
+      },
+      {
+        "company": "乐视云计算",
+        "title": "软件开发工程师",
+        "period": "2016-07 ~ 2017-09"
+      },
+      {
+        "company": "InfoQ中国",
+        "title": "策划编辑",
+        "period": "2012-11 ~ 2014-05"
+      }
+    ],
+    "education": {
+      "school": "云南大学",
+      "major": "软件工程",
+      "degree": "工科学士"
+    },
+    "source": "用户提供"
+  },
+
+  "products": {
+    "yy-design": {
+      "name": "YY Design",
+      "type": "个人品牌设计系统",
+      "description": "基于 HTML 的原生设计能力，为技术领导者打造高级感品牌视觉",
+      "github": "https://github.com/wangyiyang/yy-design",
+      "status": "active"
+    },
+    "blog": {
+      "name": "翊行代码博客",
+      "type": "技术博客",
+      "description": "AI、架构、技术管理",
+      "url": "https://wangyiyang.cc",
+      "status": "active"
+    }
+  },
+
+  "design_assets": {
+    "article_images": {
+      "base_path": "assets/generated",
+      "naming_convention": "yy-{type}-{subject}-{variant}-{yymmdd}.png",
+      "types": ["avatar", "banner", "og", "editorial", "logo", "hero"],
+      "notable_sets": []
+    },
+    "logo_variants": {
+      "primary": "{翊}",
+      "description": "花括号包裹一笔写就的「翊」字 + 一点朱红"
+    },
+    "source": "VI v1.0"
+  },
+
+  "knowledge_base": {
+    "wechat_articles": "",
+    "notion_workspace": "Wang Yiyang's Notion",
+    "vi_document": "https://www.notion.so/wangyiyangcc/YY-Personal-Brand-Prompt-Kit-67477fcdc2ce40c2ab93a52976f08318"
+  }
+}
