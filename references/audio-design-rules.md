@@ -1,7 +1,7 @@
-# 音频设计规则 · huashu-design
+# 音频设计规则 · yy-design
 
 > 所有动画 demo 的音频应用配方。和 `sfx-library.md`（资产清单）配套使用。
-> 实战锤炼：huashu-design 发布 hero v1-v9 迭代 · Anthropic 三支官方片子的 Gemini 深度拆解 · 8000+ 次 A/B 对比
+> 实战锤炼：yy-design 发布 hero v1-v9 迭代 · Anthropic 三支官方片子的 Gemini 深度拆解 · 8000+ 次 A/B 对比
 
 ---
 
@@ -91,7 +91,7 @@ Anthropic 的秘诀不是「SFX 音量大」，是**频段分层**：
 
 ## BGM 选择决策树
 
-huashu-design skill 自带 6 首 BGM（`assets/bgm-*.mp3`）：
+yy-design skill 自带 6 首 BGM（`assets/bgm-*.mp3`）：
 
 ```
 动画性格是什么？
@@ -115,7 +115,7 @@ huashu-design skill 自带 6 首 BGM（`assets/bgm-*.mp3`）：
 
 ## 场景配方（开箱即用）
 
-### 配方 A · 产品发布 hero（huashu-design v9 同款）
+### 配方 A · 产品发布 hero（yy-design v9 同款）
 ```
 时长：25 秒
 BGM：bgm-tech.mp3 · 45% · 频段 <4kHz
@@ -256,5 +256,5 @@ ffmpeg -y -i video.mp4 -i sfx-track.mp3 -i bgm.mp3 \
 
 - SFX 资产清单：`sfx-library.md`
 - 视觉风格参考：`apple-gallery-showcase.md`
-- Anthropic 三支片子深度音频分析：`/Users/alchain/Documents/写作/01-公众号写作/项目/2026.04-huashu-design发布/参考动画/AUDIO-BEST-PRACTICES.md`
-- huashu-design v9 实战案例：`/Users/alchain/Documents/写作/01-公众号写作/项目/2026.04-huashu-design发布/配图/hero-animation-v9-final.mp4`
+- Anthropic 三支片子深度音频分析：`/Users/alchain/Documents/写作/01-公众号写作/项目/2026.04-yy-design发布/参考动画/AUDIO-BEST-PRACTICES.md`
+- yy-design v9 实战案例：`/Users/alchain/Documents/写作/01-公众号写作/项目/2026.04-yy-design发布/配图/hero-animation-v9-final.mp4`

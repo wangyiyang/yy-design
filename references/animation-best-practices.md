@@ -499,7 +499,7 @@ stage.style.transform = `
 
 ## 附录 · 本文件素材来源
 
-- Anthropic 官方动画拆解：花叔项目目录的 `参考动画/BEST-PRACTICES.md`
+- Anthropic 官方动画拆解：YY项目目录的 `参考动画/BEST-PRACTICES.md`
 - Anthropic 音频拆解：同目录 `AUDIO-BEST-PRACTICES.md`
 - 3 支参考视频：`ref-{1,2,3}.mp4` + 对应 `gemini-ref-*.md` / `audio-ref-*.md`
 - **严格过滤**：本 reference 不收录任何具体品牌色值、字体名、产品名。

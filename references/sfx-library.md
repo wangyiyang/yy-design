@@ -1,7 +1,7 @@
-# SFX Library · huashu-design
+# SFX Library · yy-design
 
 > 全部由 ElevenLabs Sound Generation API 生成，苹果发布会级音质。
-> 产品级 SFX 资产库，覆盖花叔动画/演示/产品 Demo 全场景。
+> 产品级 SFX 资产库，覆盖YY动画/演示/产品 Demo 全场景。
 
 **资产位置**：`assets/sfx/<category>/<name>.mp3`
 **总数**：37 个 SFX（30 批量生成 + 7 个 v7b 保留）

@@ -1,13 +1,13 @@
 # 多视角并行实验 · Case Study
 
-> huashu-md-html v2.0 launch film 项目 · 2026-05-11
+> yy-md-html v2.0 launch film 项目 · 2026-05-11
 > 6 位艺术家视角的并行 director's notes + HTML + 关键帧实验
 
 ---
 
 ## 背景
 
-用户要求「为 huashu-md-html v2.0 制作 30 秒升级宣传片」时，主线程先产出了 v5 基线（Anthropic / Penguin Classics 出版社品位）。但用户认为可以做得更好，给了 critical instruction：
+用户要求「为 yy-md-html v2.0 制作 30 秒升级宣传片」时，主线程先产出了 v5 基线（Anthropic / Penguin Classics 出版社品位）。但用户认为可以做得更好，给了 critical instruction：
 
 > 「调用不同的 subagent 分别再去生成 6 个全然不同的表达方式和视觉设计的版本。你可以试试启用不同的导演和艺术家。然后全都完成后，再评判审校。」
 
@@ -145,7 +145,7 @@ use case 分配（按平台和受众）：
 
 ---
 
-## 关键洞察（写给 huashu-design 的未来用户）
+## 关键洞察（写给 yy-design 的未来用户）
 
 ### 洞察 1 · 「先写万字 director's notes」方法论**完全 reproducible**
 
@@ -258,10 +258,10 @@ subagent 完成需要 12-15 分钟。这段时间主线程绝不该空闲：
 
 - 完整方法论：`references/launch-film-director-notes.md`
 - 单视角样本：`assets/director-notes-samples/launch-film-30s-sample.md`（v5 基线）
-- 实战项目位置：`~/.claude/skills/huashu-md-html/demos/`（含 6 + 1 视角全套文件）
-- 审校 review：`~/.claude/skills/huashu-md-html/demos/REVIEW.md`
+- 实战项目位置：`~/.claude/skills/yy-md-html/demos/`（含 6 + 1 视角全套文件）
+- 审校 review：`~/.claude/skills/yy-md-html/demos/REVIEW.md`
 
 ---
 
 *Last updated: 2026-05-11*
-*Real case study: huashu-md-html v2.0 launch film 6-perspective parallel experiment*
+*Real case study: yy-md-html v2.0 launch film 6-perspective parallel experiment*

@@ -101,7 +101,7 @@ async function tts({ text, voice, speed, encoding }) {
 
   const body = {
     app: { cluster },
-    user: { uid: 'huashu-design' },
+    user: { uid: 'yy-design' },
     audio: {
       voice_type: voiceId,
       encoding,

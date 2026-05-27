@@ -10,7 +10,7 @@
 
 ## 1. 为什么先写 director's notes
 
-实战教训（2026-05-11 huashu-md-html v2.0 项目）：
+实战教训（2026-05-11 yy-md-html v2.0 项目）：
 
 第一轮直接动手写 HTML，产出的是「程序员视角的动画」——每个 capability 平均用力、节奏匀速、slogan 撞在一起、缺少叙事弧。
 第二轮接到用户「停下，先按苹果导演视角写 1 万字分镜脚本」的指令，写了 v5-director-notes.md（11500 字、13 镜 shot-by-shot spec），然后按脚本实施——一次过、每帧 pause 都耐看、节奏起伏有 climax。
@@ -206,7 +206,7 @@ done
 
 复杂项目（如 launch film 选不出方向 / 想看多个美学差异 / 客户没拍板风格）可以**启动多个 subagent 并行做不同导演视角的版本**。
 
-实战配置（2026-05-11 huashu-md-html 项目，并行 6 个版本）：
+实战配置（2026-05-11 yy-md-html 项目，并行 6 个版本）：
 
 ```
 v5  · 基线（Anthropic / Penguin Classics 出版社品位）
@@ -259,9 +259,9 @@ v5f · 草间彌生 Yayoi Kusama（圆点 + 重复 + 单一强色）
 
 原始项目位置（含对应实施 HTML + 关键帧）：
 
-- `~/.claude/skills/huashu-md-html/demos/v5-director-notes.md`（director's notes）
-- `~/.claude/skills/huashu-md-html/demos/v5-six-forms.html`（HTML 实施）
-- `~/.claude/skills/huashu-md-html/demos/v5-keyframes/`（关键帧验证截图）
+- `~/.claude/skills/yy-md-html/demos/v5-director-notes.md`（director's notes）
+- `~/.claude/skills/yy-md-html/demos/v5-six-forms.html`（HTML 实施）
+- `~/.claude/skills/yy-md-html/demos/v5-keyframes/`（关键帧验证截图）
 
 写新项目时强烈建议**先 Read 这份样本**，理解工作量和细节密度，再决定要不要全套走流程。
 
@@ -290,4 +290,4 @@ v5f · 草间彌生 Yayoi Kusama（圆点 + 重复 + 单一强色）
 ---
 
 *最后修订：2026-05-11*
-*真实案例：huashu-md-html v2.0 launch film（v5-director-notes.md）*
+*真实案例：yy-md-html v2.0 launch film（v5-director-notes.md）*
