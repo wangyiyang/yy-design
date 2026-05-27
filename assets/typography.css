@@ -1,0 +1,181 @@
+/* 翊行代码 · 字体系统 */
+/* VI v1.0 · 2026-05-26 锁定 */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+/* 思源字体通过 CDN 或本地加载 */
+/* 推荐使用： */
+/* - 思源宋体：Source Han Serif CN */
+/* - 思源黑体：Source Han Sans CN */
+
+:root {
+  /* 字体栈 */
+  --font-serif-zh: 'Source Han Serif CN', 'Noto Serif SC', 'SimSun', serif;
+  --font-sans-zh: 'Source Han Sans CN', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --font-sans-en: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'SF Mono', monospace;
+
+  /* 字号阶梯 */
+  --text-h1: 32px;
+  --text-h2: 24px;
+  --text-h3: 20px;
+  --text-body: 16px;
+  --text-small: 14px;
+  --text-caption: 12px;
+
+  /* 行高 */
+  --leading-tight: 1.3;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.7;
+  --leading-loose: 1.8;
+
+  /* 字重 */
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+}
+
+/* 基础排版 */
+.yy-typography {
+  font-family: var(--font-sans-zh);
+  font-size: var(--text-body);
+  line-height: var(--leading-relaxed);
+  color: var(--yy-ink);
+}
+
+/* 标题层级 */
+.yy-h1 {
+  font-family: var(--font-serif-zh);
+  font-size: var(--text-h1);
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-tight);
+  color: var(--yy-ink);
+  margin-bottom: 0.5em;
+}
+
+.yy-h2 {
+  font-family: var(--font-serif-zh);
+  font-size: var(--text-h2);
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-tight);
+  color: var(--yy-ink);
+  margin-bottom: 0.5em;
+}
+
+.yy-h3 {
+  font-family: var(--font-serif-zh);
+  font-size: var(--text-h3);
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-tight);
+  color: var(--yy-ink);
+  margin-bottom: 0.5em;
+}
+
+/* 正文 */
+.yy-body {
+  font-family: var(--font-sans-zh);
+  font-size: var(--text-body);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-loose);
+  color: var(--yy-ink);
+}
+
+/* 小字 */
+.yy-small {
+  font-family: var(--font-sans-zh);
+  font-size: var(--text-small);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-normal);
+  color: var(--yy-ink-50);
+}
+
+/* Caption */
+.yy-caption {
+  font-family: var(--font-sans-zh);
+  font-size: var(--text-caption);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-normal);
+  color: var(--yy-ink-30);
+}
+
+/* 代码 */
+.yy-code {
+  font-family: var(--font-mono);
+  font-size: var(--text-small);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-normal);
+  color: var(--yy-paper);
+  background: var(--yy-ink);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+}
+
+.yy-code-block {
+  font-family: var(--font-mono);
+  font-size: var(--text-body);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-normal);
+  color: var(--yy-paper);
+  background: var(--yy-ink);
+  padding: 1.5em;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+/* 英文专用 */
+.yy-en {
+  font-family: var(--font-sans-en);
+}
+
+.yy-en-mono {
+  font-family: var(--font-mono);
+}
+
+/* 引用块 */
+.yy-quote {
+  font-family: var(--font-serif-zh);
+  font-size: var(--text-body);
+  font-style: italic;
+  line-height: var(--leading-relaxed);
+  color: var(--yy-ink-50);
+  border-left: 4px solid var(--yy-vermilion);
+  padding-left: 1em;
+  background: var(--yy-ink-05);
+  padding: 1em 1em 1em 1.5em;
+}
+
+/* 链接 */
+.yy-link {
+  color: var(--yy-vermilion);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.yy-link:hover {
+  border-bottom-color: var(--yy-vermilion);
+}
+
+/* 列表 */
+.yy-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.yy-list li::before {
+  content: '▸';
+  color: var(--yy-vermilion);
+  margin-right: 0.5em;
+}
+
+/* 标签/Tag */
+.yy-tag {
+  font-family: var(--font-sans-en);
+  font-size: var(--text-caption);
+  font-weight: var(--weight-medium);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--yy-vermilion);
+}

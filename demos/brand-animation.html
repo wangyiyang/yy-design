@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YY Design · Brand Animation</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1920px;
+      height: 1080px;
+      background: #0A0A0F;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    
+    .container {
+      text-align: center;
+      position: relative;
+    }
+    
+    .logo {
+      font-size: 120px;
+      font-weight: 700;
+      color: #EAEAEA;
+      letter-spacing: -4px;
+      opacity: 0;
+      animation: fadeIn 1s ease-out 0.5s forwards;
+    }
+    
+    .tagline {
+      font-size: 24px;
+      color: #A0A0A0;
+      margin-top: 24px;
+      letter-spacing: 8px;
+      text-transform: uppercase;
+      opacity: 0;
+      animation: slideUp 0.8s ease-out 1.5s forwards;
+    }
+    
+    .accent-line {
+      width: 0;
+      height: 2px;
+      background: #E94560;
+      margin: 32px auto;
+      animation: expandLine 0.6s ease-out 2.5s forwards;
+    }
+    
+    .particles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+    
+    .particle {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: #E94560;
+      border-radius: 50%;
+      opacity: 0;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    @keyframes expandLine {
+      from { width: 0; }
+      to { width: 120px; }
+    }
+    
+    @keyframes particleFloat {
+      0% { opacity: 0; transform: translateY(0) scale(0); }
+      20% { opacity: 0.8; transform: translateY(-20px) scale(1); }
+      100% { opacity: 0; transform: translateY(-100px) scale(0.5); }
+    }
+  </style>
+</head>
+<body>
+  <div class="particles" id="particles"></div>
+  
+  <div class="container">
+    <div class="logo">YY</div>
+    <div class="accent-line"></div>
+    <div class="tagline">Architecture · Code · Brand</div>
+  </div>
+  
+  <script>
+    // Generate particles
+    const container = document.getElementById('particles');
+    for (let i = 0; i < 50; i++) {
+      const particle = document.createElement('div');
+      particle.className = 'particle';
+      particle.style.left = Math.random() * 1920 + 'px';
+      particle.style.top = Math.random() * 1080 + 'px';
+      particle.style.animation = `particleFloat ${3 + Math.random() * 4}s ease-out ${Math.random() * 5}s infinite`;
+      container.appendChild(particle);
+    }
+    
+    // Render frame for video export
+    let frame = 0;
+    function renderFrame(t) {
+      frame++;
+      // Animation is CSS-driven, this function is for video renderer hook
+    }
+    
+    // Export for video renderer
+    window.renderFrame = renderFrame;
+  </script>
+</body>
+</html>

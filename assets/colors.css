@@ -1,0 +1,45 @@
+:root {
+  /* 翊行代码 · 品牌色板 */
+  /* VI v1.0 · 2026-05-26 锁定 */
+
+  /* 主色：墨黑 — 70% */
+  --yy-ink: #0A0A0A;
+  --yy-ink-50: rgba(10, 10, 10, 0.5);
+  --yy-ink-30: rgba(10, 10, 10, 0.3);
+  --yy-ink-10: rgba(10, 10, 10, 0.1);
+  --yy-ink-05: rgba(10, 10, 10, 0.05);
+
+  /* 背景/留白：宣白 — 25% */
+  --yy-paper: #FAFAFA;
+  --yy-paper-80: rgba(250, 250, 250, 0.8);
+
+  /* 点睛：朱红 — 4% */
+  --yy-vermilion: #C0392B;
+  --yy-vermilion-80: rgba(192, 57, 43, 0.8);
+  --yy-vermilion-60: rgba(192, 57, 43, 0.6);
+
+  /* 印刷专用：哑金 — 1%（屏幕几乎不用） */
+  --yy-gold: #C9A961;
+
+  /* 功能色 */
+  --yy-border: #E5E5E5;
+  --yy-link: var(--yy-vermilion);
+  --yy-link-hover: var(--yy-vermilion);
+
+  /* 语义化映射 */
+  --color-primary: var(--yy-ink);
+  --color-background: var(--yy-paper);
+  --color-accent: var(--yy-vermilion);
+  --color-text: var(--yy-ink);
+  --color-text-secondary: var(--yy-ink-50);
+  --color-text-muted: var(--yy-ink-30);
+}
+
+/* 暗色模式（极少使用，仅特定场景） */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: var(--yy-ink);
+    --color-text: var(--yy-paper);
+    --color-text-secondary: var(--yy-paper-80);
+  }
+}
