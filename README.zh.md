@@ -2,7 +2,7 @@
 
 <div align="center">
 
-# Huashu Design
+# YY Design
 
 > *「打字。回车。一份能交付的设计。」*
 > *"Type. Hit enter. A finished design lands in your lap."*
@@ -21,10 +21,10 @@
 
 不是「AI 做的还行」那种水平——是看起来像大厂设计团队做的。给 skill 你的品牌资产（logo、色板、UI 截图），它会读懂你的品牌气质；什么都不给，内置的 20 种设计语汇也能兜底到不出 AI slop。
 
-**你看到这篇 README 里的每一个动画，都是 huashu-design 自己做的。** 不是 Figma，不是 AE，就是一句话 prompt + skill 跑通。下次产品发布要做宣传片？现在你也能做。
+**你看到这篇 README 里的每一个动画，都是 yy-design 自己做的。** 不是 Figma，不是 AE，就是一句话 prompt + skill 跑通。下次产品发布要做宣传片？现在你也能做。
 
 ```
-npx skills add alchaincyf/huashu-design
+npx skills add wangyiyang/yy-design
 ```
 
 跨 agent 通用——Claude Code、Cursor、Codex、OpenClaw、Hermes 都能装。
@@ -38,13 +38,13 @@ npx skills add alchaincyf/huashu-design
 ---
 
 <p align="center">
-  <img src="https://github.com/alchaincyf/huashu-design/releases/download/v2.0/hero-animation-v10-en.gif" alt="huashu-design Hero · 打字 → 选方向 → 画廊展开 → 聚焦 → 品牌显形" width="100%">
+  <img src="https://github.com/wangyiyang/yy-design/releases/download/v2.0/hero-animation-v10-en.gif" alt="yy-design Hero · 打字 → 选方向 → 画廊展开 → 聚焦 → 品牌显形" width="100%">
 </p>
 
 <p align="center"><sub>
   ▲ 25 秒 · Terminal → 4 方向 → Gallery ripple → 4 次 Focus → Brand reveal<br>
-  👉 <a href="https://www.huasheng.ai/huashu-design-hero/">访问带音效的 HTML 互动版</a> ·
-  <a href="https://github.com/alchaincyf/huashu-design/releases/download/v2.0/hero-animation-v10-en.mp4">下载 MP4（含 BGM+SFX · 10MB）</a>
+  👉 <a href="https://www.huasheng.ai/yy-design-hero/">访问带音效的 HTML 互动版</a> ·
+  <a href="https://github.com/wangyiyang/yy-design/releases/download/v2.0/hero-animation-v10-en.mp4">下载 MP4（含 BGM+SFX · 10MB）</a>
 </sub></p>
 
 ---
@@ -52,7 +52,7 @@ npx skills add alchaincyf/huashu-design
 ## 装上就能用
 
 ```bash
-npx skills add alchaincyf/huashu-design
+npx skills add wangyiyang/yy-design
 ```
 
 然后在 Claude Code 里直接说话：
@@ -71,8 +71,8 @@ npx skills add alchaincyf/huashu-design
 ## Star 趋势
 
 <p align="center">
-  <a href="https://star-history.com/#alchaincyf/huashu-design&Date">
-    <img src="https://api.star-history.com/svg?repos=alchaincyf/huashu-design&type=Date" alt="huashu-design Star History" width="80%">
+  <a href="https://star-history.com/#wangyiyang/yy-design&Date">
+    <img src="https://api.star-history.com/svg?repos=wangyiyang/yy-design&type=Date" alt="yy-design Star History" width="80%">
   </a>
 </p>
 
@@ -98,55 +98,55 @@ npx skills add alchaincyf/huashu-design
 
 模糊需求时的 fallback：从 5 流派 × 20 种设计哲学里挑 3 个差异化方向，并行生成 3 个 Demo 让你选。
 
-<p align="center"><img src="https://github.com/alchaincyf/huashu-design/releases/download/v2.0/w3-fallback-advisor.gif" width="100%"></p>
+<p align="center"><img src="https://github.com/wangyiyang/yy-design/releases/download/v2.0/w3-fallback-advisor.gif" width="100%"></p>
 
 ### iOS App 原型
 
 iPhone 15 Pro 精确机身（灵动岛 / 状态栏 / Home Indicator）· 状态驱动多屏切换 · 真图从 Wikimedia/Met/Unsplash 取 · Playwright 自动点击测试。
 
-<p align="center"><img src="https://github.com/alchaincyf/huashu-design/releases/download/v2.0/c1-ios-prototype.gif" width="100%"></p>
+<p align="center"><img src="https://github.com/wangyiyang/yy-design/releases/download/v2.0/c1-ios-prototype.gif" width="100%"></p>
 
 ### Motion Design 引擎
 
 Stage + Sprite 时间片段模型 · `useTime` / `useSprite` / `interpolate` / `Easing` 四 API 覆盖所有动画需求 · 一条命令导出 MP4 / GIF / 60fps 插帧 / 带 BGM 的成片。
 
-<p align="center"><img src="https://github.com/alchaincyf/huashu-design/releases/download/v2.0/c3-motion-design.gif" width="100%"></p>
+<p align="center"><img src="https://github.com/wangyiyang/yy-design/releases/download/v2.0/c3-motion-design.gif" width="100%"></p>
 
 ### HTML Slides → 可编辑 PPTX
 
 HTML deck 浏览器演讲 · `html2pptx.js` 读 DOM 的 computedStyle 逐元素翻译成 PowerPoint 对象 · 导出的是**真文本框**，PPT 里双击即可编辑。
 
-<p align="center"><img src="https://github.com/alchaincyf/huashu-design/releases/download/v2.0/c2-slides-pptx.gif" width="100%"></p>
+<p align="center"><img src="https://github.com/wangyiyang/yy-design/releases/download/v2.0/c2-slides-pptx.gif" width="100%"></p>
 
 ### Tweaks · 实时变体切换
 
 配色 / 字型 / 信息密度等参数化 · 侧边面板切换 · 纯前端 + `localStorage` 持久化 · 刷新不丢。
 
-<p align="center"><img src="https://github.com/alchaincyf/huashu-design/releases/download/v2.0/c4-tweaks.gif" width="100%"></p>
+<p align="center"><img src="https://github.com/wangyiyang/yy-design/releases/download/v2.0/c4-tweaks.gif" width="100%"></p>
 
 ### 信息图 / 数据可视化
 
 杂志级排版 · CSS Grid 精准分栏 · `text-wrap: pretty` 排印细节 · 真数据驱动 · 可导 PDF 矢量 / PNG 300dpi / SVG。
 
-<p align="center"><img src="https://github.com/alchaincyf/huashu-design/releases/download/v2.0/c5-infographic.gif" width="100%"></p>
+<p align="center"><img src="https://github.com/wangyiyang/yy-design/releases/download/v2.0/c5-infographic.gif" width="100%"></p>
 
 ### 5 维度专家评审
 
 哲学一致性 · 视觉层级 · 细节执行 · 功能性 · 创新性 各 0–10 分 · 雷达图可视化 · 输出 Keep / Fix / Quick Wins 清单。
 
-<p align="center"><img src="https://github.com/alchaincyf/huashu-design/releases/download/v2.0/c6-expert-review.gif" width="100%"></p>
+<p align="center"><img src="https://github.com/wangyiyang/yy-design/releases/download/v2.0/c6-expert-review.gif" width="100%"></p>
 
 ### Junior Designer 工作流
 
 不闷头做大招：先写 assumptions + placeholders + reasoning，尽早 show 给你，再迭代。理解错了早改比晚改便宜 100 倍。
 
-<p align="center"><img src="https://github.com/alchaincyf/huashu-design/releases/download/v2.0/w2-junior-designer.gif" width="100%"></p>
+<p align="center"><img src="https://github.com/wangyiyang/yy-design/releases/download/v2.0/w2-junior-designer.gif" width="100%"></p>
 
 ### 品牌资产协议 5 步硬流程
 
 涉及具体品牌时强制执行：问 → 搜 → 下载（三条兜底）→ grep 色值 → 写 `brand-spec.md`。
 
-<p align="center"><img src="https://github.com/alchaincyf/huashu-design/releases/download/v2.0/w1-brand-protocol.gif" width="100%"></p>
+<p align="center"><img src="https://github.com/wangyiyang/yy-design/releases/download/v2.0/w1-brand-protocol.gif" width="100%"></p>
 
 ---
 
@@ -156,7 +156,7 @@ HTML deck 浏览器演讲 · `html2pptx.js` 读 DOM 的 computedStyle 逐元素�
 
 > **Live demo · [https://skill-huasheng.vercel.app](https://skill-huasheng.vercel.app)**
 
-13 页 HTML deck，**全部用 huashu-design 完成**：
+13 页 HTML deck，**全部用 yy-design 完成**：
 
 - 黑底极简衬线视觉系统（cover / about / hook / what / why / closing）
 - 2 个带 BGM + SFX 的 22 秒 cinematic demo（Nuwa skill workflow + Darwin skill workflow），各采用**完全独立的视觉语言**：
@@ -165,7 +165,7 @@ HTML deck 浏览器演讲 · `html2pptx.js` 读 DOM 的 computedStyle 逐元素�
 - 每个 cinematic 默认显示**完整静态 workflow dashboard**（观众随时能看清 skill 怎么跑），点 ▶ 才触发动画，跑完自动 fade 回 dashboard
 - 嵌入 huasheng.ai 的 25 秒 hero 动画（iframe 本地化兜底）
 - 真实数据：14,495 stargazers 真实曲线（gh API 拉取）+ DeepSeek V4 真实 specs（WebSearch 验证）
-- 真实 AI 素材：用 `huashu-gpt-image` 跑 4×2 grid 大图，`extract_grid.py` 抠出 8 张独立透明 PNG，做 3D orbit 漂浮
+- 真实 AI 素材：用 `yy-gpt-image` 跑 4×2 grid 大图，`extract_grid.py` 抠出 8 张独立透明 PNG，做 3D orbit 漂浮
 
 **适合参考的页面**：
 - `/slides/slide-04b-nuwa-flow.html` · 静态 dashboard + cinematic overlay 双层架构
@@ -224,7 +224,7 @@ A/B 测试（v1 vs v2，各跑 6 agent）：**v2 的稳定性方差比 v1 低 5 
 
 定位差异：
 
-| | Claude Design | huashu-design |
+| | Claude Design | yy-design |
 |---|---|---|
 | 形态 | 网页产品（浏览器里用） | skill（Claude Code 里用） |
 | 配额 | 订阅 quota | API 消耗 · 并行跑 agent 不受 quota 限 |
@@ -233,7 +233,7 @@ A/B 测试（v1 vs v2，各跑 6 agent）：**v2 的稳定性方差比 v1 低 5 
 | 复杂动画 | 有限 | Stage + Sprite 时间轴 · 60fps 导出 |
 | 跨 agent | 专属 Claude.ai | 任意 skill 兼容 agent |
 
-Claude Design 是**更好的图形工具**，huashu-design 是**让图形工具这层消失**。两条路，不同受众。
+Claude Design 是**更好的图形工具**，yy-design 是**让图形工具这层消失**。两条路，不同受众。
 
 ---
 
@@ -250,7 +250,7 @@ Claude Design 是**更好的图形工具**，huashu-design 是**让图形工具�
 ## 仓库结构
 
 ```
-huashu-design/
+yy-design/
 ├── SKILL.md                 # 主文档（给 agent 读）
 ├── README.md                # 英文 README（默认）
 ├── README.zh.md             # 本文件（中文 README）
@@ -304,17 +304,17 @@ Anthropic 发布 Claude Design 那天我玩到凌晨四点。几天之后发现�
 
 ---
 
-## Connect · 花生（花叔）
+## Connect · 花生（YY）
 
 花生是 AI Native Coder、独立开发者、AI 自媒体博主。代表作：小猫补光灯（AppStore 付费榜 Top 1）、《一本书玩转 DeepSeek》、女娲 .skill（GitHub 12000+ star）。自媒体全平台 30 万+ 粉丝。
 
 | 平台 | 账号 | 链接 |
 |---|---|---|
 | X / Twitter | @AlchainHust | https://x.com/AlchainHust |
-| 公众号 | 花叔 | 微信搜索「花叔」 |
-| B 站 | 花叔 | https://space.bilibili.com/14097567 |
-| YouTube | 花叔 | https://www.youtube.com/@Alchain |
-| 小红书 | 花叔 | https://www.xiaohongshu.com/user/profile/5abc6f17e8ac2b109179dfdf |
+| 公众号 | YY | 微信搜索「YY」 |
+| B 站 | YY | https://space.bilibili.com/14097567 |
+| YouTube | YY | https://www.youtube.com/@Alchain |
+| 小红书 | YY | https://www.xiaohongshu.com/user/profile/5abc6f17e8ac2b109179dfdf |
 | 官网 | huasheng.ai | https://www.huasheng.ai/ |
 | 开发者主页 | bookai.top | https://bookai.top |
 

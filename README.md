@@ -2,7 +2,7 @@
 
 <div align="center">
 
-# Huashu Design
+# YY Design
 
 > *"Type. Hit enter. A finished design lands in your lap."*
 > *「打字。回车。一份能交付的设计。」*
@@ -21,10 +21,10 @@
 
 Not "decent for AI" quality — it looks like a real design team made it. Give the skill your brand assets (logo, colors, UI screenshots) and it reads your brand's voice; give it nothing and the built-in 20 design vocabularies still keep you out of AI slop territory.
 
-**Every animation in this README was made by huashu-design itself.** No Figma, no After Effects — just a sentence + skill run. Next product launch needs a promo video? You can make it too.
+**Every animation in this README was made by yy-design itself.** No Figma, no After Effects — just a sentence + skill run. Next product launch needs a promo video? You can make it too.
 
 ```
-npx skills add alchaincyf/huashu-design
+npx skills add wangyiyang/yy-design
 ```
 
 > 📣 **Now MIT-licensed.** As of 2026-05-14 this skill is fully open-source under the [MIT License](LICENSE) — free for personal **and** commercial use, no authorization required. ([what changed](#license))
@@ -33,26 +33,26 @@ npx skills add alchaincyf/huashu-design
 
 > 📖 **Note for English readers**: this skill is built by a Chinese-speaking developer. The skill's agent prompts (`SKILL.md`, `references/*.md`) are in Chinese but the agent is bilingual — works fine with English tasks. The demos below are the English parallel versions; the Chinese ones are in the default-named files (see the [Chinese README](README.zh.md)).
 >
-> 📖 **致中文读者**：这个 skill 由花叔（@AlchainHust）开发。一句话能让 agent 在 3–30 分钟内交付**产品发布动画 / 可点击 App 原型 / 可编辑 PPT / 印刷级信息图**。完整中文介绍见 [README.zh.md](README.zh.md)。
+> 📖 **致中文读者**：这个 skill 由YY（@AlchainHust）开发。一句话能让 agent 在 3–30 分钟内交付**产品发布动画 / 可点击 App 原型 / 可编辑 PPT / 印刷级信息图**。完整中文介绍见 [README.zh.md](README.zh.md)。
 
 </div>
 
 ---
 
 <p align="center">
-  <video src="https://github.com/alchaincyf/huashu-design/releases/download/v2.0/hero-animation-v10-en.mp4" autoplay muted loop playsinline width="100%">
-    Your browser doesn't support inline video. <a href="https://github.com/alchaincyf/huashu-design/releases/download/v2.0/hero-animation-v10-en.mp4">Download MP4</a>.
+  <video src="https://github.com/wangyiyang/yy-design/releases/download/v2.0/hero-animation-v10-en.mp4" autoplay muted loop playsinline width="100%">
+    Your browser doesn't support inline video. <a href="https://github.com/wangyiyang/yy-design/releases/download/v2.0/hero-animation-v10-en.mp4">Download MP4</a>.
   </video>
 </p>
 
-<p align="center"><sub>▲ 10-second hero animation showing what huashu-design does (<a href="https://github.com/alchaincyf/huashu-design/releases/download/v2.0/hero-animation-v10-en.mp4">download MP4</a> if autoplay doesn't work)</sub></p>
+<p align="center"><sub>▲ 10-second hero animation showing what yy-design does (<a href="https://github.com/wangyiyang/yy-design/releases/download/v2.0/hero-animation-v10-en.mp4">download MP4</a> if autoplay doesn't work)</sub></p>
 
 ---
 
 ## Install
 
 ```bash
-npx skills add alchaincyf/huashu-design
+npx skills add wangyiyang/yy-design
 ```
 
 Then just talk to Claude Code:
@@ -71,8 +71,8 @@ No buttons, no panels, no Figma plugin. Agent-agnostic — drops into Claude Cod
 ## Star History
 
 <p align="center">
-  <a href="https://star-history.com/#alchaincyf/huashu-design&Date">
-    <img src="https://api.star-history.com/svg?repos=alchaincyf/huashu-design&type=Date" alt="huashu-design Star History" width="80%">
+  <a href="https://star-history.com/#wangyiyang/yy-design&Date">
+    <img src="https://api.star-history.com/svg?repos=wangyiyang/yy-design&type=Date" alt="yy-design Star History" width="80%">
   </a>
 </p>
 
@@ -100,55 +100,55 @@ No buttons, no panels, no Figma plugin. Agent-agnostic — drops into Claude Cod
 
 The fallback for vague briefs: pick 3 differentiated directions from 5 schools × 20 philosophies, generate all 3 demos in parallel, let the user choose.
 
-<p align="center"><img src="https://github.com/alchaincyf/huashu-design/releases/download/v2.0/w3-fallback-advisor-en.gif" width="100%"></p>
+<p align="center"><img src="https://github.com/wangyiyang/yy-design/releases/download/v2.0/w3-fallback-advisor-en.gif" width="100%"></p>
 
 ### iOS App Prototype
 
 Pixel-accurate iPhone 15 Pro body (Dynamic Island / status bar / Home Indicator) · state-driven multi-screen navigation · real images pulled from Wikimedia/Met/Unsplash · Playwright click tests before delivery.
 
-<p align="center"><img src="https://github.com/alchaincyf/huashu-design/releases/download/v2.0/c1-ios-prototype-en.gif" width="100%"></p>
+<p align="center"><img src="https://github.com/wangyiyang/yy-design/releases/download/v2.0/c1-ios-prototype-en.gif" width="100%"></p>
 
 ### Motion Design Engine
 
 Stage + Sprite time-slice model · `useTime` / `useSprite` / `interpolate` / `Easing` — four APIs cover every animation need · one command exports MP4 / GIF / 60fps-interpolated / BGM-scored finals.
 
-<p align="center"><img src="https://github.com/alchaincyf/huashu-design/releases/download/v2.0/c3-motion-design-en.gif" width="100%"></p>
+<p align="center"><img src="https://github.com/wangyiyang/yy-design/releases/download/v2.0/c3-motion-design-en.gif" width="100%"></p>
 
 ### HTML Slides → Editable PPTX
 
 HTML decks for browser presentation · `html2pptx.js` reads DOM computed styles and translates each element into real PowerPoint objects · exports are **actual text frames**, not image-bed fakes.
 
-<p align="center"><img src="https://github.com/alchaincyf/huashu-design/releases/download/v2.0/c2-slides-pptx-en.gif" width="100%"></p>
+<p align="center"><img src="https://github.com/wangyiyang/yy-design/releases/download/v2.0/c2-slides-pptx-en.gif" width="100%"></p>
 
 ### Tweaks · Live Variation Switching
 
 Colors / typography / information density parameterized · side panel toggle · pure-frontend + `localStorage` persistence · survives reload.
 
-<p align="center"><img src="https://github.com/alchaincyf/huashu-design/releases/download/v2.0/c4-tweaks-en.gif" width="100%"></p>
+<p align="center"><img src="https://github.com/wangyiyang/yy-design/releases/download/v2.0/c4-tweaks-en.gif" width="100%"></p>
 
 ### Infographic / Data Viz
 
 Magazine-grade typography · precise CSS Grid columns · `text-wrap: pretty` typographic details · driven by real data · exports to vector PDF / 300dpi PNG / SVG.
 
-<p align="center"><img src="https://github.com/alchaincyf/huashu-design/releases/download/v2.0/c5-infographic-en.gif" width="100%"></p>
+<p align="center"><img src="https://github.com/wangyiyang/yy-design/releases/download/v2.0/c5-infographic-en.gif" width="100%"></p>
 
 ### 5-Dimension Expert Critique
 
 Philosophical coherence · visual hierarchy · execution craft · functionality · innovation — each scored 0–10 · radar-chart visualization · outputs Keep / Fix / Quick Wins punch list.
 
-<p align="center"><img src="https://github.com/alchaincyf/huashu-design/releases/download/v2.0/c6-expert-review-en.gif" width="100%"></p>
+<p align="center"><img src="https://github.com/wangyiyang/yy-design/releases/download/v2.0/c6-expert-review-en.gif" width="100%"></p>
 
 ### Junior Designer Workflow
 
 No heroic one-shot attempts: start with assumptions + placeholders + reasoning, show it to the user early, then iterate. Fixing a misunderstanding early is 100× cheaper than fixing it late.
 
-<p align="center"><img src="https://github.com/alchaincyf/huashu-design/releases/download/v2.0/w2-junior-designer-en.gif" width="100%"></p>
+<p align="center"><img src="https://github.com/wangyiyang/yy-design/releases/download/v2.0/w2-junior-designer-en.gif" width="100%"></p>
 
 ### Core Asset Protocol · 5-step hard process
 
 Mandatory whenever the task involves a specific brand: ask → search → download (three fallback paths) → verify + extract → write `brand-spec.md` covering **logo, product shots, UI screenshots, colors, fonts** — all required assets, not just colors.
 
-<p align="center"><img src="https://github.com/alchaincyf/huashu-design/releases/download/v2.0/w1-brand-protocol-en.gif" width="100%"></p>
+<p align="center"><img src="https://github.com/wangyiyang/yy-design/releases/download/v2.0/w1-brand-protocol-en.gif" width="100%"></p>
 
 ---
 
@@ -212,7 +212,7 @@ I'll be upfront: the Core Asset Protocol's philosophy was lifted from system pro
 
 Positioning differences:
 
-| | Claude Design | huashu-design |
+| | Claude Design | yy-design |
 |---|---|---|
 | Form | Web product (used in browser) | Skill (used in Claude Code) |
 | Quota | Subscription quota | API usage · parallel agents unblocked |
@@ -221,7 +221,7 @@ Positioning differences:
 | Complex animation | Limited | Stage + Sprite timeline · 60fps export |
 | Agent compatibility | Claude.ai only | Claude Code / Cursor / Trae / Hermes / OpenClaw |
 
-Claude Design is a **better graphics tool**. Huashu-design makes **the graphics-tool layer disappear**. Two paths, different audiences.
+Claude Design is a **better graphics tool**. YY-design makes **the graphics-tool layer disappear**. Two paths, different audiences.
 
 ---
 
@@ -238,7 +238,7 @@ This is an 80-point skill, not a 100-point product. For people unwilling to open
 ## Repository Structure
 
 ```
-huashu-design/
+yy-design/
 ├── SKILL.md                 # Main doc (read by agent, Chinese)
 ├── README.md                # English README (default, this file)
 ├── README.zh.md             # Chinese README
@@ -292,17 +292,17 @@ Under the [MIT License](LICENSE) you are free to **use, modify, and distribute**
 
 ---
 
-## Connect · Huasheng (Huashu)
+## Connect · Huasheng (YY)
 
 Huasheng is an AI-native coder, independent developer, and AI content creator. Notable work: Cat Fill Light (App Store Top 1 in Paid category), *A Book on DeepSeek*, Nüwa.skill (GitHub 12k+ stars). Combined 300k+ followers across platforms.
 
 | Platform | Handle | Link |
 |---|---|---|
 | X / Twitter | @AlchainHust | https://x.com/AlchainHust |
-| WeChat Official Account | 花叔 | Search "花叔" in WeChat |
-| Bilibili | 花叔 | https://space.bilibili.com/14097567 |
-| YouTube | 花叔 | https://www.youtube.com/@Alchain |
-| Xiaohongshu | 花叔 | https://www.xiaohongshu.com/user/profile/5abc6f17e8ac2b109179dfdf |
+| WeChat Official Account | YY | Search "YY" in WeChat |
+| Bilibili | YY | https://space.bilibili.com/14097567 |
+| YouTube | YY | https://www.youtube.com/@Alchain |
+| Xiaohongshu | YY | https://www.xiaohongshu.com/user/profile/5abc6f17e8ac2b109179dfdf |
 | Official Site | huasheng.ai | https://www.huasheng.ai/ |
 | Developer Hub | bookai.top | https://bookai.top |
 
