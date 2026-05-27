@@ -292,9 +292,9 @@ Under the [MIT License](LICENSE) you are free to **use, modify, and distribute**
 
 ---
 
-## Connect · Huasheng (YY)
+## Connect · OWNER_NAME (YY)
 
-Huasheng is an AI-native coder, independent developer, and AI content creator. Notable work: Cat Fill Light (App Store Top 1 in Paid category), *A Book on DeepSeek*, Nüwa.skill (GitHub 12k+ stars). Combined 300k+ followers across platforms.
+OWNER_NAME is an AI-native coder, independent developer, and AI content creator. Notable work: Cat Fill Light (App Store Top 1 in Paid category), *A Book on DeepSeek*, Nüwa.skill (GitHub 12k+ stars). Combined 300k+ followers across platforms.
 
 | Platform | Handle | Link |
 |---|---|---|
@@ -303,7 +303,7 @@ Huasheng is an AI-native coder, independent developer, and AI content creator. N
 | Bilibili | YY | https://space.bilibili.com/14097567 |
 | YouTube | YY | https://www.youtube.com/@Alchain |
 | Xiaohongshu | YY | https://www.xiaohongshu.com/user/profile/5abc6f17e8ac2b109179dfdf |
-| Official Site | huasheng.ai | https://www.huasheng.ai/ |
+| Official Site | OWNER_WEBSITE | https://www.OWNER_WEBSITE/ |
 | Developer Hub | bookai.top | https://bookai.top |
 
 For collaborations or sponsored content, DM on any of the above.

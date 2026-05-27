@@ -280,7 +280,7 @@ requestAnimationFrame(function tick(now) {
 ```html
 <div class="corner-brand">
   <div class="mark"></div>
-  <div>HUASHU · DESIGN</div>
+  <div>DESIGN_STUDIO</div>
 </div>
 ```
 

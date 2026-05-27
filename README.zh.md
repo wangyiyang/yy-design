@@ -43,7 +43,7 @@ npx skills add OWNER/yy-design
 
 <p align="center"><sub>
   ▲ 25 秒 · Terminal → 4 方向 → Gallery ripple → 4 次 Focus → Brand reveal<br>
-  👉 <a href="https://www.huasheng.ai/yy-design-hero/">访问带音效的 HTML 互动版</a> ·
+  👉 <a href="https://www.OWNER_WEBSITE/yy-design-hero/">访问带音效的 HTML 互动版</a> ·
   <a href="https://github.com/OWNER/yy-design/releases/download/v2.0/hero-animation-v10-en.mp4">下载 MP4（含 BGM+SFX · 10MB）</a>
 </sub></p>
 
@@ -154,7 +154,7 @@ HTML deck 浏览器演讲 · `html2pptx.js` 读 DOM 的 computedStyle 逐元素�
 
 ### 「聊聊 skill」 · PM after-party 演讲 deck
 
-> **Live demo · [https://skill-huasheng.vercel.app](https://skill-huasheng.vercel.app)**
+> **Live demo · [https://skill-OWNER.vercel.app](https://skill-OWNER.vercel.app)**
 
 13 页 HTML deck，**全部用 yy-design 完成**：
 
@@ -163,7 +163,7 @@ HTML deck 浏览器演讲 · `html2pptx.js` 读 DOM 的 computedStyle 逐元素�
   - **Nuwa**：3D 知识 orbit + Pentagon 提炼 + SKILL.md typewriter + 「21 分钟」hero reveal
   - **Darwin**：autoresearch loop spin + v1/v5 并列 diff + Hill-Climb 全屏曲线 + Ratchet gear lock
 - 每个 cinematic 默认显示**完整静态 workflow dashboard**（观众随时能看清 skill 怎么跑），点 ▶ 才触发动画，跑完自动 fade 回 dashboard
-- 嵌入 huasheng.ai 的 25 秒 hero 动画（iframe 本地化兜底）
+- 嵌入 OWNER_WEBSITE 的 25 秒 hero 动画（iframe 本地化兜底）
 - 真实数据：14,495 stargazers 真实曲线（gh API 拉取）+ DeepSeek V4 真实 specs（WebSearch 验证）
 - 真实 AI 素材：用 `yy-gpt-image` 跑 4×2 grid 大图，`extract_grid.py` 抠出 8 张独立透明 PNG，做 3D orbit 漂浮
 
@@ -315,7 +315,7 @@ Anthropic 发布 Claude Design 那天我玩到凌晨四点。几天之后发现�
 | B 站 | YY | https://space.bilibili.com/14097567 |
 | YouTube | YY | https://www.youtube.com/@Alchain |
 | 小红书 | YY | https://www.xiaohongshu.com/user/profile/5abc6f17e8ac2b109179dfdf |
-| 官网 | huasheng.ai | https://www.huasheng.ai/ |
+| 官网 | OWNER_WEBSITE | https://www.OWNER_WEBSITE/ |
 | 开发者主页 | bookai.top | https://bookai.top |
 
 合作咨询、自媒体约稿 → 以上任一平台私信花生即可。

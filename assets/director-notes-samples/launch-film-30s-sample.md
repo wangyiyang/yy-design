@@ -283,7 +283,7 @@ scene 之间过渡            300ms 重叠    cross-dissolve + scale
 
 ```
    ╔═════════════════════════╗
-   ║ ● HUASHU-MD-HTML · v2.0 ║
+   ║ ● MD-HTML · v2.0 ║
    ╚═════════════════════════╝
 ```
 
@@ -306,7 +306,7 @@ scene 之间过渡            300ms 重叠    cross-dissolve + scale
 **Chrome D · bottom-right · watermark（持续）**
 
 ```
-   CREATED BY HUASHU-DESIGN
+   CREATED BY DESIGN_STUDIO
 ```
 
 - 字体：JetBrains Mono 10px，letter-spacing 0.24em
@@ -625,7 +625,7 @@ cursor 是写作的最小单位。从一个 cursor 开始，是「源代码」�
 **[CHROME]**
 
 - 04.50s · Chrome B（version chip top-right）开始浮现 (fade-in 600ms)
-  - 形态：`● HUASHU-MD-HTML · v2.0`
+  - 形态：`● MD-HTML · v2.0`
   - terracotta dot, mono text, Ink color
   - 进入位置：top: 78px, right: 80px
 - 仍隐藏：Chrome A, C, E（visible only ≥ 06s）
@@ -1106,7 +1106,7 @@ destination card 设计：**Apple Books 风的 EPUB reader frame**（强调「�
    ║ ● ● ●                              ║  ← window chrome (Apple Books)
    ╠════════════════════════════════════╣
    ║                                    ║
-   ║  HUASHU · ORANGE BOOK              ║  ← Mono Bold 10px Terracotta 0.22em
+   ║  OWNER · ORANGE BOOK              ║  ← Mono Bold 10px Terracotta 0.22em
    ║                                    ║
    ║                                    ║
    ║  On                                ║  ← Newsreader 700, 30px, Ivory paper
@@ -1131,7 +1131,7 @@ destination card 设计：**Apple Books 风的 EPUB reader frame**（强调「�
 
 **[TYPE]**
 
-- HUASHU · ORANGE BOOK：Mono Bold 10px, Terracotta, 0.22em
+- OWNER · ORANGE BOOK：Mono Bold 10px, Terracotta, 0.22em
 - book title (On Markdown)：Newsreader 700, 30px, Ivory (on Charred bg), line-height 1.0
 - terracotta rule：40×2px
 - author italic：Noto Serif SC italic 14px, Smoke
@@ -1450,14 +1450,14 @@ md 是源代码，万物是产物。
 30.00s：所有元素到位。最后一帧是：
 
 ```
-                                                                  ● HUASHU-MD-HTML · v2.0
+                                                                  ● MD-HTML · v2.0
                                                                                               (top-right chrome)
 
 
                                             md.                   ← Newsreader 600, 88px, Ink + Terracotta dot
                                           ───                     ← Terracotta rule, 120×2px
 
-                                                                                CREATED BY HUASHU-DESIGN
+                                                                                CREATED BY DESIGN_STUDIO
                                                                                               (bottom-right watermark)
 ```
 
