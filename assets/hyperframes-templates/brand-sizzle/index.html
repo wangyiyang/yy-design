@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; background: #0A0A0A; }
+
+      [data-composition-id="main"] {
+        width: 1920px; height: 1080px; position: relative; overflow: hidden;
+      }
+      .scene {
+        position: absolute; inset: 0;
+        display: flex; align-items: center; justify-content: center;
+      }
+      .hero-text {
+        font-family: "Noto Serif SC", serif;
+        font-size: 96px; font-weight: 600; color: #FAFAFA;
+        text-align: center; line-height: 1.3;
+      }
+      .hero-text .accent { color: #C0392B; }
+      .stat-row { display: flex; gap: 120px; align-items: baseline; }
+      .stat { text-align: center; }
+      .stat-number {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 120px; font-weight: 700; color: #FAFAFA;
+      }
+      .stat-label {
+        font-family: "Noto Sans SC", sans-serif;
+        font-size: 24px; color: rgba(250,250,250,0.5);
+        margin-top: 12px; letter-spacing: 0.05em;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main"
+         data-start="0" data-duration="12"
+         data-width="1920" data-height="1080">
+
+      <div id="scene1" class="scene">
+        <div class="hero-text">
+          用一句话<br><span class="accent">交付设计</span>
+        </div>
+      </div>
+
+      <div id="scene2" class="scene" style="opacity:0">
+        <div class="stat-row">
+          <div class="stat">
+            <div class="stat-number">3</div>
+            <div class="stat-label">分钟出原型</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">20</div>
+            <div class="stat-label">种设计语汇</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">60</div>
+            <div class="stat-label">fps 视频导出</div>
+          </div>
+        </div>
+      </div>
+
+      <div id="scene3" class="scene" style="opacity:0">
+        <div class="hero-text" style="font-size: 200px;">
+          {<span class="accent">翊</span>}
+        </div>
+      </div>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      // Scene 1: 标题入场
+      tl.from("#scene1 .hero-text", {
+        opacity: 0, y: 60, duration: 1, ease: "expo.out"
+      }, 0.3);
+      tl.to("#scene1", { opacity: 0, duration: 0.6, ease: "power2.in" }, 3.4);
+
+      // Scene 2: 数据入场
+      tl.to("#scene2", { opacity: 1, duration: 0.01 }, 4);
+      tl.from("#scene2 .stat", {
+        opacity: 0, y: 40, duration: 0.7, ease: "expo.out", stagger: 0.2
+      }, 4.3);
+      tl.to("#scene2", { opacity: 0, duration: 0.6, ease: "power2.in" }, 7.4);
+
+      // Scene 3: Logo 入场
+      tl.to("#scene3", { opacity: 1, duration: 0.01 }, 8);
+      tl.from("#scene3 .hero-text", {
+        opacity: 0, scale: 0.6, duration: 1.2, ease: "expo.out"
+      }, 8.3);
+      tl.to("#scene3", { opacity: 0, duration: 0.8, ease: "power2.in" }, 11.2);
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

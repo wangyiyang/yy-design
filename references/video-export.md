@@ -5,7 +5,7 @@
 ## 何时导出
 
 **导出时机**：
-- 动画完整跑通、视觉验证过（Playwright 截图确认各时间点状态正确）
+- 动画完整跑通、视觉验证过（浏览器 preview 确认各时间点状态正确）
 - 用户在浏览器里看过至少一次，表示效果 OK
 - **不要**在动画 bug 没修完的阶段导出——导出到视频后改起来更贵
 
@@ -21,29 +21,36 @@
 
 | 格式 | 规格 | 适合场景 | 典型大小（30s） |
 |---|---|---|---|
-| MP4 25fps | 1920×1080 · H.264 · CRF 18 | 公众号嵌入、视频号、YouTube | 1-2 MB |
-| MP4 60fps | 1920×1080 · minterpolate 插帧 · H.264 · CRF 18 | 高帧率展示、B站、作品集 | 1.5-3 MB |
+| MP4 30fps | 1920×1080 · H.264 · CRF 18 | 公众号嵌入、视频号、YouTube | 1-2 MB |
+| MP4 60fps | 1920×1080 · HyperFrames 直出 · H.264 | 高帧率展示、B站、作品集 | 2-4 MB |
 | GIF | 960×540 · 15fps · palette 优化 | Twitter/X、README、Slack 预览 | 2-4 MB |
 
 ## 工具链
 
-两个脚本在 `scripts/`：
+### 渲染引擎：HyperFrames
 
-### 1. `render-video.js` — HTML → MP4
+使用 [HyperFrames](https://github.com/heygen-com/hyperframes) 做确定性逐帧渲染。
+核心优势：seek-and-capture 模型（同输入必同输出）、任意帧率、并行捕获。
 
-录一个 25fps 的 MP4 基础版本。依赖全局 playwright。
+### 1. `render-hyperframes.mjs` — Composition → MP4
 
 ```bash
-NODE_PATH=$(npm root -g) node /path/to/claude-design/scripts/render-video.js <html文件>
+node scripts/render-hyperframes.mjs <composition-dir> [options]
 ```
 
 可选参数：
-- `--duration=30` 动画时长（秒）
-- `--width=1920 --height=1080` 分辨率
-- `--trim=2.2` 从视频开头裁掉的秒数（去掉 reload + 字体加载时间）
-- `--fontwait=1.5` 字体加载等待时间（秒），字体多时调高
+- `--output <path>` 输出文件路径
+- `--fps 30|60` 帧率（默认 30）
+- `--quality draft|standard|high` 质量预设（默认 standard）
+- `--format mp4|webm|mov` 格式（默认 mp4）
+- `--workers <n>` 并行线程数（默认 4）
+- `--docker` 使用 Docker 确定性渲染
 
-输出：与 HTML 同目录，同名 `.mp4`。
+或直接用 HyperFrames CLI：
+```bash
+cd <composition-dir>
+npx hyperframes render --output output.mp4 --fps 30 --quality high
+```
 
 ### 2. `add-music.sh` — MP4 + BGM → MP4
 
@@ -71,14 +78,20 @@ bash add-music.sh <input.mp4> [--mood=<name>] [--music=<path>] [--out=<path>]
 - `--music=<path>` 优先级高于 `--mood`，可以直接指定任意外部音频
 - 传错 mood 名会列出所有可用选项，不会静默失败
 
-**典型流水线**（动画导出三件套 + 配乐）：
+**典型流水线**（HyperFrames 渲染 + 配乐）：
 ```bash
-node render-video.js animation.html                        # 录屏
-bash convert-formats.sh animation.mp4                      # 派生 60fps + GIF
-bash add-music.sh animation-60fps.mp4                      # 加默认 tech BGM
-# 或针对不同场景：
-bash add-music.sh tutorial-demo.mp4 --mood=tutorial
-bash add-music.sh product-promo.mp4 --mood=ad --out=promo-final.mp4
+# 渲染 30fps MP4
+npx hyperframes render --output animation.mp4 --fps 30 --quality high
+
+# 派生 GIF（60fps 转换自动跳过，因为可以直接 --fps 60 渲染）
+bash convert-formats.sh animation.mp4
+
+# 加默认 tech BGM
+bash add-music.sh animation.mp4
+
+# 或直接渲染 60fps
+npx hyperframes render --output animation-60fps.mp4 --fps 60 --quality high
+bash add-music.sh animation-60fps.mp4 --mood=ad --out=promo-final.mp4
 ```
 
 ### 3. `convert-formats.sh` — MP4 → 60fps MP4 + GIF
@@ -112,47 +125,89 @@ bash /path/to/claude-design/scripts/convert-formats.sh <input.mp4> [gif_width] [
 用户说「导出视频」后：
 
 ```bash
-cd <项目目录>
+cd <composition-dir>
 
-# 假设 $SKILL 指向本 skill 的根目录（自行按安装位置替换）
+# 1. 渲染 MP4（30fps 标准质量）
+npx hyperframes render --output output.mp4 --fps 30 --quality high
 
-# 1. 录 25fps 基础 MP4
-NODE_PATH=$(npm root -g) node "$SKILL/scripts/render-video.js" my-animation.html
+# 2. 可选：生成 GIF
+bash scripts/convert-formats.sh output.mp4
 
-# 2. 派生 60fps MP4 和 GIF
-bash "$SKILL/scripts/convert-formats.sh" my-animation.mp4
+# 3. 可选：加 BGM
+bash scripts/add-music.sh output.mp4 --mood=tech
 
 # 产出清单：
-# my-animation.mp4         (25fps · 1-2 MB)
-# my-animation-60fps.mp4   (60fps · 1.5-3 MB)
-# my-animation.gif         (15fps · 2-4 MB)
+# output.mp4         (30fps · 1-2 MB)
+# output.gif         (15fps · 2-4 MB)
+# output-bgm.mp4    (带音乐)
+```
+
+如需 60fps：
+```bash
+npx hyperframes render --output output-60fps.mp4 --fps 60 --quality high
+```
+
+## HyperFrames Composition 格式
+
+### 必需文件
+
+每个 composition 目录需要：
+- `index.html` — 主 composition 文件
+- `hyperframes.json` — 配置文件
+- `meta.json` — 元数据
+
+### HTML 结构
+
+```html
+<div id="root" data-composition-id="main"
+     data-start="0" data-duration="10"
+     data-width="1920" data-height="1080">
+  <!-- 内容 -->
+</div>
+```
+
+### GSAP Timeline 规则
+
+- 所有 timeline 必须 `{ paused: true }`
+- 注册到 `window.__timelines["main"]`
+- 不要用 `repeat: -1`（无限循环会破坏捕获引擎）
+- 入场用 `gsap.from()`，退场用 `gsap.to()`
+
+### 预制模板
+
+在 `assets/hyperframes-templates/` 下提供 4 个 VI 化模板：
+
+| 模板 | 时长 | 用途 |
+|------|------|------|
+| `logo-reveal/` | 5s | 品牌 Logo 揭示 |
+| `product-reveal/` | 5s | 产品展示 |
+| `brand-sizzle/` | 12s | 品牌宣传片（多场景） |
+| `terminal-typing/` | 8s | 终端打字效果 |
+
+使用方式：
+```bash
+cp -r assets/hyperframes-templates/logo-reveal/ my-video/
+# 编辑 my-video/index.html
+npx hyperframes render --output my-video.mp4
 ```
 
 ## 技术细节（排错用）
 
-### Playwright recordVideo 的坑
+### HyperFrames 渲染模型
 
-- 帧率固定 25fps，无法直接录 60fps（Chromium headless 的 compositor 上限）
-- 从 context 创建就开始录，必须用 `trim` 裁掉前面的加载时间
-- 默认 webm 格式，需要 ffmpeg 转 H.264 MP4 才能通用播放
+- **确定性 seek-and-capture**：每帧独立定位（frame / fps = seconds），不依赖实时播放
+- **并行捕获**：多 worker 同时捕获不同帧段，渲染速度随 CPU 核心数线性提升
+- **Chrome beginFrame API**：原子级帧捕获，无竞态条件
+- **字体处理**：自动从 Google Fonts 拉取映射字体；自定义字体需 @font-face 声明
 
-`render-video.js` 已处理以上问题。
+### 常见问题
 
-### ffmpeg minterpolate 参数
-
-当前配置：`minterpolate=fps=60:mi_mode=mci:mc_mode=aobmc:me_mode=bidir:vsbmc=1`
-
-- `mi_mode=mci` — motion compensation interpolation（运动补偿）
-- `mc_mode=aobmc` — adaptive overlapped block motion compensation
-- `me_mode=bidir` — 双向运动估计
-- `vsbmc=1` — 可变 size block motion compensation
-
-对 CSS **transform 动画**（translate/scale/rotate）效果好。
-对**纯 fade** 可能产生轻微 ghosting——如果用户嫌弃，退化为简单帧复制：
-
-```bash
-ffmpeg -i input.mp4 -r 60 -c:v libx264 ... output.mp4
-```
+| 问题 | 解决 |
+|------|------|
+| 字体 fallback 警告 | 使用 HyperFrames 映射字体名（如 `Inter` 代替 `Helvetica`）或添加 @font-face |
+| 动画不播放 | 确认 timeline 注册到 `window.__timelines` 且 `paused: true` |
+| 渲染超时 | 检查是否有 `repeat: -1` 或无限循环 |
+| 黑帧 | 确认 `data-duration` 覆盖了所有动画时间 |
 
 ### GIF palette 为何要两阶段
 

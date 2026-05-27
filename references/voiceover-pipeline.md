@@ -344,7 +344,8 @@ NarrationStage 自动检测 `window.__recording`：
 
 | 脚本 | 输入 | 输出 |
 |---|---|---|
-| `scripts/tts-doubao.mjs` | 单段文本 | 单个 mp3 + 实测时长 |
+| `scripts/tts-minimax.mjs` | 单段文本 | 单个 mp3 + 实测时长（默认） |
+| `scripts/tts-doubao.mjs` | 单段文本 | 单个 mp3 + 实测时长（备选） |
 | `scripts/narrate-pipeline.mjs` | 解说稿 .md | voiceover.mp3 + timeline.json |
 | `scripts/mix-voiceover.sh` | 视频 + voiceover.mp3 [+ BGM] | 带音频的 MP4 |
 | `scripts/render-narration.sh` | 解说 HTML + timeline.json | 最终 MP4（录制 + 混音一条龙）|
@@ -354,13 +355,20 @@ NarrationStage 自动检测 `window.__recording`：
 skill 根目录下 `.env`（已 gitignore）：
 
 ```
+# TTS 提供商：minimax（默认）| doubao
+TTS_PROVIDER=minimax
+
+# MiniMax（依赖 mmx CLI：npm install -g mmx-cli && mmx auth login）
+MMX_TTS_VOICE_ID=female-shaonv-jingpin
+
+# 豆包（备选，需火山引擎 openspeech API key）
 DOUBAO_TTS_API_KEY=<your_key>
 DOUBAO_TTS_VOICE_ID=<your_clone_voice_id>
 DOUBAO_TTS_CLUSTER=volcano_icl
 DOUBAO_TTS_ENDPOINT=https://openspeech.bytedance.com/api/v1/tts
 ```
 
-参考 `.env.example` 模板。豆包语音克隆音色 ID 在火山引擎控制台获取。
+参考 `.env.example` 模板。`narrate-pipeline.mjs` 根据 `TTS_PROVIDER` 自动选择对应脚本。
 
 ## 标准工作流（10 步）
 
@@ -379,7 +387,7 @@ DOUBAO_TTS_ENDPOINT=https://openspeech.bytedance.com/api/v1/tts
 
 | 问题 | 解决 |
 |---|---|
-| TTS API 报错 | 检查 .env 里 `DOUBAO_TTS_API_KEY` 是否正确 |
+| TTS API 报错 | MiniMax: 检查 `mmx auth` 登录状态；豆包: 检查 .env 里 API key |
 | 某段音频明显比脚本长/短 | 该段文本里有奇怪标点或 emoji，TTS 解析异常 → 改稿 |
 | cue absoluteTime 不准 | 段内子段拼接时 ffmpeg 有问题 → 检查 mp3 编码一致性 |
 | 录视频结果有黑屏 | render-video.js 没拿到 `window.__ready` 信号 → 检查 NarrationStage 是否正常挂载 |

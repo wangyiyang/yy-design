@@ -40,7 +40,10 @@ import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const SKILL_ROOT = path.resolve(__dirname, '..');
-const TTS_SCRIPT = path.join(__dirname, 'tts-doubao.mjs');
+const TTS_PROVIDER = process.env.TTS_PROVIDER || 'minimax';
+const TTS_SCRIPT = path.join(__dirname,
+  TTS_PROVIDER === 'doubao' ? 'tts-doubao.mjs' : 'tts-minimax.mjs'
+);
 
 function parseArgs(argv) {
   const args = {};

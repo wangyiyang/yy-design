@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; background: #FAFAFA; }
+
+      [data-composition-id="main"] {
+        width: 1920px; height: 1080px;
+        display: flex; align-items: center; justify-content: center;
+        position: relative;
+      }
+
+      .product-frame {
+        width: 800px; height: 600px; background: #0A0A0A;
+        border-radius: 12px; display: flex; align-items: center;
+        justify-content: center; position: relative;
+        box-shadow: 0 40px 80px rgba(10,10,10,0.15);
+      }
+      .product-placeholder {
+        font-size: 160px; color: #FAFAFA; opacity: 0.3;
+        font-family: "JetBrains Mono", monospace;
+      }
+      .title-block {
+        position: absolute; right: 120px; top: 50%;
+        transform: translateY(-50%); text-align: right;
+      }
+      .title-block h1 {
+        font-family: "Noto Serif SC", serif; font-size: 64px;
+        font-weight: 600; color: #0A0A0A; line-height: 1.2;
+      }
+      .title-block .subtitle {
+        font-family: "JetBrains Mono", monospace; font-size: 22px;
+        color: rgba(10,10,10,0.5); margin-top: 16px; letter-spacing: 0.03em;
+      }
+      .accent-line {
+        position: absolute; bottom: 0; left: 0; width: 100%; height: 3px;
+        background: linear-gradient(90deg, transparent, #C0392B, transparent);
+      }
+      .seal {
+        position: absolute; bottom: 60px; right: 80px;
+        width: 48px; height: 48px; border: 2px solid #C0392B;
+        border-radius: 4px; display: flex; align-items: center;
+        justify-content: center; font-family: "Noto Serif SC", serif;
+        font-size: 24px; color: #C0392B; font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main"
+         data-start="0" data-duration="5"
+         data-width="1920" data-height="1080">
+
+      <div id="product" class="product-frame">
+        <span class="product-placeholder">&lt;/&gt;</span>
+      </div>
+
+      <div id="title-block" class="title-block">
+        <h1 id="title">产品名称</h1>
+        <p id="subtitle" class="subtitle">Product Tagline Here</p>
+      </div>
+
+      <div id="accent" class="accent-line"></div>
+      <div id="seal" class="seal">翊</div>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      tl.from("#product", {
+        scale: 0.85, opacity: 0, y: 30, duration: 1, ease: "expo.out"
+      }, 0.2);
+      tl.from("#accent", {
+        scaleX: 0, duration: 1.2, ease: "expo.out", transformOrigin: "left"
+      }, 0.3);
+      tl.from("#title", {
+        opacity: 0, x: 40, duration: 0.8, ease: "power3.out"
+      }, 0.9);
+      tl.from("#subtitle", {
+        opacity: 0, x: 30, duration: 0.6, ease: "power2.out"
+      }, 1.2);
+      tl.from("#seal", {
+        opacity: 0, scale: 0, rotation: -90, duration: 0.5, ease: "back.out(2)"
+      }, 3);
+      tl.to("#product, #title-block, #seal", {
+        opacity: 0, y: -20, duration: 0.7, ease: "power2.in"
+      }, 4.3);
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

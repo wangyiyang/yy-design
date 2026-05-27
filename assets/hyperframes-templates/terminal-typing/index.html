@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; background: #0A0A0A; }
+
+      [data-composition-id="main"] {
+        width: 1920px; height: 1080px;
+        display: flex; align-items: center; justify-content: center;
+      }
+
+      .terminal {
+        width: 1400px; background: #111; border-radius: 12px;
+        border: 1px solid rgba(250,250,250,0.08);
+        box-shadow: 0 40px 100px rgba(0,0,0,0.6);
+      }
+      .terminal-bar {
+        height: 40px; background: #1a1a1a;
+        display: flex; align-items: center; padding: 0 16px; gap: 8px;
+      }
+      .dot { width: 12px; height: 12px; border-radius: 50%; }
+      .dot-r { background: #C0392B; }
+      .dot-y { background: #B8860B; }
+      .dot-g { background: #27ae60; }
+      .terminal-body {
+        padding: 32px 40px; font-family: "JetBrains Mono", monospace;
+        font-size: 22px; line-height: 1.8; color: #FAFAFA; min-height: 380px;
+      }
+      .line { opacity: 0; }
+      .prompt { color: #C0392B; }
+      .comment { color: rgba(250,250,250,0.35); }
+      .string { color: #B8860B; }
+      .keyword { color: #C0392B; }
+      .cursor {
+        display: inline-block; width: 10px; height: 24px;
+        background: #C0392B; vertical-align: middle; margin-left: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main"
+         data-start="0" data-duration="8"
+         data-width="1920" data-height="1080">
+
+      <div id="terminal" class="terminal">
+        <div class="terminal-bar">
+          <span class="dot dot-r"></span>
+          <span class="dot dot-y"></span>
+          <span class="dot dot-g"></span>
+        </div>
+        <div class="terminal-body">
+          <div class="line" id="l1"><span class="prompt">$</span> npx skills add wangyiyang/yy-design</div>
+          <div class="line" id="l2"><span class="comment"># ✓ skill installed</span></div>
+          <div class="line" id="l3">&nbsp;</div>
+          <div class="line" id="l4"><span class="prompt">$</span> <span class="string">"做一段产品发布动画，导出 MP4"</span></div>
+          <div class="line" id="l5"><span class="comment"># → 选定方向: 东方极简</span></div>
+          <div class="line" id="l6"><span class="comment"># → 生成 HTML 动画...</span></div>
+          <div class="line" id="l7"><span class="comment"># → 渲染 1920×1080 30fps...</span></div>
+          <div class="line" id="l8"><span class="keyword">✓</span> output.mp4 <span class="comment">(2.1 MB, 15s)</span></div>
+          <span class="cursor" id="cursor"></span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      tl.from("#terminal", {
+        opacity: 0, y: 40, scale: 0.95, duration: 0.8, ease: "expo.out"
+      }, 0.2);
+
+      const lines = ["#l1","#l2","#l3","#l4","#l5","#l6","#l7","#l8"];
+      lines.forEach((sel, i) => {
+        tl.to(sel, { opacity: 1, duration: 0.05 }, 1 + i * 0.7);
+      });
+
+      tl.to("#cursor", {
+        opacity: 0, duration: 0.4, ease: "steps(1)", yoyo: true, repeat: 8
+      }, 1);
+
+      tl.to("#terminal", {
+        opacity: 0, y: -20, duration: 0.6, ease: "power2.in"
+      }, 7.2);
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

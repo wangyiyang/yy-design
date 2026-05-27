@@ -1,11 +1,11 @@
 ---
 name: yy-design
-description: YY Design · AUTHOR（Ian）个人品牌设计系统 —— 基于 HTML 的原生设计能力，为技术领导者打造高级感品牌视觉。HTML是工具不是媒介，根据任务embody不同专家（UX设计师/动画师/幻灯片设计师/原型师），避免web design tropes。品牌DNA：简单+神秘，墨黑配朱红，类奢牌质感。触发词：做原型、设计Demo、交互原型、HTML演示、动画Demo、设计变体、hi-fi设计、UI mockup、prototype、设计探索、做个HTML页面、做个可视化、app原型、iOS原型、移动应用mockup、导出MP4、导出GIF、60fps视频、设计风格、设计方向、设计哲学、配色方案、视觉风格、推荐风格、选个风格、做个好看的、评审、好不好看、review this design、带解说的动画、解说视频、概念解释视频、长视频科普、配音动画、voiceover、narration、TTS+动画、5分钟讲清楚什么是XX、生成封面、生成头像、生成banner、品牌资产、VI设计。**主干能力**：Junior Designer工作流（先给假设+reasoning+placeholder再迭代）、反AI slop清单、React+Babel最佳实践、Tweaks变体切换、Speaker Notes演示、Starter Components（幻灯片外壳/变体画布/动画引擎/设备边框/解说Stage）、App原型专属守则（默认从Wikimedia/Met/Unsplash取真图、每台iPhone包AppPhone状态管理器可交互、交付前跑Playwright点击测试）、Playwright验证、HTML动画→MP4/GIF视频导出（25fps基础 + 60fps插帧 + palette优化GIF + 6首场景化BGM + 自动fade）、**带解说的长动画pipeline**（豆包TTS生人声+实测时长生timeline.json+NarrationStage驱动画面+ducking混音→交付HTML实播+发布MP4双形态；铁律：整片是一个连续的运动叙事，禁PowerPoint切换）、**品牌资产生成**（头像/Banner/OG/公众号封面/文章配图，基于VI规范自动生成prompt）。**需求模糊时的Fallback**：设计方向顾问模式——从5流派×20种设计哲学（Pentagram信息建筑/Field.io运动诗学/Kenya Hara东方极简/Sagmeister实验先锋等）推荐3个差异化方向，展示24个预制showcase（8场景×3风格），并行生成3个视觉Demo让用户选。**交付后可选**：专家级5维度评审（哲学一致性/视觉层级/细节执行/功能性/创新性各打10分+修复清单）。
-author: AUTHOR (Ian)
-brand: BRAND_NAME
-website: https://OWNER.cc
-github: OWNER
-email: OWNER.kk@gmail.com
+description: YY Design · 王翊仰（Ian/YY）个人品牌设计系统 —— 基于 HTML 的原生设计能力，为技术领导者打造高级感品牌视觉。HTML是工具不是媒介，根据任务embody不同专家（UX设计师/动画师/幻灯片设计师/原型师），避免web design tropes。品牌DNA：简单+神秘，墨黑配朱红，类奢牌质感。触发词：做原型、设计Demo、交互原型、HTML演示、动画Demo、设计变体、hi-fi设计、UI mockup、prototype、设计探索、做个HTML页面、做个可视化、app原型、iOS原型、移动应用mockup、导出MP4、导出GIF、60fps视频、设计风格、设计方向、设计哲学、配色方案、视觉风格、推荐风格、选个风格、做个好看的、评审、好不好看、review this design、带解说的动画、解说视频、概念解释视频、长视频科普、配音动画、voiceover、narration、TTS+动画、5分钟讲清楚什么是XX、生成封面、生成头像、生成banner、品牌资产、VI设计。**主干能力**：Junior Designer工作流（先给假设+reasoning+placeholder再迭代）、反AI slop清单、React+Babel最佳实践、Tweaks变体切换、Speaker Notes演示、Starter Components（幻灯片外壳/变体画布/动画引擎/设备边框/解说Stage）、App原型专属守则（默认从Wikimedia/Met/Unsplash取真图、每台iPhone包AppPhone状态管理器可交互、交付前跑Playwright点击测试）、Playwright验证、HTML动画→MP4/GIF视频导出（HyperFrames确定性渲染 + 30/60fps直出 + palette优化GIF + 6首场景化BGM + 自动fade + 4个VI化模板）、**带解说的长动画pipeline**（MiniMax/豆包TTS生人声+实测时长生timeline.json+NarrationStage驱动画面+ducking混音→交付HTML实播+发布MP4双形态；铁律：整片是一个连续的运动叙事，禁PowerPoint切换）、**品牌资产生成**（头像/Banner/OG/公众号封面/文章配图，基于VI规范自动生成prompt）。**需求模糊时的Fallback**：设计方向顾问模式——从5流派×20种设计哲学（Pentagram信息建筑/Field.io运动诗学/Kenya Hara东方极简/Sagmeister实验先锋等）推荐3个差异化方向，展示24个预制showcase（8场景×3风格），并行生成3个视觉Demo让用户选。**交付后可选**：专家级5维度评审（哲学一致性/视觉层级/细节执行/功能性/创新性各打10分+修复清单）。
+author: 王翊仰 (Ian/YY)
+brand: 翊行代码
+website: https://wangyiyang.cc
+github: wangyiyang
+email: wangyiyang.kk@gmail.com
 ---
 
 # YY Design · YY-Design
@@ -640,8 +640,8 @@ Screen 组件接 callback props（`onEnter`、`onClose`、`onTabChange`、`onOpe
    🛑 **检查点4：交付前自己肉眼过一遍浏览器**。AI写的代码经常有interaction bug。
 8. **总结**：极简，只说caveats和next steps。
 9. **（默认）导出视频 · 必带 SFX + BGM**：动画 HTML 的**默认交付形态是带音频的 MP4**，不是纯画面。无声版本等于半成品——用户潜意识感知「画在动但没声音响应」，廉价感的根源就在这里。流水线：
-   - `scripts/render-video.js` 录 25fps 纯画面 MP4（只是中间产物，**不是成品**）
-   - `scripts/convert-formats.sh` 派生 60fps MP4 + palette 优化 GIF（视平台需要）
+   - `npx hyperframes render` 渲染 MP4（30/60fps 可选，**不是成品**直到加了音频）
+   - `scripts/convert-formats.sh` 派生 GIF（60fps 源自动跳过帧复制）
    - `scripts/add-music.sh` 加 BGM（6 首场景化配乐：tech/ad/educational/tutorial + alt 变体）
    - SFX 按 `references/audio-design-rules.md` 设计 cue 清单（时间轴 + 音效类型），用 `assets/sfx/<category>/*.mp3` 37 个预制资源，按配方 A/B/C/D 选密度（发布 hero ≈ 6个/10s，工具演示 ≈ 0-2个/10s）
    - **BGM + SFX 双轨制必须同时做**——只做 BGM 是 ⅓ 分完成度；SFX 占高频、BGM 占低频，频段隔离见 audio-design-rules.md 的 ffmpeg 模板
@@ -650,7 +650,7 @@ Screen 组件接 callback props（`onEnter`、`onClose`、`onTabChange`、`onOpe
    - 参考完整流程见 `references/video-export.md` + `references/audio-design-rules.md` + `references/sfx-library.md`。
 9.5. **（带解说时走这条）解说驱动动画 · L2 长概念视频**：用户要做「5-20 分钟解释一个概念」、「带配音的教程」、「长篇科普视频」时——**不要先做动画再配音**，那会让画面节奏跟解说对不上。改走 `references/voiceover-pipeline.md` 的解说驱动流程：
    - **写解说稿**（markdown，`## scene-id` 分段，`[[cue:xx]]` 标关键句）→ 解说稿是源代码，节奏靠它撑
-   - **跑 narrate-pipeline.mjs**（豆包 TTS · `.env` 配置音色）→ 输出 voiceover.mp3 + timeline.json（cue 时间是真实测出来的，不是按字符估算）
+   - **跑 narrate-pipeline.mjs**（默认 MiniMax TTS，可通过 `TTS_PROVIDER=doubao` 切换 · `.env` 配置音色）→ 输出 voiceover.mp3 + timeline.json（cue 时间是真实测出来的，不是按字符估算）
    - **🛑 设计动画前先答铁律 3 条**：(1) hero element 是什么？(2) 它跨 7 段怎么 morph？(3) 任意一帧画面有运动吗？答不上不要写代码
    - **写动画 HTML**：用 `assets/narration_stage.jsx`（NarrationStage + Scene + Cue + useNarration + useSceneFade + **Subtitles**）→ hero 直接放 `<NarrationStage>` 子级，不进 Scene；`<Subtitles />` 默认带（B 站风·深墨字+白光晕，按 timeline.chunks 自动切 ≤12 字短行不跨句号）
    - **录最终 MP4**：`bash scripts/render-narration.sh demo.html --timeline=_narration/timeline.json [--bgm-mood=educational]` → 自动录无声 MP4 + 混入人声 + 可选 BGM
@@ -747,14 +747,14 @@ Screen 组件接 callback props（`onEnter`、`onClose`、`onTabChange`、`onOpe
 | 导出可编辑 PPTX（html2pptx 4 条硬约束） | `references/editable-pptx.md` + `scripts/html2pptx.js` |
 | 做动画/motion（**先读 pitfalls**）| `references/animation-pitfalls.md` + `references/animations.md` + `assets/animations.jsx` |
 | **动画的正向设计语法**（Anthropic 级叙事/运动/节奏/表达风格）| `references/animation-best-practices.md`（5 段叙事+Expo easing+运动语言 8 条+3 种场景配方）|
-| **带解说的长动画 / 长概念视频**（5-20 分钟带配音、解说驱动画面、TTS 实测时长生成 timeline）| `references/voiceover-pipeline.md`（铁律：连续运动叙事、禁 PowerPoint 切换）+ `assets/narration_stage.jsx` + `scripts/{tts-doubao,narrate-pipeline}.mjs` + `scripts/{mix-voiceover,render-narration}.sh` |
+| **带解说的长动画 / 长概念视频**（5-20 分钟带配音、解说驱动画面、TTS 实测时长生成 timeline）| `references/voiceover-pipeline.md`（铁律：连续运动叙事、禁 PowerPoint 切换）+ `assets/narration_stage.jsx` + `scripts/{tts-minimax,tts-doubao,narrate-pipeline}.mjs` + `scripts/{mix-voiceover,render-narration}.sh` |
 | 做Tweaks实时调参 | `references/tweaks-system.md` |
 | 没有design context怎么办 | `references/design-context.md`（薄 fallback） 或 `references/design-styles.md`（厚 fallback：20 种设计哲学详细库） |
 | **需求模糊要推荐风格方向** | `references/design-styles.md`（20 种风格+AI prompt 模板）+ `assets/showcases/INDEX.md`（24 个预制样例） |
 | **按输出类型查场景模板**（封面/PPT/信息图） | `references/scene-templates.md` |
 | 输出完后验证 | `references/verification.md` + `scripts/verify.py` |
 | **设计评审/打分**（设计完成后可选） | `references/critique-guide.md`（5 维度评分+常见问题清单） |
-| **动画导出MP4/GIF/加BGM** | `references/video-export.md` + `scripts/render-video.js` + `scripts/convert-formats.sh` + `scripts/add-music.sh` |
+| **动画导出MP4/GIF/加BGM** | `references/video-export.md` + `scripts/render-hyperframes.mjs` + `scripts/convert-formats.sh` + `scripts/add-music.sh` + `assets/hyperframes-templates/` |
 | **动画加音效SFX**（苹果发布会级，37个预制） | `references/sfx-library.md` + `assets/sfx/<category>/*.mp3` |
 | **动画音频配置规则**（SFX+BGM双轨制、黄金配比、ffmpeg模板、场景配方） | `references/audio-design-rules.md` |
 | **Apple画廊展示风格**（3D倾斜+悬浮卡片+缓慢pan+焦点切换，v9实战同款） | `references/apple-gallery-showcase.md` |
