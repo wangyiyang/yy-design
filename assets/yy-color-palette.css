@@ -1,0 +1,89 @@
+/**
+ * YY Design · 色彩系统
+ * 
+ * 品牌 DNA：简单 + 神秘
+ * 核心比例：黑 70% · 白 25% · 红 4% · 金 1%
+ */
+
+:root {
+  /* ========== 主色 ========== */
+  
+  /* 墨黑 Sumi Black — 主体、文字、剪影 */
+  --yy-sumi: #0A0A0A;
+  --yy-sumi-rgb: 10, 10, 10;
+  
+  /* 宣白 Washi White — 背景、留白（70%+ 画面） */
+  --yy-washi: #FAFAFA;
+  --yy-washi-rgb: 250, 250, 250;
+  
+  /* 朱红 Vermillion — 印章、点睛、CTA、单点高亮 */
+  --yy-vermillion: #C0392B;
+  --yy-vermillion-rgb: 192, 57, 43;
+  
+  /* 哑金 Gold Leaf — 极少量奢华点缀 */
+  --yy-gold: #B8860B;
+  --yy-gold-rgb: 184, 134, 11;
+
+  /* ========== 扩展色阶 ========== */
+  
+  /* 墨黑阶 */
+  --yy-sumi-50: #F5F5F5;
+  --yy-sumi-100: #E0E0E0;
+  --yy-sumi-200: #BDBDBD;
+  --yy-sumi-300: #9E9E9E;
+  --yy-sumi-400: #757575;
+  --yy-sumi-500: #616161;
+  --yy-sumi-600: #424242;
+  --yy-sumi-700: #303030;
+  --yy-sumi-800: #1A1A1A;
+  --yy-sumi-900: #0A0A0A;
+  
+  /* 朱红阶 */
+  --yy-vermillion-50: #FCEAE8;
+  --yy-vermillion-100: #F5C6C2;
+  --yy-vermillion-200: #EB9F99;
+  --yy-vermillion-300: #E17870;
+  --yy-vermillion-400: #D85B52;
+  --yy-vermillion-500: #C0392B;
+  --yy-vermillion-600: #B03327;
+  --yy-vermillion-700: #9A2C22;
+  --yy-vermillion-800: #84251D;
+  --yy-vermillion-900: #6E1E18;
+
+  /* ========== 功能色 ========== */
+  
+  --yy-text-primary: var(--yy-sumi);
+  --yy-text-secondary: var(--yy-sumi-600);
+  --yy-text-muted: var(--yy-sumi-400);
+  
+  --yy-bg-primary: var(--yy-washi);
+  --yy-bg-secondary: var(--yy-sumi-50);
+  --yy-bg-dark: var(--yy-sumi-900);
+  
+  --yy-border-light: var(--yy-sumi-100);
+  --yy-border-medium: var(--yy-sumi-200);
+  
+  --yy-accent: var(--yy-vermillion);
+  --yy-accent-hover: var(--yy-vermillion-600);
+  --yy-luxury: var(--yy-gold);
+}
+
+/* ========== 使用示例 ========== */
+
+.yy-theme-light {
+  background-color: var(--yy-washi);
+  color: var(--yy-sumi);
+}
+
+.yy-theme-dark {
+  background-color: var(--yy-sumi);
+  color: var(--yy-washi);
+}
+
+.yy-accent-dot {
+  /* 永远只用 1 个朱红点 */
+  background-color: var(--yy-vermillion);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
