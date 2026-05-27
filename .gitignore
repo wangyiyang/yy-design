@@ -29,8 +29,5 @@ demos/_frames_*.png
 demos/_verify.js
 demos/_verify.mjs
 
-# HyperFrames render test output
-_output/
-
 # Test files
 test-prompts.json
