@@ -33,7 +33,7 @@ npx skills add wangyiyang/yy-design
 
 > 📖 **Note for English readers**: this skill is built by a Chinese-speaking developer. The skill's agent prompts (`SKILL.md`, `references/*.md`) are in Chinese but the agent is bilingual — works fine with English tasks. The demos below are the English parallel versions; the Chinese ones are in the default-named files (see the [Chinese README](README.zh.md)).
 >
-> 📖 **致中文读者**：这个 skill 由YY（@AlchainHust）开发。一句话能让 agent 在 3–30 分钟内交付**产品发布动画 / 可点击 App 原型 / 可编辑 PPT / 印刷级信息图**。完整中文介绍见 [README.zh.md](README.zh.md)。
+> 📖 **致中文读者**：这个 skill 由王翊仰（Ian/YY · [@wangyiyang](https://github.com/wangyiyang)）开发。一句话能让 agent 在 3–30 分钟内交付**产品发布动画 / 可点击 App 原型 / 可编辑 PPT / 印刷级信息图**。完整中文介绍见 [README.zh.md](README.zh.md)。
 
 </div>
 
@@ -292,18 +292,10 @@ Under the [MIT License](LICENSE) you are free to **use, modify, and distribute**
 
 ---
 
-## Connect · OWNER_NAME (YY)
+## Connect · 王翊仰 (Ian/YY)
 
-OWNER_NAME is an AI-native coder, independent developer, and AI content creator. Notable work: Cat Fill Light (App Store Top 1 in Paid category), *A Book on DeepSeek*, Nüwa.skill (GitHub 12k+ stars). Combined 300k+ followers across platforms.
-
-| Platform | Handle | Link |
-|---|---|---|
-| X / Twitter | @AlchainHust | https://x.com/AlchainHust |
-| WeChat Official Account | YY | Search "YY" in WeChat |
-| Bilibili | YY | https://space.bilibili.com/14097567 |
-| YouTube | YY | https://www.youtube.com/@Alchain |
-| Xiaohongshu | YY | https://www.xiaohongshu.com/user/profile/5abc6f17e8ac2b109179dfdf |
-| Official Site | OWNER_WEBSITE | https://www.OWNER_WEBSITE/ |
-| Developer Hub | bookai.top | https://bookai.top |
-
-For collaborations or sponsored content, DM on any of the above.
+| Channel | Link |
+|---|---|
+| GitHub | https://github.com/wangyiyang |
+| Email | wangyiyang.kk@gmail.com |
+| Site | https://wangyiyang.cc |

@@ -34,7 +34,7 @@
   --muted:      #86868B;   /* 次级文字 */
   --dim:        #C7C7CC;
   --hairline:   #E5E5EA;   /* 卡片1px边框 */
-  --accent:     #D97757;   /* 赤陶橙 — Claude brand */
+  --accent:     #C0392B;   /* 赤陶橙 — Claude brand */
   --accent-deep:#B85D3D;
 
   --serif-cn: "Noto Serif SC", "Songti SC", Georgia, serif;

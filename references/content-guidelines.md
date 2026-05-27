@@ -137,7 +137,7 @@ Asymmetric、不同大小的cards、有的带image有的只有文字、有的跨
 
 ```markdown
 我的设计系统：
-- 色彩：#1A1A1A主体 + #F0EEE6背景 + #D97757 accent（来自你的品牌）
+- 色彩：#1A1A1A主体 + #F0EEE6背景 + #C0392B accent（来自你的品牌）
 - 字型：Instrument Serif做display + Geist Sans做body
 - 节奏：section title用full-bleed彩色背景 + 白字；普通section用白背景
 - 图像：hero用full-bleed照片，feature section用placeholder等你提供

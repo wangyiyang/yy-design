@@ -2,7 +2,7 @@
 
 > 从 yy-design hero 动画 v9（25 秒，8 场景）里提炼出的**一种可复用的视觉编排结构**。
 > 不是动画制作流水线，是**什么场景下这种编排是"对的"**。
-> 实战参考：[demos/hero-animation-v9.mp4](../demos/hero-animation-v9.mp4) · [https://www.OWNER_WEBSITE/yy-design-hero/](https://www.OWNER_WEBSITE/yy-design-hero/)
+> 实战参考：[demos/hero-animation-v9.mp4](../demos/hero-animation-v9.mp4) · [https://www.wangyiyang.cc/yy-design-hero/](https://www.wangyiyang.cc/yy-design-hero/)
 
 ## 一句话先行
 
@@ -165,7 +165,7 @@ const panY = Math.cos(panT * 0.09) * 120 - panT * 5;
 ```css
 --bg: #F7F4EE;        /* 暖纸 */
 --ink: #1D1D1F;       /* 几乎黑 */
---accent: #D97757;    /* 赤陶橙 */
+--accent: #C0392B;    /* 赤陶橙 */
 --hairline: #E4DED2;  /* 暖线条 */
 ```
 
@@ -247,4 +247,4 @@ Gallery 阶段左上角有个 `DESIGN_STUDIO` 小标识，16% opacity 色值，1
 - 动画导出流水线：[references/video-export.md](video-export.md)
 - 音频配置（BGM + SFX 双轨）：[references/audio-design-rules.md](audio-design-rules.md)
 - Apple 画廊风格的横向参考：[references/apple-gallery-showcase.md](apple-gallery-showcase.md)
-- 源 HTML（v6 + 音频集成版）：`www.OWNER_WEBSITE/yy-design-hero/index.html`
+- 源 HTML（v6 + 音频集成版）：`www.wangyiyang.cc/yy-design-hero/index.html`

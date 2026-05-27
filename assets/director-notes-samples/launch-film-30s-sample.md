@@ -1106,7 +1106,7 @@ destination card 设计：**Apple Books 风的 EPUB reader frame**（强调「�
    ║ ● ● ●                              ║  ← window chrome (Apple Books)
    ╠════════════════════════════════════╣
    ║                                    ║
-   ║  OWNER · ORANGE BOOK              ║  ← Mono Bold 10px Terracotta 0.22em
+   ║  YY · ORANGE BOOK                 ║  ← Mono Bold 10px Terracotta 0.22em
    ║                                    ║
    ║                                    ║
    ║  On                                ║  ← Newsreader 700, 30px, Ivory paper
@@ -1131,7 +1131,7 @@ destination card 设计：**Apple Books 风的 EPUB reader frame**（强调「�
 
 **[TYPE]**
 
-- OWNER · ORANGE BOOK：Mono Bold 10px, Terracotta, 0.22em
+- YY · ORANGE BOOK：Mono Bold 10px, Terracotta, 0.22em
 - book title (On Markdown)：Newsreader 700, 30px, Ivory (on Charred bg), line-height 1.0
 - terracotta rule：40×2px
 - author italic：Noto Serif SC italic 14px, Smoke

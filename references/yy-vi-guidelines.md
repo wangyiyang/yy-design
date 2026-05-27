@@ -1,6 +1,6 @@
 # YY Design · VI 完整规范 v1.0
 
-> 本页是「BRAND_NAME」品牌的 VI v1.0 唯一规范来源。
+> 本页是「翊行代码」品牌的 VI v1.0 唯一规范来源。
 
 ---
 
@@ -19,14 +19,14 @@
 
 **四重意义的合一**：
 
-- **音** · BRAND_CHAR行（yì háng）≈ 一行（yī háng） → BRAND_NAME ↔ 一行代码 · 1 line code（程序员母语的双关，最直击的一层）
-- **形** · BRAND_CHAR行 ≈ 一笔（one stroke） →「BRAND_CHAR」字用一笔连续墨迹写就，对应英文 tagline Code, one stroke at a time.
+- **音** · 翊行（yì háng）≈ 一行（yī háng） → 翊行代码 ↔ 一行代码 · 1 line code（程序员母语的双关，最直击的一层）
+- **形** · 翊行 ≈ 一笔（one stroke） →「翊」字用一笔连续墨迹写就，对应英文 tagline Code, one stroke at a time.
 - **码** · `{ }` → 几乎所有编程语言的代码块边界
-- **气** · 简单 + 神秘 → 表面只是「花括号 + 一个字」，内里藏着「BRAND_NAME」的视觉密码
+- **气** · 简单 + 神秘 → 表面只是「花括号 + 一个字」，内里藏着「翊行代码」的视觉密码
 
-`{BRAND_CHAR}` 是「BRAND_NAME」四字的视觉浓缩：花括号 = 代码，BRAND_CHAR = 行（你的一笔 / 你的一行）。一个 logo 同时讲完了「你是谁 + 你做什么 + 你怎么做」，且不可复制——抄走没有「BRAND_CHAR」这个名字就立刻穿帮。
+`{翊}` 是「翊行代码」四字的视觉浓缩：花括号 = 代码，翊 = 行（你的一笔 / 你的一行）。一个 logo 同时讲完了「你是谁 + 你做什么 + 你怎么做」，且不可复制——抄走没有「翊」这个名字就立刻穿帮。
 
-短描述（用于 bio / OG 副标 / GitHub README 首行）：BRAND_NAME · 1 line code 或 BRAND_NAME（yì háng dài mǎ）≈ 一行代码。不起 tagline 作用，只用在需要重透品牌名内含义的场景。
+短描述（用于 bio / OG 副标 / GitHub README 首行）：翊行代码 · 1 line code 或 翊行代码（yì háng dài mǎ）≈ 一行代码。不起 tagline 作用，只用在需要重透品牌名内含义的场景。
 
 ### 1.6 字体系统（中文 / 英文 / 代码）
 
@@ -142,11 +142,11 @@ A single drop of ink blooming on paper, captured at the moment of contact, sumi 
 ## 9. 待办 & 迭代
 
 - [x] 跑 Moodboard 找感觉
-- [x] 锁定主视觉概念：`{BRAND_CHAR}` 笔意花括号
+- [x] 锁定主视觉概念：`{翊}` 笔意花括号
 - [x] 选定主视觉版本：行书 + 毛笔括号 + 右括号内朱红点
 - [x] 锁定配色 / 字体 / Tagline / 文章模板（VI v1.0）
-- [x] 锁定个人 handle：GitHub OWNER / 域名 OWNER.cc / Gmail OWNERkk@gmail.com
-- [ ] 在 GitHub、X、知乎、小红书、即刻、B 站等平台核查并统一占用 OWNER
+- [x] 锁定个人 handle：GitHub wangyiyang / 域名 wangyiyang.cc / Gmail wangyiyang.kk@gmail.com
+- [ ] 在 GitHub、X、知乎、小红书、即刻、B 站等平台核查并统一占用 wangyiyang
 - [ ] 矢量化 Logo（拿 §10.3 brief 找设计师，预算 ¥2k–5k）
 - [ ] 出首批资产四件套：Avatar / Banner / OG / 公众号封面
 - [ ] 公众号 + 博客按 §11、§12 改造套用 VI
