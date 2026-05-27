@@ -22,14 +22,14 @@ VERMILLION="#C0392B"
 GOLD="#B8860B"
 
 # 品牌信息
-BRAND_NAME="翊行代码"
+BRAND_NAME="BRAND_NAME"
 BRAND_EN="YY Design"
 TAGLINE="Code, one stroke at a time."
-AUTHOR="王翊仰"
+AUTHOR="AUTHOR"
 AUTHOR_EN="Ian"
-WEBSITE="wangyiyang.cc"
-GITHUB="wangyiyang"
-EMAIL="wangyiyang.kk@gmail.com"
+WEBSITE="OWNER.cc"
+GITHUB="OWNER"
+EMAIL="OWNER.kk@gmail.com"
 
 # ========== 帮助 ==========
 usage() {
@@ -115,7 +115,7 @@ generate_prompt() {
                     echo "Square composition, a single enso (zen circle) in the center, incomplete with one gap, sumi ink on washi paper, single vermillion dot at the gap, $STYLE_SUFFIX --negative-prompt: $NEGATIVE"
                     ;;
                 minimal)
-                    echo "Square composition, the character {翊} rendered in elegant brush calligraphy, centered, with a single vermillion dot inside the right brace, on pure white background, $STYLE_SUFFIX --negative-prompt: $NEGATIVE"
+                    echo "Square composition, the character {BRAND_CHAR} rendered in elegant brush calligraphy, centered, with a single vermillion dot inside the right brace, on pure white background, $STYLE_SUFFIX --negative-prompt: $NEGATIVE"
                     ;;
             esac
             ;;
@@ -135,7 +135,7 @@ generate_prompt() {
         logo)
             case "$variant" in
                 primary)
-                    echo "Minimalist logo design, the Chinese character 翊 inside elegant curly braces { }, rendered in bold sumi ink brush calligraphy, single vermillion dot accent, on pure white background, clean vector style, $STYLE_SUFFIX --negative-prompt: $NEGATIVE"
+                    echo "Minimalist logo design, the Chinese character BRAND_CHAR inside elegant curly braces { }, rendered in bold sumi ink brush calligraphy, single vermillion dot accent, on pure white background, clean vector style, $STYLE_SUFFIX --negative-prompt: $NEGATIVE"
                     ;;
                 minimal)
                     echo "Ultra-minimalist logo, a single enso circle with a small gap, inside the gap a tiny vermillion dot, black ink on white, $STYLE_SUFFIX --negative-prompt: $NEGATIVE"
