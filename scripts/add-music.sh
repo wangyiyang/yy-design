@@ -3,6 +3,7 @@
 #
 # Usage:
 #   bash add-music.sh <input.mp4> [--mood=<name>] [--music=<path>] [--out=<path>]
+#   bash add-music.sh <input.mp4> --generate [--mood=<name>]
 #
 # Mood library (in ../assets/, matching bgm-<mood>.mp3):
 #   tech              — Apple Silicon / product keynote vibe, minimal synth+piano (default)
@@ -15,6 +16,7 @@
 # Flags (all optional):
 #   --mood=<name>     pick a preset from the library (default: tech)
 #   --music=<path>    override with your own audio file (wins over --mood)
+#   --generate        generate fresh BGM via MiniMax AI (requires mmx CLI)
 #   --out=<path>      output path (default: <input-basename>-bgm.mp4)
 #
 # Legacy positional form still works: bash add-music.sh in.mp4 music.mp3 out.mp4
@@ -23,12 +25,6 @@
 #   - Music is trimmed to match video duration
 #   - 0.3s fade in, 1.0s fade out (avoids hard cuts)
 #   - Video stream copied (no re-encode), audio AAC 192k
-#
-# Examples:
-#   bash add-music.sh my.mp4                              # default: tech mood
-#   bash add-music.sh my.mp4 --mood=ad                    # switch mood
-#   bash add-music.sh my.mp4 --mood=educational --out=final.mp4
-#   bash add-music.sh my.mp4 --music=~/Downloads/song.mp3 # bring your own
 #
 set -e
 
@@ -40,14 +36,16 @@ INPUT=""
 MOOD="tech"
 CUSTOM_MUSIC=""
 OUTPUT=""
+GENERATE=0
 POSITIONAL=()
 
 for arg in "$@"; do
   case "$arg" in
-    --mood=*)  MOOD="${arg#*=}" ;;
-    --music=*) CUSTOM_MUSIC="${arg#*=}" ;;
-    --out=*)   OUTPUT="${arg#*=}" ;;
-    *)         POSITIONAL+=("$arg") ;;
+    --mood=*)    MOOD="${arg#*=}" ;;
+    --music=*)   CUSTOM_MUSIC="${arg#*=}" ;;
+    --out=*)     OUTPUT="${arg#*=}" ;;
+    --generate)  GENERATE=1 ;;
+    *)           POSITIONAL+=("$arg") ;;
   esac
 done
 
@@ -62,10 +60,16 @@ if [ -z "$INPUT" ] || [ ! -f "$INPUT" ]; then
   exit 1
 fi
 
-# ── Resolve music source: --music wins, else --mood ─────────────────
+# ── Resolve music source: --music > --generate > --mood ───────────────
 if [ -n "$CUSTOM_MUSIC" ]; then
   MUSIC="$CUSTOM_MUSIC"
   SOURCE_LABEL="custom: $MUSIC"
+elif [ "$GENERATE" = "1" ]; then
+  echo "▸ Generating BGM via MiniMax AI (mood: $MOOD)..."
+  GEN_OUT="$INPUT_DIR/.generated-bgm-${MOOD}-$$.mp3"
+  node "$SCRIPT_DIR/generate-bgm.mjs" --mood "$MOOD" --out "$GEN_OUT" >&2
+  MUSIC="$GEN_OUT"
+  SOURCE_LABEL="generated: $MOOD"
 else
   MUSIC="$ASSETS_DIR/bgm-${MOOD}.mp3"
   SOURCE_LABEL="mood: $MOOD"
@@ -106,3 +110,6 @@ ffmpeg -y -loglevel error \
 
 SIZE=$(du -h "$OUTPUT" | cut -f1)
 echo "✓ Done: $OUTPUT ($SIZE)"
+
+# Cleanup generated temp BGM
+[ "$GENERATE" = "1" ] && [ -f "$GEN_OUT" ] && rm -f "$GEN_OUT"
