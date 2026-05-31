@@ -41,3 +41,4 @@ test-prompts.json
 # Skills lock file
 skills-lock.json
 .ant-colony/
+.worktrees/
