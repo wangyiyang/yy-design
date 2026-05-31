@@ -42,9 +42,9 @@
   --yy-text-caption: 12px;
 
   /* ========== 行高 ========== */
-  --yy-leading-tight: 1.25;
-  --yy-leading-normal: 1.6;
-  --yy-leading-relaxed: 1.8;
+  --yy-leading-tight: 1.3;     /* VI: 标题行高 1.3 */
+  --yy-leading-normal: 1.7;    /* VI: 正文行高 1.7 */
+  --yy-leading-relaxed: 1.7;   /* VI: 同正文 */
 
   /* ========== 字重 ========== */
   --yy-weight-regular: 400;
