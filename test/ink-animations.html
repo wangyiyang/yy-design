@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../assets/yy-color-palette.css">
+  <link rel="stylesheet" href="../assets/yy-typography.css">
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <style>
+    body { background: var(--yy-washi); padding: 40px; font-family: var(--yy-font-sans); }
+    .demo-section { margin-bottom: 48px; padding: 24px; border: 1px solid var(--yy-sumi-100); border-radius: 8px; }
+    .demo-label { font-family: var(--yy-font-mono); font-size: 12px; color: var(--yy-sumi-400); margin-bottom: 16px; }
+  </style>
+</head>
+<body>
+  <h1 class="yy-h1">水墨动效测试</h1>
+  <p class="yy-body">5 种品牌动效依次播放，观察 console 无报错。</p>
+
+  <div id="root"></div>
+
+  <script type="text/babel" src="../assets/animations.jsx"></script>
+  <script type="text/babel" src="../assets/animations-ink.jsx"></script>
+  <script type="text/babel">
+    const { Stage } = window.Animations;
+    const { InkReveal, BrushStroke, SealStamp, PaperFade, EnsoDraw } = window.InkAnimations;
+
+    function Demo() {
+      return (
+        <Stage duration={8} playing={true}>
+          <div style={{ padding: 20 }}>
+
+            <div className="demo-section">
+              <div className="demo-label">InkReveal — 墨晕开 (delay 0s)</div>
+              <InkReveal delay={0}>
+                <h2 className="yy-h2">墨滴入水</h2>
+              </InkReveal>
+            </div>
+
+            <div className="demo-section">
+              <div className="demo-label">BrushStroke — 笔迹绘制 (delay 1.5s)</div>
+              <BrushStroke delay={1.5}>
+                <p className="yy-body">一笔落成，不多不少</p>
+              </BrushStroke>
+            </div>
+
+            <div className="demo-section">
+              <div className="demo-label">SealStamp — 印章落下 (delay 3s)</div>
+              <SealStamp delay={3}>
+                <div style={{
+                  width: 48, height: 48, background: '#C0392B',
+                  color: '#FAFAFA', display: 'flex', alignItems: 'center',
+                  justifyContent: 'center', borderRadius: 4,
+                  fontFamily: 'var(--yy-font-serif)', fontSize: 20
+                }}>翊</div>
+              </SealStamp>
+            </div>
+
+            <div className="demo-section">
+              <div className="demo-label">PaperFade — 宣纸翻页 (delay 4.5s)</div>
+              <PaperFade delay={4.5}>
+                <p className="yy-body">像宣纸翻页般淡入淡出</p>
+              </PaperFade>
+            </div>
+
+            <div className="demo-section">
+              <div className="demo-label">EnsoDraw — 禅圆一笔 (delay 0s)</div>
+              <EnsoDraw size={100} strokeWidth={4} delay={6} />
+            </div>
+
+          </div>
+        </Stage>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<Demo />);
+  </script>
+</body>
+</html>
