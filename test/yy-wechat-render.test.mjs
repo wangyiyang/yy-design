@@ -97,3 +97,40 @@ describe('svg-render', () => {
     assert.strictEqual(countSvgNodes(svg), 3);
   });
 });
+
+import { postProcess } from '../scripts/lib/post-process.mjs';
+
+describe('post-process', () => {
+  it('replaces external links with vermillion spans', () => {
+    const html = '<p><a href="https://example.com" data-external="true">Example</a></p>';
+    const result = postProcess(html);
+    assert(!result.includes('<a'));
+    assert(result.includes('color:#C0392B'));
+    assert(result.includes('Example'));
+  });
+
+  it('adds references section for external links', () => {
+    const html = '<p><a href="https://a.com" data-external="true">A</a></p>';
+    const result = postProcess(html);
+    assert(result.includes('引用'));
+    assert(result.includes('https://a.com'));
+  });
+
+  it('adds footer and author card by default', () => {
+    const result = postProcess('<p>text</p>');
+    assert(result.includes('翊行代码'));
+    assert(result.includes('wangyiyang.cc'));
+  });
+
+  it('wraps in root section', () => {
+    const result = postProcess('<p>text</p>');
+    assert(result.startsWith('<section'));
+    assert(result.includes('max-width:680px'));
+  });
+
+  it('respects --no-footer and --no-author-card', () => {
+    const result = postProcess('<p>text</p>', { includeFooter: false, includeAuthorCard: false });
+    assert(!result.includes('翊行代码'));
+    assert(!result.includes('wangyiyang.cc'));
+  });
+});
