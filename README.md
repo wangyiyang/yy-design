@@ -18,9 +18,11 @@
 
 ## What is this?
 
-YY Design is a [skill](https://skills.sh) — a structured prompt package that any compatible AI coding agent can install. Once installed, you describe what you want in plain language, and the agent delivers finished design work: animations, prototypes, slide decks, infographics, posters.
+YY Design is a brush — one line of prompt, one stroke of design. Install it, speak your intent, and watch your idea form like ink on paper: deliberate, restrained, unmistakably yours.
 
-The output isn't "AI-generated looking." It's opinionated, typographically precise, and brand-aware.
+It is a [skill](https://skills.sh) — a structured prompt package that any compatible AI coding agent can install. Once installed, you describe what you want in plain language, and the agent delivers finished design work: animations, prototypes, slide decks, infographics, posters.
+
+The output isn't "AI-generated looking." It's opinionated, typographically precise, and brand-aware — ink black and vermillion red, 80% negative space, one brushstroke at a time.
 
 ```bash
 npx skills add wangyiyang/yy-design

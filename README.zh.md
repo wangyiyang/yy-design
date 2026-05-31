@@ -18,9 +18,11 @@
 
 ## 这是什么
 
-YY Design 是一个 [skill](https://skills.sh)——装进 AI 编程 agent 里的结构化 prompt 包。装好之后，你用自然语言描述需求，agent 直接交付成品：动画视频、可点击原型、演讲 PPT、信息图、海报。
+YY Design 是一支笔——一句话，一笔设计。装上它，说出你的意图，然后看着你的想法像墨落在纸上一样成形：克制、安静、 unmistakably yours。
 
-产出不是「AI 味」的东西。它有设计立场、有排印细节、能读懂你的品牌。
+它是一个 [skill](https://skills.sh)——装进 AI 编程 agent 里的结构化 prompt 包。装好之后，你用自然语言描述需求，agent 直接交付成品：水墨动画、可点击原型、书法排版幻灯片、信息图、海报。
+
+产出不是「AI 味」的东西。它有设计立场、有排印细节、能读懂你的品牌——墨黑配朱红，80% 留白，一笔落成。
 
 ```bash
 npx skills add wangyiyang/yy-design
