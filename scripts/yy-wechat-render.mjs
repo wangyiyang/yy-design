@@ -96,9 +96,14 @@ import { postProcess } from './lib/post-process.mjs';
 import { lint } from './lib/linter.mjs';
 import { generateCopyHtml } from './lib/copy-html.mjs';
 import { renderMermaidToSvg } from './lib/svg-render.mjs';
+import { extractFormulas, restoreFormulas } from './lib/katex-render.mjs';
 
 export async function renderMarkdown(mdPath, options = {}) {
-  const md = fs.readFileSync(mdPath, 'utf8');
+  let md = fs.readFileSync(mdPath, 'utf8');
+
+  // 预处理：提取数学公式
+  const { processed, formulas } = extractFormulas(md);
+  md = processed;
 
   process.stderr.write('▸ 解析 Markdown...\n');
   const renderer = createVIRenderer();
@@ -117,11 +122,17 @@ export async function renderMarkdown(mdPath, options = {}) {
     for (const { full, graph } of mermaidMatches) {
       const svg = await renderMermaidToSvg(graph);
       if (svg) {
-        html = html.replace(full, `<div style="margin:1em 0;">${svg}</div>`);
+        html = html.replace(full, `<div style="margin:1em 0;text-align:center;">${svg}</div>`);
       } else {
         html = html.replace(full, `<section style="margin:1em 0;background:${VI.colors.sumiBlack};color:${VI.colors.washiWhite};padding:1em;border-radius:6px;"><code style="font-family:${VI.fonts.mono};">[mermaid 渲染失败]</code></section>`);
       }
     }
+  }
+
+  // 后处理：恢复数学公式
+  if (formulas.length > 0) {
+    process.stderr.write(`▸ 渲染 ${formulas.length} 个数学公式...\n`);
+    html = await restoreFormulas(html, formulas);
   }
 
   process.stderr.write('▸ 后处理（外链、文末签、作者卡）...\n');

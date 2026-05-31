@@ -1,7 +1,8 @@
 import { Renderer } from 'marked';
 import { VI } from '../yy-wechat-render.mjs';
+import { highlightToInline } from './highlight-inline.mjs';
 
-export function createVIRenderer() {
+export function createVIRenderer(options = {}) {
   const renderer = new Renderer();
 
   renderer.paragraph = ({ tokens }) => {
@@ -30,8 +31,11 @@ export function createVIRenderer() {
     if (lang === 'mermaid') {
       return `<div class="mermaid-raw" data-graph="${escapeHtml(text)}"></div>`;
     }
-    const escaped = escapeHtml(text);
-    return `<section style="margin:1em 0;background:${VI.colors.sumiBlack};color:${VI.colors.washiWhite};font-family:${VI.fonts.mono};font-size:${VI.sizes.small};line-height:${VI.lineHeights.code};padding:1em;border-radius:6px;overflow-x:auto;"><code>${escaped}</code></section>`;
+    // 使用 highlight.js 语法高亮（内联样式）
+    const highlighted = options.highlight !== false 
+      ? highlightToInline(text, lang)
+      : escapeHtml(text);
+    return `<section style="margin:1em 0;background:${VI.colors.sumiBlack};color:${VI.colors.washiWhite};font-family:${VI.fonts.mono};font-size:${VI.sizes.small};line-height:${VI.lineHeights.code};padding:1em;border-radius:6px;overflow-x:auto;"><code>${highlighted}</code></section>`;
   };
 
   renderer.codespan = ({ text }) => {

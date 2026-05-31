@@ -8,7 +8,9 @@
   },
   "dependencies": {
     "dompurify": "^3.4.7",
+    "highlight.js": "^11.11.1",
     "jsdom": "^29.1.1",
+    "katex": "^0.17.0",
     "marked": "^15.0.0",
     "mermaid": "^10.9.6",
     "playwright": "^1.60.0"
