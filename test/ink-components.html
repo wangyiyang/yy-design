@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../assets/yy-color-palette.css">
+  <link rel="stylesheet" href="../assets/yy-typography.css">
+  <link rel="stylesheet" href="../assets/components/ink-components.css">
+  <style>
+    body { background: var(--yy-washi); padding: 40px; }
+    .sample { margin-bottom: 48px; }
+    .sample-label {
+      font-family: var(--yy-font-mono);
+      font-size: 12px;
+      color: var(--yy-sumi-400);
+      margin-bottom: 8px;
+      letter-spacing: 0.05em;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="yy-h1">水墨排版组件测试</h1>
+
+  <div class="sample">
+    <div class="sample-label">.yy-ink-block</div>
+    <div class="yy-ink-block">
+      <p>这是 InkBlock — 墨黑底色 + 朱红左竖线，模拟传统批注符号。<br>
+      留白即呼吸，克制即力量。</p>
+    </div>
+  </div>
+
+  <div class="sample">
+    <div class="sample-label">.yy-seal-mark</div>
+    <div style="display: flex; align-items: center; gap: 16px;">
+      <span class="yy-seal-mark"></span>
+      <span class="yy-body">SealMark — 朱红印章，{翊} 品牌标识</span>
+    </div>
+  </div>
+
+  <div class="sample">
+    <div class="sample-label">.yy-breathing-space</div>
+    <div class="yy-breathing-space">
+      <p class="yy-body">BreathingSpace — 70%+ 留白</p>
+      <p class="yy-caption">画面有呼吸，信息才有力量</p>
+    </div>
+  </div>
+
+  <div class="sample">
+    <div class="sample-label">.yy-vermillion-dot</div>
+    <p class="yy-body">
+      正文中的朱红单点<span class="yy-vermillion-dot"></span>
+      <span class="yy-caption" style="margin-left: 8px;">永远只用 1 个</span>
+    </p>
+  </div>
+
+  <div class="sample">
+    <div class="sample-label">.yy-sumi-divider</div>
+    <p class="yy-body">墨分五色渐变淡出</p>
+    <hr class="yy-sumi-divider">
+    <p class="yy-body">分隔线另一侧</p>
+  </div>
+
+</body>
+</html>

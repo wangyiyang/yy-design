@@ -1,0 +1,81 @@
+/**
+ * 翊行代码 · 水墨排版组件
+ * 
+ * 纯 CSS class，不依赖任何框架。
+ * 用法：在 HTML 中 <link> 引入，然后给元素加 class。
+ * 
+ * 依赖：yy-color-palette.css（CSS 变量）
+ */
+
+/* ── InkBlock · 墨块引用 ─────────────────────────── */
+.yy-ink-block {
+  background-color: var(--yy-sumi-50, #F5F5F5);
+  border-left: 3px solid var(--yy-vermillion, #C0392B);
+  padding: 16px 24px;
+  margin: 24px 0;
+  color: var(--yy-sumi, #0A0A0A);
+  font-family: var(--yy-font-sans, 'Noto Sans SC', sans-serif);
+  font-size: var(--yy-text-body, 16px);
+  line-height: 1.7;
+}
+
+.yy-ink-block p {
+  margin: 0;
+}
+
+/* ── SealMark · 印章标记 ─────────────────────────── */
+.yy-seal-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background-color: var(--yy-vermillion, #C0392B);
+  color: var(--yy-washi, #FAFAFA);
+  font-family: var(--yy-font-serif, 'Noto Serif SC', serif);
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+}
+
+.yy-seal-mark::after {
+  content: '{翊}';
+}
+
+/* ── BreathingSpace · 留白容器 ───────────────────── */
+.yy-breathing-space {
+  padding: 15vh 10vw;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--yy-washi, #FAFAFA);
+}
+
+/* ── VermillionDot · 朱红单点 ────────────────────── */
+.yy-vermillion-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: var(--yy-vermillion, #C0392B);
+  border-radius: 50%;
+  margin-left: 4px;
+  vertical-align: middle;
+}
+
+/* ── SumiDivider · 墨分五色分隔线 ────────────────── */
+.yy-sumi-divider {
+  border: none;
+  height: 1px;
+  margin: 32px 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--yy-sumi-200, #BDBDBD) 20%,
+    var(--yy-sumi, #0A0A0A) 50%,
+    var(--yy-sumi-200, #BDBDBD) 80%,
+    transparent 100%
+  );
+}
