@@ -175,3 +175,21 @@ describe('linter', () => {
     assert.strictEqual(warnings.length, 0);
   });
 });
+
+import { generateCopyHtml } from '../scripts/lib/copy-html.mjs';
+
+describe('copy-html', () => {
+  it('generates valid HTML with hidden source container', () => {
+    const html = generateCopyHtml('<p>test</p>');
+    assert(html.includes('<!DOCTYPE html>'));
+    assert(html.includes('id="source"'));
+    assert(html.includes('position:fixed;left:-9999px'));
+    assert(html.includes('document.execCommand(\'copy\')'));
+    assert(html.includes('<p>test</p>'));
+  });
+
+  it('includes fallback message for failed copy', () => {
+    const html = generateCopyHtml('<p>test</p>');
+    assert(html.includes('自动复制失败'));
+  });
+});
