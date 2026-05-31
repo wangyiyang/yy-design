@@ -7,8 +7,10 @@
     "test": "node --test test/*.test.mjs"
   },
   "dependencies": {
+    "dompurify": "^3.4.7",
+    "jsdom": "^29.1.1",
     "marked": "^15.0.0",
-    "mermaid": "^11.0.0",
-    "jsdom": "^26.0.0"
+    "mermaid": "^10.9.6",
+    "playwright": "^1.60.0"
   }
 }

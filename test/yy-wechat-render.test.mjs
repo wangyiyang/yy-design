@@ -77,3 +77,23 @@ describe('vi-renderer', () => {
     assert(html.includes('data-external="true"'));
   });
 });
+
+import { renderMermaidToSvg, countSvgNodes } from '../scripts/lib/svg-render.mjs';
+
+describe('svg-render', () => {
+  it('renders simple flowchart to SVG', async () => {
+    const svg = await renderMermaidToSvg('graph TD; A-->B;');
+    assert(svg);
+    assert(svg.startsWith('<svg'));
+  });
+
+  it('returns null for invalid mermaid', async () => {
+    const svg = await renderMermaidToSvg('invalid %% syntax');
+    assert.strictEqual(svg, null);
+  });
+
+  it('counts SVG nodes', () => {
+    const svg = '<svg><rect/><rect/><circle/></svg>';
+    assert.strictEqual(countSvgNodes(svg), 3);
+  });
+});
