@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>翊行代码 · {翊} · YY Design</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --sumi: #0A0A0A;
+    --washi: #FAFAFA;
+    --vermillion: #C0392B;
+    --gold: #B8860B;
+    --sumi-80: rgba(10,10,10,0.8);
+    --sumi-40: rgba(10,10,10,0.4);
+    --sumi-10: rgba(10,10,10,0.1);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    width: 100%; height: 100%;
+    background: var(--washi);
+    font-family: 'Noto Sans SC', 'Inter', sans-serif;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ============ Stage ============ */
+  .stage {
+    position: fixed;
+    top: 50%; left: 50%;
+    width: 1920px; height: 1080px;
+    transform: translate(-50%, -50%) scale(var(--scale, 1));
+    transform-origin: center center;
+    background: var(--washi);
+    overflow: hidden;
+  }
+
+  /* ============ Scene 1: 墨晕开 ============ */
+  .scene-ink {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0;
+    filter: blur(20px);
+    transform: scale(0.85);
+  }
+  .scene-ink.active {
+    animation: inkReveal 2.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .ink-dot {
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 40% 40%, var(--sumi-80) 0%, var(--sumi-40) 40%, transparent 70%);
+    position: relative;
+  }
+  .ink-dot::after {
+    content: '';
+    position: absolute;
+    width: 8px; height: 8px;
+    background: var(--vermillion);
+    border-radius: 50%;
+    bottom: 30px; right: 45px;
+    opacity: 0;
+  }
+  .scene-ink.active .ink-dot::after {
+    animation: vermillionAppear 0.6s ease-out 1.8s forwards;
+  }
+
+  @keyframes inkReveal {
+    to { opacity: 1; filter: blur(0); transform: scale(1); }
+  }
+  @keyframes vermillionAppear {
+    to { opacity: 1; }
+  }
+
+  /* ============ Scene 2: 笔迹 ============ */
+  .scene-brush {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    opacity: 0;
+  }
+  .scene-brush.active {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  .brush-line {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 72px;
+    font-weight: 600;
+    color: var(--sumi);
+    letter-spacing: 0.15em;
+    line-height: 1.4;
+    clip-path: inset(0 100% 0 0);
+    white-space: nowrap;
+  }
+  .scene-brush.active .brush-line:nth-child(1) {
+    animation: brushStroke 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+  }
+  .scene-brush.active .brush-line:nth-child(2) {
+    animation: brushStroke 1.2s cubic-bezier(0.16, 1, 0.3, 1) 1.0s forwards;
+  }
+  .brush-line.sub {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 0.3em;
+    color: var(--sumi-40);
+    margin-top: 24px;
+    text-transform: uppercase;
+  }
+  .scene-brush.active .brush-line.sub {
+    animation: brushStroke 1s cubic-bezier(0.16, 1, 0.3, 1) 1.8s forwards;
+  }
+
+  @keyframes brushStroke {
+    to { clip-path: inset(0 0 0 0); }
+  }
+  @keyframes fadeIn {
+    to { opacity: 1; }
+  }
+
+  /* ============ Scene 3: 禅圆 ============ */
+  .scene-enso {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    opacity: 0;
+  }
+  .scene-enso.active {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  .enso-container {
+    position: relative;
+    width: 300px; height: 300px;
+  }
+  .enso-svg {
+    width: 100%; height: 100%;
+    transform: rotate(-90deg);
+  }
+  .enso-svg circle {
+    fill: none;
+    stroke: var(--sumi);
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-dasharray: 880;
+    stroke-dashoffset: 880;
+  }
+  .scene-enso.active .enso-svg circle {
+    animation: ensoDraw 2s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+  }
+  .enso-dot {
+    position: absolute;
+    width: 12px; height: 12px;
+    background: var(--vermillion);
+    border-radius: 50%;
+    top: 15px; left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  .scene-enso.active .enso-dot {
+    animation: vermillionAppear 0.4s ease-out 2.2s forwards;
+  }
+
+  .enso-caption {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 28px;
+    color: var(--sumi);
+    margin-top: 48px;
+    letter-spacing: 0.2em;
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  .scene-enso.active .enso-caption {
+    animation: fadeSlideUp 0.8s ease-out 2.4s forwards;
+  }
+
+  @keyframes ensoDraw {
+    to { stroke-dashoffset: 70; } /* 留约 8% 缺口 */
+  }
+  @keyframes fadeSlideUp {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ============ Scene 4: 品牌 ============ */
+  .scene-brand {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    opacity: 0;
+  }
+  .scene-brand.active {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  .brand-seal {
+    width: 120px; height: 120px;
+    background: var(--vermillion);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Noto Serif SC', serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--washi);
+    letter-spacing: 0.1em;
+    opacity: 0;
+    transform: scale(1.5);
+  }
+  .scene-brand.active .brand-seal {
+    animation: sealStamp 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s forwards;
+  }
+
+  .brand-name {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 48px;
+    font-weight: 600;
+    color: var(--sumi);
+    margin-top: 40px;
+    letter-spacing: 0.15em;
+    opacity: 0;
+  }
+  .scene-brand.active .brand-name {
+    animation: fadeSlideUp 0.8s ease-out 1.0s forwards;
+  }
+
+  .brand-tagline {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--sumi-40);
+    margin-top: 16px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    opacity: 0;
+  }
+  .scene-brand.active .brand-tagline {
+    animation: fadeSlideUp 0.8s ease-out 1.3s forwards;
+  }
+
+  .brand-url {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    color: var(--sumi-40);
+    margin-top: 48px;
+    letter-spacing: 0.1em;
+    opacity: 0;
+  }
+  .scene-brand.active .brand-url {
+    animation: fadeSlideUp 0.6s ease-out 1.6s forwards;
+  }
+
+  @keyframes sealStamp {
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  /* ============ Watermark ============ */
+  .watermark {
+    position: absolute;
+    bottom: 40px; right: 60px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--sumi-10);
+    letter-spacing: 0.15em;
+  }
+
+  /* ============ Breathing space decoration ============ */
+  .breathing-line {
+    position: absolute;
+    left: 10%; right: 10%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--sumi-10), transparent);
+  }
+  .breathing-line.top { top: 15%; }
+  .breathing-line.bottom { bottom: 15%; }
+
+</style>
+</head>
+<body>
+
+<div class="stage" id="stage">
+  <!-- Breathing lines -->
+  <div class="breathing-line top"></div>
+  <div class="breathing-line bottom"></div>
+
+  <!-- Scene 1: Ink reveals (0-2.5s) -->
+  <div class="scene-ink" id="sceneInk">
+    <div class="ink-dot"></div>
+  </div>
+
+  <!-- Scene 2: Brush stroke text (2.5-6s) -->
+  <div class="scene-brush" id="sceneBrush">
+    <div class="brush-line">翊行代码</div>
+    <div class="brush-line sub">YY Design</div>
+  </div>
+
+  <!-- Scene 3: Enso draws (6-9s) -->
+  <div class="scene-enso" id="sceneEnso">
+    <div class="enso-container">
+      <svg class="enso-svg" viewBox="0 0 300 300">
+        <circle cx="150" cy="150" r="140"/>
+      </svg>
+      <div class="enso-dot"></div>
+    </div>
+    <div class="enso-caption">一笔落成</div>
+  </div>
+
+  <!-- Scene 4: Brand seal (9-14s) -->
+  <div class="scene-brand" id="sceneBrand">
+    <div class="brand-seal">翊</div>
+    <div class="brand-name">翊行代码</div>
+    <div class="brand-tagline">Code, one stroke at a time.</div>
+    <div class="brand-url">wangyiyang.cc · github.com/wangyiyang</div>
+  </div>
+
+  <!-- Watermark -->
+  <div class="watermark">{翊} · YY Design</div>
+</div>
+
+<script>
+  // Auto-scale stage
+  function fitStage() {
+    const stage = document.getElementById('stage');
+    const scale = Math.min(window.innerWidth / 1920, window.innerHeight / 1080);
+    stage.style.setProperty('--scale', scale);
+  }
+  window.addEventListener('resize', fitStage);
+  fitStage();
+
+  // Scene sequencer
+  const scenes = ['sceneInk', 'sceneBrush', 'sceneEnso', 'sceneBrand'];
+  const timings = [0, 2500, 5500, 9000, 14000];
+
+  function playScene(index) {
+    if (index >= scenes.length) return;
+
+    // Hide previous
+    for (let i = 0; i < index; i++) {
+      const el = document.getElementById(scenes[i]);
+      if (el) el.style.display = 'none';
+    }
+
+    // Show current
+    const el = document.getElementById(scenes[index]);
+    if (el) {
+      el.style.display = 'flex';
+      // Force reflow
+      void el.offsetWidth;
+      el.classList.add('active');
+    }
+
+    // Schedule next
+    const duration = timings[index + 1] - timings[index];
+    setTimeout(() => playScene(index + 1), duration);
+  }
+
+  // Start
+  const urlParams = new URLSearchParams(window.location.search);
+  const startScene = parseInt(urlParams.get('scene') || '0', 10);
+  const skipDelay = urlParams.has('nodelay');
+
+  function jumpToScene(sceneIndex) {
+    scenes.forEach((id, i) => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      if (i < sceneIndex) {
+        el.style.display = 'none';
+      } else if (i === sceneIndex) {
+        el.style.display = 'flex';
+        el.style.opacity = '1';
+        void el.offsetWidth;
+        el.classList.add('active');
+      } else {
+        el.style.display = 'none';
+        el.classList.remove('active');
+      }
+    });
+  }
+
+  if (startScene > 0) {
+    jumpToScene(startScene);
+  } else {
+    setTimeout(() => playScene(0), skipDelay ? 0 : 300);
+  }
+
+  // Loop after 14s
+  setInterval(() => {
+    scenes.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) {
+        el.classList.remove('active');
+        el.style.display = 'flex';
+        el.style.opacity = '0';
+      }
+    });
+    setTimeout(() => playScene(0), 100);
+  }, 15000);
+</script>
+
+</body>
+</html>
