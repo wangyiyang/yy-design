@@ -139,6 +139,22 @@ Explicit bans on the visual clichés that make AI output obvious: purple gradien
 
 ---
 
+## WeChat Article Renderer
+
+`scripts/yy-wechat-render.mjs` — Renders Markdown to inline-styled HTML matching YY Design VI. Paste-ready for WeChat Official Account editor.
+
+```bash
+node scripts/yy-wechat-render.mjs --md article.md --out article.html
+```
+
+Outputs:
+- `article.html` — Inline-styled HTML (browser previewable)
+- `article-copy.html` — One-click copy button to paste rich text into WeChat editor
+
+Supports: headings/paragraphs/blockquotes/lists/code blocks/images/mermaid diagrams/iron-rule linting
+
+---
+
 ## Repository Layout
 
 ```

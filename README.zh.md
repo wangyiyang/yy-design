@@ -163,7 +163,7 @@ node scripts/yy-wechat-render.mjs --md article.md --out article.html
 
 输出：
 - `article.html` — 带内联样式的完整 HTML（可浏览器预览）
-- `article-copy.html` — 打开即自动复制富文本到剪贴板
+- `article-copy.html` — 一键复制按钮，粘贴到公众号编辑器
 
 支持：标题/正文/引用/列表/代码块/图片/mermaid 图表/铁律校验
 

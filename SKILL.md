@@ -1,6 +1,6 @@
 ---
 name: yy-design
-description: 翊行代码 · YY Design —— 一行 prompt，一笔设计。用 HTML 做高保真原型、水墨动画、书法排版幻灯片、品牌资产生成。品牌 DNA：简单+神秘，墨黑配朱红，留白即呼吸。根据任务 embody 不同专家（诗人设计师/动画师/书法排版师/原型师）。触发词：做原型、设计Demo、一笔、速写、钤印、水墨、留白、{翊}、交互原型、HTML演示、动画Demo、设计变体、hi-fi设计、UI mockup、prototype、设计探索、做个HTML页面、做个可视化、app原型、iOS原型、移动应用mockup、导出MP4、导出GIF、60fps视频、设计风格、设计方向、设计哲学、配色方案、视觉风格、推荐风格、选个风格、做个好看的、评审、好不好看、review this design、带解说的动画、解说视频、概念解释视频、长视频科普、配音动画、voiceover、narration、TTS+动画、5分钟讲清楚什么是XX、生成封面、生成头像、生成banner、品牌资产、VI设计。**主干能力**：Junior Designer工作流（先给假设+reasoning+placeholder再迭代）、反AI slop清单、React+Babel最佳实践、Tweaks变体切换、Speaker Notes演示、Starter Components（幻灯片外壳/变体画布/动画引擎/设备边框/解说Stage）、App原型专属守则（默认从Wikimedia/Met/Unsplash取真图、每台iPhone包AppPhone状态管理器可交互、交付前跑Playwright点击测试）、Playwright验证、HTML动画→MP4/GIF视频导出（HyperFrames确定性渲染 + 30/60fps直出 + palette优化GIF + 6首场景化BGM + 自动fade + 4个VI化模板）、**带解说的长动画pipeline**（MiniMax/豆包TTS生人声+实测时长生timeline.json+NarrationStage驱动画面+ducking混音→交付HTML实播+发布MP4双形态；铁律：整片是一个连续的运动叙事，禁PowerPoint切换）、**品牌资产生成**（头像/Banner/OG/公众号封面/文章配图，基于VI规范自动生成prompt）。**需求模糊时的Fallback**：设计方向顾问模式——从5流派×20种设计哲学（Pentagram信息建筑/Field.io运动诗学/Kenya Hara东方极简/Sagmeister实验先锋等）推荐3个差异化方向，展示24个预制showcase（8场景×3风格），并行生成3个视觉Demo让用户选。**交付后可选**：专家级5维度评审（哲学一致性/视觉层级/细节执行/功能性/创新性各打10分+修复清单）。
+description: 翊行代码 · YY Design —— 一行 prompt，一笔设计。用 HTML 做高保真原型、水墨动画、书法排版幻灯片、品牌资产生成。品牌 DNA：简单+神秘，墨黑配朱红，留白即呼吸。根据任务 embody 不同专家（诗人设计师/动画师/书法排版师/原型师）。触发词：做原型、设计Demo、一笔、速写、钤印、水墨、留白、{翊}、交互原型、HTML演示、动画Demo、设计变体、hi-fi设计、UI mockup、prototype、设计探索、做个HTML页面、做个可视化、app原型、iOS原型、移动应用mockup、导出MP4、导出GIF、60fps视频、设计风格、设计方向、设计哲学、配色方案、视觉风格、推荐风格、选个风格、做个好看的、评审、好不好看、review this design、带解说的动画、解说视频、概念解释视频、长视频科普、配音动画、voiceover、narration、TTS+动画、5分钟讲清楚什么是XX、生成封面、生成头像、生成banner、品牌资产、VI设计。**主干能力**：Junior Designer工作流（先给假设+reasoning+placeholder再迭代）、反AI slop清单、React+Babel最佳实践、Tweaks变体切换、Speaker Notes演示、Starter Components（幻灯片外壳/变体画布/动画引擎/设备边框/解说Stage）、App原型专属守则（默认从Wikimedia/Met/Unsplash取真图、每台iPhone包AppPhone状态管理器可交互、交付前跑Playwright点击测试）、Playwright验证、HTML动画→MP4/GIF视频导出（HyperFrames确定性渲染 + 30/60fps直出 + palette优化GIF + 6首场景化BGM + 自动fade + 4个VI化模板）、**带解说的长动画pipeline**（MiniMax/豆包TTS生人声+实测时长生timeline.json+NarrationStage驱动画面+ducking混音→交付HTML实播+发布MP4双形态；铁律：整片是一个连续的运动叙事，禁PowerPoint切换）、**品牌资产生成**（头像/Banner/OG/公众号封面/文章配图，基于VI规范自动生成prompt）、**公众号文章渲染**（Markdown→内联样式HTML，Mermaid/公式→PNG base64，代码高亮，铁律校验，一键复制到公众号编辑器）。**需求模糊时的Fallback**：设计方向顾问模式——从5流派×20种设计哲学（Pentagram信息建筑/Field.io运动诗学/Kenya Hara东方极简/Sagmeister实验先锋等）推荐3个差异化方向，展示24个预制showcase（8场景×3风格），并行生成3个视觉Demo让用户选。**交付后可选**：专家级5维度评审（哲学一致性/视觉层级/细节执行/功能性/创新性各打10分+修复清单）。
 author: 王翊仰 (Ian/YY)
 brand: 翊行代码
 website: https://wangyiyang.cc
@@ -18,7 +18,7 @@ email: wangyiyang.kk@gmail.com
 
 > **简单 + 神秘**
 >
-> 要的是忍者的「气」——克制、安静、若有若无——而不是手里剑、忍者头巾这些「形」。
+> 要的是墨家的「气」——克制、安静、若有若无——而不是手里剑、墨家头巾这些「形」。
 
 > **一笔落成**
 >
@@ -799,6 +799,7 @@ Screen 组件接 callback props（`onEnter`、`onClose`、`onTabChange`、`onOpe
 | ⭐ **Launch Film 工作流**（30 秒级品牌宣传片 / launch trailer / superbowl-tier ad / Apple 级别预期）：先写**万字 director's notes** 再做动画。含 5 大部分结构 + 触发判断 + 多视角并行策略 + 关键帧验证流程 | `法帖/launch-film-director-notes.md`（yy-md-html v2.0 launch film 蒸馏）|
 | ⭐ **多视角并行实验**（用户说「再做几个版本」「想看不同方向」/ 多平台分发 / 客户拍不了板）：6 位艺术家视角同时启动 subagent 各做独立版本 + 完成后 5 维度审校 | `法帖/multi-perspective-parallel-case-study.md`（yy-md-html v2.0 6 视角实战）|
 | **AI 品牌图片生成**（头像/Banner/OG/封面/海报，基于 VI 约束自动注入 prompt） | `scripts/generate-image.mjs`（7 个场景预设 + VI prompt 前后缀 + snap-to-8 尺寸安全）|
+| **公众号文章渲染**（Markdown→内联样式 HTML，Mermaid/公式→PNG base64，代码高亮，铁律校验，一键复制到公众号编辑器） | `scripts/yy-wechat-render.mjs` + `test/fixtures/demo-article.md`（示例）|
 
 ## 跨 Agent 环境适配说明
 
