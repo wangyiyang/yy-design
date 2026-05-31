@@ -48,7 +48,7 @@ const VI = {
   ],
 };
 
-const VI_PROMPT_PREFIX = `Style: ultra-minimal, luxury brand aesthetic, ink black (#0A0A0A) and off-white (#FAFAFA) with a single vermillion red (#C0392B) accent point. Abstract, restrained, zen-like negative space. No gradients, no neon, no busy patterns. Think Muji meets Aesop meets calligraphy.`;
+const VI_PROMPT_PREFIX = `Style: 翊行代码品牌视觉 — ultra-minimal, luxury brand aesthetic, ink black (#0A0A0A) and off-white (#FAFAFA) with a single vermillion red (#C0392B) accent point. Abstract, restrained, zen-like negative space. No gradients, no neon, no busy patterns. Think Muji meets Aesop meets calligraphy.`;
 
 const VI_PROMPT_SUFFIX = `Avoid: ninja imagery, shuriken, gradient backgrounds, neon colors, cyberpunk aesthetic, emoji, glitter, rainbow, busy oriental motifs mixed together.`;
 
@@ -106,6 +106,7 @@ function parseArgs(argv) {
     else if (a === '--seed') args.seed = argv[++i];
     else if (a === '--width') args.width = parseInt(argv[++i], 10);
     else if (a === '--height') args.height = parseInt(argv[++i], 10);
+    else if (a === '--auto') args.auto = true;
     else if (a === '--no-vi') args.noVi = true;
     else if (a === '--optimize') args.optimize = true;
     else if (a === '--help' || a === '-h') args.help = true;
@@ -118,6 +119,7 @@ function usage() {
 generate-image.mjs · MiniMax AI 品牌图片生成（VI 约束自动注入）
 
   --preset <name>     场景预设：avatar|banner|og|cover|wechat-cover|square|portrait
+  --auto              自动根据 subject 关键词推断 preset
   --prompt <text>     自定义图片描述（与 --preset 可叠加）
   --subject <text>    主题/内容描述（叠加到 preset prompt 上）
   --style vi          强制注入 VI 约束（默认行为）
@@ -161,6 +163,20 @@ function main() {
   const args = parseArgs(process.argv);
   if (args.help) usage();
   if (!args.out && !args.outDir) { console.error('错：缺 --out 或 --out-dir'); usage(); }
+
+  // Auto 模式：根据 subject 关键词推断 preset
+  if (args.auto && !args.preset) {
+    const subject = (args.subject || args.prompt || '').toLowerCase();
+    if (subject.includes('avatar') || subject.includes('头像')) args.preset = 'avatar';
+    else if (subject.includes('banner') || subject.includes('横幅') || subject.includes('封面')) args.preset = 'banner';
+    else if (subject.includes('og') || subject.includes('分享')) args.preset = 'og';
+    else if (subject.includes('wechat') || subject.includes('公众号')) args.preset = 'wechat-cover';
+    else if (subject.includes('square') || subject.includes('方')) args.preset = 'square';
+    else if (subject.includes('portrait') || subject.includes('竖')) args.preset = 'portrait';
+    else args.preset = 'square';
+    console.log(`[auto] detected preset: ${args.preset}`);
+  }
+
   if (!args.preset && !args.prompt) { console.error('错：缺 --preset 或 --prompt'); usage(); }
 
   const preset = args.preset ? PRESETS[args.preset] : null;
