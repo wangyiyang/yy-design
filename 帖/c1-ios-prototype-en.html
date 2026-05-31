@@ -634,7 +634,7 @@
 
 <div class="stage" id="stage">
 
-  <div class="watermark">DESIGN_STUDIO</div>
+  <div class="watermark">{翊} · YY Design</div>
 
   <!-- Terminal -->
   <div class="terminal" id="terminal">
@@ -645,7 +645,7 @@
       <div class="title">~/projects</div>
     </div>
     <div class="tty-body">
-      <div class="comment" id="comment" style="opacity:0">&gt; Type a sentence, get a clickable app.</div>
+      <div class="comment" id="comment" style="opacity:0">&gt; One line of prompt, one stroke of design.</div>
       <div style="margin-top:6px">
         <span class="prompt">$</span><span class="typed" id="typed"></span><span class="cursor" id="ttyCursor"></span>
       </div>
@@ -691,18 +691,18 @@
           <!-- 2. Home -->
           <div class="screen-view" id="view-home">
             <div class="home-screen">
-              <div class="kicker">POMODORO</div>
-              <div class="title">Next up.</div>
+              <div class="kicker">INK PRACTICE</div>
+              <div class="title">One stroke.</div>
               <div class="time-big">25<span class="sep">:</span>00</div>
-              <div class="sub">Write one section. Rest five minutes.</div>
-              <div class="cta">Focus now</div>
+              <div class="sub">One character. One breath. One line.</div>
+              <div class="cta">Begin practice</div>
             </div>
           </div>
 
           <!-- 3. Timer -->
           <div class="screen-view" id="view-timer">
             <div class="timer-screen">
-              <div class="phase">FOCUS · ROUND 1</div>
+              <div class="phase">PRACTICE · STROKE 1</div>
               <div class="ring-wrap">
                 <svg viewBox="0 0 320 320">
                   <circle class="bg-ring" cx="160" cy="160" r="140"/>
@@ -710,7 +710,7 @@
                 </svg>
                 <div class="ring-label">
                   <div class="rl-time" id="ringTime">24:12</div>
-                  <div class="rl-tag">REMAINING</div>
+                  <div class="rl-tag">BREATHING</div>
                 </div>
               </div>
               <div class="actions">
@@ -724,7 +724,7 @@
           <div class="screen-view" id="view-stats">
             <div class="stats-screen">
               <div class="stats-label">THIS WEEK</div>
-              <div class="stats-hero">23<span class="unit">rounds</span></div>
+              <div class="stats-hero">23<span class="unit">strokes</span></div>
               <div class="stats-sub">+5 from last week</div>
               <div class="chart" id="chart">
                 <div class="bar dim" style="height:30%"></div>
@@ -760,7 +760,7 @@
                 </div>
                 <div class="row">
                   <span class="k">Theme</span>
-                  <span class="v">CLAUDE MIST</span>
+                  <span class="v">INK WASH</span>
                 </div>
               </div>
             </div>
@@ -802,9 +802,9 @@
 
   <!-- Brand reveal -->
   <div class="brand-wall" id="brandWall">
-    <div class="brand-wordmark" id="brandWord">yy<span class="dot">·</span>design</div>
+    <div class="brand-wordmark" id="brandWord">翊行<span class="dot">·</span>代码</div>
     <div class="brand-underline" id="brandLine"></div>
-    <div class="brand-cn" id="brandCn">Say it. Get an app.</div>
+    <div class="brand-cn" id="brandCn">Code, one stroke at a time.</div>
   </div>
 
 </div>
@@ -858,7 +858,7 @@
   const brandCn = el('brandCn');
 
   // Typing text
-  const typeStr = 'make pomodoro app';
+  const typeStr = 'make ink-practice app';
   function setTyping(progress) {
     const n = Math.floor(typeStr.length * progress);
     typed.textContent = typeStr.slice(0, n);
