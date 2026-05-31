@@ -395,10 +395,15 @@ const NarrationStageLib = (() => {
    *   color     字色，默认深墨 #1a1a1a（适合浅纸白底）
    *   haloColor 光晕色，默认 rgba(245,241,232,0.9)（适合 #f5f1e8 底）
    *   maxLen    单行最大视觉长度，默认 13
+   *   style     'default' | 'ink'，ink = 翊行代码朱红字幕 + 宣纸光晕
    *
    * 深底场景：把 color 改成 '#fff'，haloColor 改成 'rgba(0,0,0,0.85)' 即可。
    */
-  function Subtitles({ bottom = 90, fontSize = 32, color = '#1a1a1a', haloColor = 'rgba(245,241,232,0.9)', maxLen = 13 } = {}) {
+  function Subtitles({ bottom = 90, fontSize = 32, color = '#1a1a1a', haloColor = 'rgba(245,241,232,0.9)', maxLen = 13, style = 'default' } = {}) {
+    // 翊行代码水墨叙事字幕样式
+    const isInk = style === 'ink';
+    const inkColor = isInk ? '#C0392B' : color;
+    const inkHalo = isInk ? 'rgba(250,250,250,0.95)' : haloColor;
     const { time, scene } = React.useContext(NarrationContext);
     if (!scene || !scene.chunks) return null;
     const active = scene.chunks.find(c => time >= c.absoluteStart && time < c.absoluteEnd);
@@ -424,7 +429,7 @@ const NarrationStageLib = (() => {
         fontFamily: '"PingFang SC", "Noto Sans SC", -apple-system, sans-serif',
         fontSize, fontWeight: 600, color,
         letterSpacing: '0.04em', lineHeight: 1.2, textAlign: 'center',
-        textShadow: `0 0 6px ${haloColor}, 0 0 12px ${haloColor}, 0 1px 2px rgba(255,255,255,0.5)`,
+        textShadow: `0 0 6px ${inkHalo}, 0 0 12px ${inkHalo}, 0 1px 2px rgba(255,255,255,0.5)`,
         opacity: lineProg, transform: `translateY(${(1 - lineProg) * 4}px)`,
       },
     }, activeLine));
