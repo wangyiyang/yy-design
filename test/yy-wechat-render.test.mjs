@@ -193,3 +193,29 @@ describe('copy-html', () => {
     assert(html.includes('自动复制失败'));
   });
 });
+
+import { renderMarkdown } from '../scripts/yy-wechat-render.mjs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+describe('integration', () => {
+  it('renders sample.md to inline-styled HTML', async () => {
+    const samplePath = path.join(__dirname, 'fixtures', 'sample.md');
+    const { html, warnings } = await renderMarkdown(samplePath);
+
+    assert(html.includes('color:#0A0A0A'));
+    assert(html.includes('▌'));
+    assert(html.includes('▸'));
+    assert(html.includes('background:#0A0A0A'));
+    assert(html.includes('翊行代码'));
+    assert(html.includes('引用'));
+  });
+
+  it('outputs warnings array', async () => {
+    const samplePath = path.join(__dirname, 'fixtures', 'sample.md');
+    const { warnings } = await renderMarkdown(samplePath);
+    assert(Array.isArray(warnings));
+  });
+});
