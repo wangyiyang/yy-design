@@ -147,9 +147,25 @@ yy-design/
 ├── README.md / README.zh.md # 英文/中文说明
 ├── assets/                  # 组件、设备框、BGM、预制样例
 ├── 法帖/              # 按任务类型的深入文档
-├── scripts/                 # 导出工具链（渲染、转码、配乐、TTS）
+├── scripts/                 # 导出工具链（渲染、转码、配乐、TTS、公众号渲染）
 └── 帖/                   # 能力演示 GIF/MP4/HTML
 ```
+
+---
+
+## 公众号文章渲染
+
+`scripts/yy-wechat-render.mjs` — 将 Markdown 渲染为符合翊行代码 VI 的内联样式 HTML，可直接粘贴到公众号编辑器。
+
+```bash
+node scripts/yy-wechat-render.mjs --md article.md --out article.html
+```
+
+输出：
+- `article.html` — 带内联样式的完整 HTML（可浏览器预览）
+- `article-copy.html` — 打开即自动复制富文本到剪贴板
+
+支持：标题/正文/引用/列表/代码块/图片/mermaid 图表/铁律校验
 
 ---
 

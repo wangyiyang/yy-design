@@ -37,7 +37,10 @@ export function lint(html) {
   const hexColors = html.match(/#[0-9A-Fa-f]{6}/g) || [];
   const rgbColors = html.match(/rgba?\([^)]+\)/g) || [];
   const allColors = [...new Set([...hexColors, ...rgbColors])];
-  const unknown = allColors.filter(c => !ALLOWED_COLORS.has(c.toUpperCase()));
+  const unknown = allColors.filter(c => {
+    const normalized = c.toLowerCase().replace(/\s+/g, '');
+    return !ALLOWED_COLORS.has(c) && !ALLOWED_COLORS.has(normalized);
+  });
   if (unknown.length > 0) {
     warnings.push(`❌ 发现未授权颜色：${unknown.slice(0, 3).join(', ')}`);
   }
