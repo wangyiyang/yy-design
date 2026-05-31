@@ -2,6 +2,8 @@
 
 <div align="center">
 
+<img src="assets/yixing-logo-master.svg" alt="{翊} · 翊行代码" width="120">
+
 # YY Design
 
 **一句话，让 agent 交付成品设计。**
@@ -169,3 +171,5 @@ yy-design/
 ## 作者
 
 **王翊仰 (Ian / YY)** · [@wangyiyang](https://github.com/wangyiyang) · [wangyiyang.cc](https://wangyiyang.cc) · wangyiyang.kk@gmail.com
+
+<img src="assets/yixing-wechat-qrcode.jpg" alt="微信公众号" width="120">

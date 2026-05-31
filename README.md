@@ -2,6 +2,8 @@
 
 <div align="center">
 
+<img src="assets/yixing-logo-master.svg" alt="{翊} · 翊行代码" width="120">
+
 # YY Design
 
 **An agent skill that turns one sentence into production-ready design artifacts.**
@@ -165,5 +167,7 @@ yy-design/
 ## Author
 
 **王翊仰 (Ian / YY)** · [@wangyiyang](https://github.com/wangyiyang) · [wangyiyang.cc](https://wangyiyang.cc) · wangyiyang.kk@gmail.com
+
+<img src="assets/yixing-wechat-qrcode.jpg" alt="微信公众号" width="120">
 </content>
 </invoke>

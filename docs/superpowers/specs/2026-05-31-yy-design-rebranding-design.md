@@ -255,7 +255,45 @@ Type 对照：
 | `留白` | 触发留白审计评审 |
 | `{翊}` | 生成品牌资产（头像/banner/og） |
 
-### 5.5 品牌一致性校验清单
+### 5.5 品牌资产引用规范
+
+#### Logo
+
+- **文件**：`assets/yixing-logo-master.svg`
+- **使用场景**：
+  - README.md / README.zh.md 顶部居中展示（首屏品牌识别）
+  - GitHub 仓库社交预览（Settings → Social preview）
+  - SKILL.md 产出中涉及品牌展示时，以 `<img>` 引用 SVG，不手画
+  - 动画产出末尾水印（`seal-stamp` 动效版 `{翊}`）
+- **安全间距**：Logo 四周留白 ≥ 字高 50%
+- **最小尺寸**：屏幕 ≥32px，印刷 ≥15mm
+- **禁止**：拉伸、改色、加阴影、与其他 logo 紧贴
+
+#### 微信公众号二维码
+
+- **文件**：`assets/yixing-wechat-qrcode.jpg`
+- **使用场景**：
+  - README.md / README.zh.md 底部作者信息区（引导关注）
+  - 公众号文末签（与 `{翊}` 印章并列）
+  - 品牌 contact 卡片 / 名片背面
+- **显示尺寸**：README 中 120×120px，保持清晰度
+- **禁止**：裁切边框、加滤镜、与其他二维码并排混淆
+
+#### 品牌资产文件清单（纳入版本控制）
+
+```
+assets/
+├── yixing-logo-master.svg          # 彩色主版（黑字黑括号 + 红点）
+├── yixing-wechat-qrcode.jpg        # 公众号二维码
+├── yixing-logo-mono-black.svg      # 纯黑单色版（待补）
+├── yixing-logo-mono-white.svg      # 白色反白版（待补）
+├── yixing-logo-seal-red.svg        # 朱红印章版（待补）
+├── yixing-logo-favicon-32.png      # favicon 32×32（待补）
+├── yixing-logo-favicon-16.png      # favicon 16×16（待补）
+└── yixing-logo-grid-spec.pdf       # 规范手册（待补）
+```
+
+### 5.6 品牌一致性校验清单
 
 交付前自动/手动执行：
 

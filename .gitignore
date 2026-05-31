@@ -31,3 +31,12 @@ demos/_verify.mjs
 
 # Test files
 test-prompts.json
+
+# Pi brainstorm temp files
+.superpowers/
+
+# Agent skills cache
+.agents/
+
+# Skills lock file
+skills-lock.json
