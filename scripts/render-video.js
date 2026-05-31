@@ -206,7 +206,7 @@ console.log(`  output: ${MP4_OUT}`);
   if (hasReady) {
     // 第二道防线：主动把动画 time 归零——对付 HTML 不严格遵守 starter tick 模板
     // 的情况（例如 lastTick 用 performance.now() 导致字体加载时间被算进首帧 dt）
-    // 详见 references/animation-pitfalls.md §12
+    // 详见 法帖/animation-pitfalls.md §12
     const seekCorrected = await page.evaluate(() => {
       if (typeof window.__seek === 'function') {
         window.__seek(0);
@@ -234,7 +234,7 @@ console.log(`  output: ${MP4_OUT}`);
     console.log(`     FIX: in your HTML's animation tick (or rAF first frame), add:`);
     console.log(`        window.__ready = true;`);
     console.log(`     animations.jsx-based HTML does this automatically. If you wrote your`);
-    console.log(`     own Stage, see references/animation-pitfalls.md §12 for the pattern.`);
+    console.log(`     own Stage, see 法帖/animation-pitfalls.md §12 for the pattern.`);
     console.log('');
   }
 

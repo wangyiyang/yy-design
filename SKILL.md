@@ -387,7 +387,7 @@ curl -A "Mozilla/5.0" -L "<hero-image-url>" -o assets/<brand>-brand/product-hero
 
 这不是硬规则（不做成模板），是原则：**反例要看得出是反例，不是让页面真的变成 slop**。
 
-完整清单见 `references/content-guidelines.md`。
+完整清单见 `法帖/content-guidelines.md`。
 
 ## 设计方向顾问（Fallback 模式）
 
@@ -431,22 +431,22 @@ curl -A "Mozilla/5.0" -L "<hero-image-url>" -o assets/<brand>-brand/product-hero
 
 ❌ **禁止从同一流派推荐 2 个以上** — 差异化不够用户看不出区别。
 
-详细 20 种风格库 + AI 提示词模板 → `references/design-styles.md`。
+详细 20 种风格库 + AI 提示词模板 → `法帖/design-styles.md`。
 
 **Phase 4 · 展示预制 Showcase 画廊**
 
-推荐 3 方向后，**立即检查** `assets/showcases/INDEX.md` 是否有匹配的预制样例（8 场景 × 3 风格 = 24 个样例）：
+推荐 3 方向后，**立即检查** `assets/展/INDEX.md` 是否有匹配的预制样例（8 场景 × 3 风格 = 24 个样例）：
 
 | 场景 | 目录 |
 |------|------|
-| 公众号封面 | `assets/showcases/cover/` |
-| PPT 数据页 | `assets/showcases/ppt/` |
-| 竖版信息图 | `assets/showcases/infographic/` |
-| 个人主页 / AI 导航 / AI 写作 / SaaS / 开发文档 | `assets/showcases/website-*/` |
+| 公众号封面 | `assets/展/cover/` |
+| PPT 数据页 | `assets/展/ppt/` |
+| 竖版信息图 | `assets/展/infographic/` |
+| 个人主页 / AI 导航 / AI 写作 / SaaS / 开发文档 | `assets/展/website-*/` |
 
 匹配话术：「在启动实时 Demo 之前，先看看这 3 个风格在类似场景的效果 →」然后 Read 对应 .png。
 
-场景模板按输出类型组织 → `references/scene-templates.md`。
+场景模板按输出类型组织 → `法帖/scene-templates.md`。
 
 **Phase 5 · 生成 3 个视觉 Demo**
 
@@ -454,7 +454,7 @@ curl -A "Mozilla/5.0" -L "<hero-image-url>" -o assets/<brand>-brand/product-hero
 
 为 3 个方向各生成一个 Demo——**如果当前 agent 支持 subagent 并行**，启动 3 个并行子任务（后台执行）；**不支持就串行生成**（先后做 3 次，同样能用）。两种路径都能工作：
 - 使用**用户真实内容/主题**（不是 Lorem ipsum）
-- HTML 存 `_temp/design-demos/demo-[风格].html`
+- HTML 存 `_temp/design-帖/demo-[风格].html`
 - 截图：`npx playwright screenshot file:///path.html out.png --viewport-size=1200,900`
 - 全部完成后一起展示 3 张截图
 
@@ -625,18 +625,18 @@ Screen 组件接 callback props（`onEnter`、`onClose`、`onTabChange`、`onOpe
 
 1. **理解需求**：
    - 🔍 **0. 事实验证（涉及具体产品/技术时必做，优先级最高）**：任务涉及具体产品/技术/事件（DJI Pocket 4、Gemini 3 Pro、Nano Banana Pro、某新 SDK 等）时，**第一个动作**是 `WebSearch` 验证其存在性、发布状态、最新版本、关键规格。把事实写入 `product-facts.md`。详见「核心原则 #0」。**这步做在问 clarifying questions 之前**——事实错了问什么都歪。
-   - 新任务或模糊任务必须问clarifying questions，详见 `references/workflow.md`。一次focused一轮问题通常够，小修小补跳过。
+   - 新任务或模糊任务必须问clarifying questions，详见 `法帖/workflow.md`。一次focused一轮问题通常够，小修小补跳过。
    - 🛑 **检查点1：问题清单一次性发给用户，等用户批量答完再往下走**。不要边问边做。
    - 🛑 **幻灯片/PPT 任务：HTML 聚合演示版永远是默认基础产物**（不管用户最终要什么格式）：
      - **必做**：每页独立 HTML + `assets/deck_index.html` 聚合（重命名为 `index.html`，编辑 MANIFEST 列所有页），浏览器里键盘翻页、全屏演讲——这是幻灯片作品的"源"
      - **可选导出**：额外询问是否需要 PDF（`export_deck_pdf.mjs`）或可编辑 PPTX（`export_deck_pptx.mjs`）作为衍生物
-     - **只有要可编辑 PPTX 时**，HTML 必须从第一行就按 4 条硬约束写（见 `references/editable-pptx.md`）；事后补救会 2-3 小时返工
-     - **≥ 5 页 deck 必须先做 2 页 showcase 定 grammar 再批量推**（见 `references/slide-decks.md` 的「批量制作前先做 showcase」章节）——跳过这步 = 方向错返工 N 次而非 2 次
-     - 详见 `references/slide-decks.md` 开头「HTML 优先架构 + 交付格式决策树」
+     - **只有要可编辑 PPTX 时**，HTML 必须从第一行就按 4 条硬约束写（见 `法帖/editable-pptx.md`）；事后补救会 2-3 小时返工
+     - **≥ 5 页 deck 必须先做 2 页 showcase 定 grammar 再批量推**（见 `法帖/slide-decks.md` 的「批量制作前先做 showcase」章节）——跳过这步 = 方向错返工 N 次而非 2 次
+     - 详见 `法帖/slide-decks.md` 开头「HTML 优先架构 + 交付格式决策树」
    - ⚡ **如果用户需求严重模糊（没参考、没明确风格、"做个好看的"类）→ 走「设计方向顾问（Fallback 模式）」大节，完成 Phase 1-4 选定方向后，再回到这里 Step 2**。
 2. **探索资源 + 抽核心资产**（不只是抽色值）：读 design system、linked files、上传的截图/代码。**涉及具体品牌时必走 §1.a「核心资产协议」五步**（问→按类型搜→按类型下载 logo/产品图/UI→验证+提取→写 `brand-spec.md` 含所有资产路径）。
    - 🛑 **检查点2·资产自检**：开工前确认核心资产到位——实体产品要有产品图（不是 CSS 剪影）、数字产品要有 logo+UI 截图、色值从真实 HTML/SVG 抽取。缺了就停下补，不硬做。
-   - 如果用户没给 context 且挖不出资产，先走设计方向顾问 Fallback，再按 `references/design-context.md` 的品位锚点兜底。
+   - 如果用户没给 context 且挖不出资产，先走设计方向顾问 Fallback，再按 `法帖/design-context.md` 的品位锚点兜底。
 3. **先答四问，再规划系统**：**这一步的前半段比所有 CSS 规则更决定输出**。
 
    📐 **位置四问**（每个页面/屏幕/镜头开工前必答）：
@@ -652,32 +652,32 @@ Screen 组件接 callback props（`onEnter`、`onClose`、`onTabChange`、`onOpe
 5. **起稿**：HTML里写assumptions+placeholders+reasoning comments。
    🛑 **检查点3：尽早show给用户（哪怕只是灰色方块+标签），等反馈再写组件**。
 6. **着色**：填placeholder，做variations，加Tweaks。做到一半再show一次，不要等全做完。
-7. **审帖**：用Playwright截图（见 `references/verification.md`），检查控制台错误，发给用户。
+7. **审帖**：用Playwright截图（见 `法帖/verification.md`），检查控制台错误，发给用户。
    🛑 **检查点4：交付前自己肉眼过一遍浏览器**。AI写的代码经常有interaction bug。
 8. **总结**：极简，只说caveats和next steps。
 9. **（默认）钤印视频 · 必带 SFX + BGM**：动画 HTML 的**默认交付形态是带音频的 MP4**，不是纯画面。无声版本等于半成品——用户潜意识感知「画在动但没声音响应」，廉价感的根源就在这里。流水线：
    - `npx hyperframes render` 渲染 MP4（30/60fps 可选，**不是成品**直到加了音频）
    - `scripts/convert-formats.sh` 派生 GIF（60fps 源自动跳过帧复制）
    - `scripts/add-music.sh` 加 BGM（6 首场景化配乐：tech/ad/educational/tutorial + alt 变体）
-   - SFX 按 `references/audio-design-rules.md` 设计 cue 清单（时间轴 + 音效类型），用 `assets/sfx/<category>/*.mp3` 37 个预制资源，按配方 A/B/C/D 选密度（发布 hero ≈ 6个/10s，工具演示 ≈ 0-2个/10s）
+   - SFX 按 `法帖/audio-design-rules.md` 设计 cue 清单（时间轴 + 音效类型），用 `assets/声/<category>/*.mp3` 37 个预制资源，按配方 A/B/C/D 选密度（发布 hero ≈ 6个/10s，工具演示 ≈ 0-2个/10s）
    - **BGM + SFX 双轨制必须同时做**——只做 BGM 是 ⅓ 分完成度；SFX 占高频、BGM 占低频，频段隔离见 audio-design-rules.md 的 ffmpeg 模板
    - 交付前 `ffprobe -select_streams a` 确认有 audio stream，没有则不是成品
    - **跳过音频的条件**：用户明确说「不要音频」「纯画面」「我要自己配音」——否则默认带。
-   - 参考完整流程见 `references/video-export.md` + `references/audio-design-rules.md` + `references/sfx-library.md`。
-9.5. **（带解说时走这条）解说驱动动画 · L2 长概念视频**：用户要做「5-20 分钟解释一个概念」、「带配音的教程」、「长篇科普视频」时——**不要先做动画再配音**，那会让画面节奏跟解说对不上。改走 `references/voiceover-pipeline.md` 的解说驱动流程：
+   - 参考完整流程见 `法帖/video-export.md` + `法帖/audio-design-rules.md` + `法帖/sfx-library.md`。
+9.5. **（带解说时走这条）解说驱动动画 · L2 长概念视频**：用户要做「5-20 分钟解释一个概念」、「带配音的教程」、「长篇科普视频」时——**不要先做动画再配音**，那会让画面节奏跟解说对不上。改走 `法帖/voiceover-pipeline.md` 的解说驱动流程：
    - **写解说稿**（markdown，`## scene-id` 分段，`[[cue:xx]]` 标关键句）→ 解说稿是源代码，节奏靠它撑
    - **跑 narrate-pipeline.mjs**（默认 MiniMax TTS，可通过 `TTS_PROVIDER=doubao` 切换 · `.env` 配置音色）→ 输出 voiceover.mp3 + timeline.json（cue 时间是真实测出来的，不是按字符估算）
    - **🛑 设计动画前先答铁律 3 条**：(1) hero element 是什么？(2) 它跨 7 段怎么 morph？(3) 任意一帧画面有运动吗？答不上不要写代码
    - **写动画 HTML**：用 `assets/narration_stage.jsx`（NarrationStage + Scene + Cue + useNarration + useSceneFade + **Subtitles**）→ hero 直接放 `<NarrationStage>` 子级，不进 Scene；`<Subtitles />` 默认带（B 站风·深墨字+白光晕，按 timeline.chunks 自动切 ≤12 字短行不跨句号）
    - **录最终 MP4**：`bash scripts/render-narration.sh demo.html --timeline=_narration/timeline.json [--bgm-mood=educational]` → 自动录无声 MP4 + 混入人声 + 可选 BGM
-   - **失败模式 #1（必须避免）**：每个 Scene 各自独立 layout + cue 用 fade-up + scene 切换整页 opacity 切换 = **带配音的 PowerPoint** = 质感归零。完整规则见 `references/voiceover-pipeline.md` 头部「铁律」章节。
-10. **（可选）品评**：用户若提「评审」「好不好看」「review」「打分」，或你对产出有疑问想主动质检，按 `references/critique-guide.md` 走 5 维度评审——哲学一致性 / 视觉层级 / 细节执行 / 功能性 / 创新性各 0-10 分，输出总评 + Keep（做得好的）+ Fix（严重程度 ⚠️致命 / ⚡重要 / 💡优化）+ Quick Wins（5 分钟能做的前 3 件事）。评审设计不评设计师。
+   - **失败模式 #1（必须避免）**：每个 Scene 各自独立 layout + cue 用 fade-up + scene 切换整页 opacity 切换 = **带配音的 PowerPoint** = 质感归零。完整规则见 `法帖/voiceover-pipeline.md` 头部「铁律」章节。
+10. **（可选）品评**：用户若提「评审」「好不好看」「review」「打分」，或你对产出有疑问想主动质检，按 `法帖/critique-guide.md` 走 5 维度评审——哲学一致性 / 视觉层级 / 细节执行 / 功能性 / 创新性各 0-10 分，输出总评 + Keep（做得好的）+ Fix（严重程度 ⚠️致命 / ⚡重要 / 💡优化）+ Quick Wins（5 分钟能做的前 3 件事）。评审设计不评设计师。
 
 **检查点原则**：碰到🛑就停下，明确告诉用户"我做了X，下一步打算Y，你确认吗？"然后真的**等**。不要说完自己就开始做。
 
 ### 问问题的要点
 
-必问（用`references/workflow.md`里的模板）：
+必问（用`法帖/workflow.md`里的模板）：
 - design system/UI kit/codebase有吗？没有的话先去找
 - 想要几种variations？在哪些维度上变？
 - 关心flow、copy、还是visuals？
@@ -692,9 +692,9 @@ Screen 组件接 callback props（`onEnter`、`onClose`、`onTabChange`、`onOpe
 | 需求模糊到无法着手 | 用户只给一句模糊描述（如"做个好看的页面"） | 主动列3个可能方向让用户选（如"落地页 / Dashboard / 产品详情页"），而不是直接问10个问题 |
 | 用户拒绝回答问题清单 | 用户说"不要问了，直接做" | 尊重节奏，用best judgment做1个主方案+1个差异明显的变体，交付时**明确标注assumption**，方便用户定位要改哪里 |
 | Design context矛盾 | 用户给的参考图和品牌规范打架 | 停下，指出具体矛盾（"截图里字体是衬线，规范说用sans"），让用户选一个 |
-| Starter component加载失败 | 控制台404/integrity mismatch | 先查`references/react-setup.md`常见报错表；还不行降级纯HTML+CSS不用React，保证产出可用 |
+| Starter component加载失败 | 控制台404/integrity mismatch | 先查`法帖/react-setup.md`常见报错表；还不行降级纯HTML+CSS不用React，保证产出可用 |
 | 时间紧迫要快交付 | 用户说"30分钟内要" | 跳过起稿直接着色，只做1个方案，交付时**明确标注"未经early validation"**，提醒用户质量可能打折 |
-| SKILL.md体积超限 | 新写HTML>1000行 | 按`references/react-setup.md`的拆分策略拆成多jsx文件，末尾`Object.assign(window,...)`共享 |
+| SKILL.md体积超限 | 新写HTML>1000行 | 按`法帖/react-setup.md`的拆分策略拆成多jsx文件，末尾`Object.assign(window,...)`共享 |
 | 克制原则 vs 产品所需密度冲突 | 产品核心卖点是 AI 智能 / 数据可视化 / 上下文感知（如番茄钟、Dashboard、Tracker、AI agent、Copilot、记账、健康监测）| 按「品位锚点」表格走**高密度型**信息密度：每屏 ≥ 3 处产品差异化信息。装饰性 icon 照样忌讳——加的是**有内容的**密度，不是装饰 |
 
 **原则**：异常时**先告诉用户发生了什么**（1句话），再按表处理。不要静默决策。
@@ -710,10 +710,10 @@ Screen 组件接 callback props（`onEnter`、`onClose`、`onTabChange`、`onOpe
 | 图标 | **装饰性** icon 每处都配（撞 slop）| **承载差异化信息**的密度元素必须保留——不要把产品特色也一并减掉 |
 | 填充 | 编造stats/quotes装饰 | 留白，或问用户要真内容 |
 | 动画 | 散落的微交互 | 一次well-orchestrated的page load |
-| 动画-伪chrome | 画面内画底部进度条/时间码/版权署名条（与 Stage scrubber 撞车） | 画面只放叙事内容，进度/时间交给 Stage chrome（详见 `references/animation-pitfalls.md` §11） |
-| 动画-PowerPoint 切换 | 每个 scene 独立 layout + cue 用 fade-up + scene 切换整页 opacity 切换（= 带配音的 PowerPoint）| **整片是一个连续的运动叙事**：选 1-2 个 hero element 跨 scene 持续存在，每段是 hero 的状态变化（位置/大小/形态），scene 之间 morph 不切（详见 `references/voiceover-pipeline.md` 「铁律」章节）|
+| 动画-伪chrome | 画面内画底部进度条/时间码/版权署名条（与 Stage scrubber 撞车） | 画面只放叙事内容，进度/时间交给 Stage chrome（详见 `法帖/animation-pitfalls.md` §11） |
+| 动画-PowerPoint 切换 | 每个 scene 独立 layout + cue 用 fade-up + scene 切换整页 opacity 切换（= 带配音的 PowerPoint）| **整片是一个连续的运动叙事**：选 1-2 个 hero element 跨 scene 持续存在，每段是 hero 的状态变化（位置/大小/形态），scene 之间 morph 不切（详见 `法帖/voiceover-pipeline.md` 「铁律」章节）|
 
-## 技术红线（必读 references/react-setup.md）
+## 技术红线（必读 法帖/react-setup.md）
 
 **React+Babel项目**必须用pinned版本（见`react-setup.md`）。三条不可违反：
 
@@ -727,7 +727,7 @@ Screen 组件接 callback props（`onEnter`、`onClose`、`onTabChange`、`onOpe
 - **多文件**（默认，≥10页 / 学术/课件 / 多agent并行）→ 每页独立HTML + `assets/deck_index.html`拼接器
 - **单文件**（≤10页 / pitch deck / 需跨页共享状态）→ `assets/deck_stage.js` web component
 
-先读 `references/slide-decks.md` 的「🛑 先定架构」一节，错了会反复踩 CSS 特异性/作用域的坑。
+先读 `法帖/slide-decks.md` 的「🛑 先定架构」一节，错了会反复踩 CSS 特异性/作用域的坑。
 
 ## Starter Components（assets/下）
 
@@ -736,10 +736,10 @@ Screen 组件接 callback props（`onEnter`、`onClose`、`onTabChange`、`onOpe
 | 文件 | 何时用 | 提供 |
 |------|--------|------|
 | `deck_index.html` | **幻灯片的默认基础产物**（不管最终出 PDF 还是 PPTX，HTML 聚合版永远先做） | iframe拼接 + 键盘导航 + scale + 计数器 + 打印合并，每页独立HTML免CSS串扰。用法：复制为 `index.html`、编辑 MANIFEST 列出所有页、浏览器打开即成演示版 |
-| `deck_stage.js` | 做幻灯片（单文件架构，≤10页） | web component：auto-scale + 键盘导航 + slide counter + localStorage + speaker notes ⚠️ **script 必须放在 `</deck-stage>` 之后，section 的 `display: flex` 必须写到 `.active` 上**，详见 `references/slide-decks.md` 的两个硬约束 |
+| `deck_stage.js` | 做幻灯片（单文件架构，≤10页） | web component：auto-scale + 键盘导航 + slide counter + localStorage + speaker notes ⚠️ **script 必须放在 `</deck-stage>` 之后，section 的 `display: flex` 必须写到 `.active` 上**，详见 `法帖/slide-decks.md` 的两个硬约束 |
 | `scripts/export_deck_pdf.mjs` | **HTML→PDF 导出（多文件架构）** · 每页独立 HTML 文件，playwright 逐个 `page.pdf()` → pdf-lib 合并。文字保留矢量可搜。依赖 `playwright pdf-lib` |
-| `scripts/export_deck_stage_pdf.mjs` | **HTML→PDF 导出（单文件 deck-stage 架构专用）** · 2026-04-20 新增。处理 shadow DOM slot 导致的「只出 1 页」、absolute 子元素溢出等坑。详见 `references/slide-decks.md` 末节。依赖 `playwright` |
-| `scripts/export_deck_pptx.mjs` | **HTML→可编辑 PPTX 导出** · 调 `html2pptx.js` 导出原生可编辑文本框，文字在 PPT 里双击可直接编辑。**HTML 必须符合 4 条硬约束**（见 `references/editable-pptx.md`），视觉自由度优先的场景请改走 PDF 路径。依赖 `playwright pptxgenjs sharp` |
+| `scripts/export_deck_stage_pdf.mjs` | **HTML→PDF 导出（单文件 deck-stage 架构专用）** · 2026-04-20 新增。处理 shadow DOM slot 导致的「只出 1 页」、absolute 子元素溢出等坑。详见 `法帖/slide-decks.md` 末节。依赖 `playwright` |
+| `scripts/export_deck_pptx.mjs` | **HTML→可编辑 PPTX 导出** · 调 `html2pptx.js` 导出原生可编辑文本框，文字在 PPT 里双击可直接编辑。**HTML 必须符合 4 条硬约束**（见 `法帖/editable-pptx.md`），视觉自由度优先的场景请改走 PDF 路径。依赖 `playwright pptxgenjs sharp` |
 | `scripts/html2pptx.js` | **HTML→PPTX 元素级翻译器** · 读 computedStyle 把 DOM 逐元素翻译成 PowerPoint 对象（text frame / shape / picture）。`export_deck_pptx.mjs` 内部调用。要求 HTML 严格满足 4 条硬约束 |
 | `design_canvas.jsx` | 并排展示≥2个静态variations | 带label的网格布局 |
 | `animations.jsx` | 任何动画HTML | Stage + Sprite + useTime + Easing + interpolate |
@@ -756,27 +756,27 @@ Screen 组件接 callback props（`onEnter`、`onClose`、`onTabChange`、`onOpe
 
 | 任务 | 读 |
 |------|-----|
-| 开工前问问题、定方向 | `references/workflow.md` |
-| 反AI slop、内容规范、scale | `references/content-guidelines.md` |
-| React+Babel项目setup | `references/react-setup.md` |
-| 做幻灯片 | `references/slide-decks.md` + `assets/deck_stage.js` |
-| 导出可编辑 PPTX（html2pptx 4 条硬约束） | `references/editable-pptx.md` + `scripts/html2pptx.js` |
-| 做动画/motion（**先读 pitfalls**）| `references/animation-pitfalls.md` + `references/animations.md` + `assets/animations.jsx` |
-| **动画的正向设计语法**（Anthropic 级叙事/运动/节奏/表达风格）| `references/animation-best-practices.md`（5 段叙事+Expo easing+运动语言 8 条+3 种场景配方）|
-| **带解说的长动画 / 长概念视频**（5-20 分钟带配音、解说驱动画面、TTS 实测时长生成 timeline）| `references/voiceover-pipeline.md`（铁律：连续运动叙事、禁 PowerPoint 切换）+ `assets/narration_stage.jsx` + `scripts/{tts-minimax,tts-doubao,narrate-pipeline}.mjs` + `scripts/{mix-voiceover,render-narration}.sh` |
-| 做Tweaks实时调参 | `references/tweaks-system.md` |
-| 没有design context怎么办 | `references/design-context.md`（薄 fallback） 或 `references/design-styles.md`（厚 fallback：20 种设计哲学详细库） |
-| **需求模糊要推荐风格方向** | `references/design-styles.md`（20 种风格+AI prompt 模板）+ `assets/showcases/INDEX.md`（24 个预制样例） |
-| **按输出类型查场景模板**（封面/PPT/信息图） | `references/scene-templates.md` |
-| 输出完后验证 | `references/verification.md` + `scripts/verify.py` |
-| **设计评审/打分**（设计完成后可选） | `references/critique-guide.md`（5 维度评分+常见问题清单） |
-| **动画导出MP4/GIF/加BGM** | `references/video-export.md` + `scripts/render-hyperframes.mjs` + `scripts/convert-formats.sh` + `scripts/add-music.sh` + `assets/hyperframes-templates/` |
-| **动画加音效SFX**（苹果发布会级，37个预制） | `references/sfx-library.md` + `assets/sfx/<category>/*.mp3` |
-| **动画音频配置规则**（SFX+BGM双轨制、黄金配比、ffmpeg模板、场景配方） | `references/audio-design-rules.md` |
-| **Apple画廊展示风格**（3D倾斜+悬浮卡片+缓慢pan+焦点切换，v9实战同款） | `references/apple-gallery-showcase.md` |
-| **Gallery Ripple + Multi-Focus 场景哲学**（当素材 20+ 同质+场景需表达「规模×深度」时优先用；含前置条件、技术配方、5 个可复用模式）| `references/hero-animation-case-study.md`（yy-design hero v9 蒸馏）|
-| ⭐ **Launch Film 工作流**（30 秒级品牌宣传片 / launch trailer / superbowl-tier ad / Apple 级别预期）：先写**万字 director's notes** 再做动画。含 5 大部分结构 + 触发判断 + 多视角并行策略 + 关键帧验证流程 | `references/launch-film-director-notes.md`（yy-md-html v2.0 launch film 蒸馏）|
-| ⭐ **多视角并行实验**（用户说「再做几个版本」「想看不同方向」/ 多平台分发 / 客户拍不了板）：6 位艺术家视角同时启动 subagent 各做独立版本 + 完成后 5 维度审校 | `references/multi-perspective-parallel-case-study.md`（yy-md-html v2.0 6 视角实战）|
+| 开工前问问题、定方向 | `法帖/workflow.md` |
+| 反AI slop、内容规范、scale | `法帖/content-guidelines.md` |
+| React+Babel项目setup | `法帖/react-setup.md` |
+| 做幻灯片 | `法帖/slide-decks.md` + `assets/deck_stage.js` |
+| 导出可编辑 PPTX（html2pptx 4 条硬约束） | `法帖/editable-pptx.md` + `scripts/html2pptx.js` |
+| 做动画/motion（**先读 pitfalls**）| `法帖/animation-pitfalls.md` + `法帖/animations.md` + `assets/animations.jsx` |
+| **动画的正向设计语法**（Anthropic 级叙事/运动/节奏/表达风格）| `法帖/animation-best-practices.md`（5 段叙事+Expo easing+运动语言 8 条+3 种场景配方）|
+| **带解说的长动画 / 长概念视频**（5-20 分钟带配音、解说驱动画面、TTS 实测时长生成 timeline）| `法帖/voiceover-pipeline.md`（铁律：连续运动叙事、禁 PowerPoint 切换）+ `assets/narration_stage.jsx` + `scripts/{tts-minimax,tts-doubao,narrate-pipeline}.mjs` + `scripts/{mix-voiceover,render-narration}.sh` |
+| 做Tweaks实时调参 | `法帖/tweaks-system.md` |
+| 没有design context怎么办 | `法帖/design-context.md`（薄 fallback） 或 `法帖/design-styles.md`（厚 fallback：20 种设计哲学详细库） |
+| **需求模糊要推荐风格方向** | `法帖/design-styles.md`（20 种风格+AI prompt 模板）+ `assets/展/INDEX.md`（24 个预制样例） |
+| **按输出类型查场景模板**（封面/PPT/信息图） | `法帖/scene-templates.md` |
+| 输出完后验证 | `法帖/verification.md` + `scripts/verify.py` |
+| **设计评审/打分**（设计完成后可选） | `法帖/critique-guide.md`（5 维度评分+常见问题清单） |
+| **动画导出MP4/GIF/加BGM** | `法帖/video-export.md` + `scripts/render-hyperframes.mjs` + `scripts/convert-formats.sh` + `scripts/add-music.sh` + `assets/hyperframes-templates/` |
+| **动画加音效SFX**（苹果发布会级，37个预制） | `法帖/sfx-library.md` + `assets/声/<category>/*.mp3` |
+| **动画音频配置规则**（SFX+BGM双轨制、黄金配比、ffmpeg模板、场景配方） | `法帖/audio-design-rules.md` |
+| **Apple画廊展示风格**（3D倾斜+悬浮卡片+缓慢pan+焦点切换，v9实战同款） | `法帖/apple-gallery-showcase.md` |
+| **Gallery Ripple + Multi-Focus 场景哲学**（当素材 20+ 同质+场景需表达「规模×深度」时优先用；含前置条件、技术配方、5 个可复用模式）| `法帖/hero-animation-case-study.md`（yy-design hero v9 蒸馏）|
+| ⭐ **Launch Film 工作流**（30 秒级品牌宣传片 / launch trailer / superbowl-tier ad / Apple 级别预期）：先写**万字 director's notes** 再做动画。含 5 大部分结构 + 触发判断 + 多视角并行策略 + 关键帧验证流程 | `法帖/launch-film-director-notes.md`（yy-md-html v2.0 launch film 蒸馏）|
+| ⭐ **多视角并行实验**（用户说「再做几个版本」「想看不同方向」/ 多平台分发 / 客户拍不了板）：6 位艺术家视角同时启动 subagent 各做独立版本 + 完成后 5 维度审校 | `法帖/multi-perspective-parallel-case-study.md`（yy-md-html v2.0 6 视角实战）|
 | **AI 品牌图片生成**（头像/Banner/OG/封面/海报，基于 VI 约束自动注入 prompt） | `scripts/generate-image.mjs`（7 个场景预设 + VI prompt 前后缀 + snap-to-8 尺寸安全）|
 
 ## 跨 Agent 环境适配说明
@@ -785,11 +785,11 @@ Screen 组件接 callback props（`onEnter`、`onClose`、`onTabChange`、`onOpe
 
 - **没有内置的 fork-verifier agent**：用 `scripts/verify.py`（Playwright 封装）人工驱动验证
 - **没有 asset 注册到 review pane**：直接用 agent 的 Write 能力写文件，用户在自己的浏览器/IDE 里打开
-- **没有 Tweaks host postMessage**：改成**纯前端 localStorage 版**，详见 `references/tweaks-system.md`
-- **没有 `window.claude.complete` 免配置 helper**：若 HTML 里要调 LLM，用一个可复用的 mock 或让用户填自己的 API key，详见 `references/react-setup.md`
-- **没有结构化问题 UI**：在对话里用 markdown 清单问问题，参考 `references/workflow.md` 的模板
+- **没有 Tweaks host postMessage**：改成**纯前端 localStorage 版**，详见 `法帖/tweaks-system.md`
+- **没有 `window.claude.complete` 免配置 helper**：若 HTML 里要调 LLM，用一个可复用的 mock 或让用户填自己的 API key，详见 `法帖/react-setup.md`
+- **没有结构化问题 UI**：在对话里用 markdown 清单问问题，参考 `法帖/workflow.md` 的模板
 
-Skill 路径引用均采用**相对本 skill 根目录**的形式（`references/xxx.md`、`assets/xxx.jsx`、`scripts/xxx.sh`）——agent 或用户按自身安装位置解析，不依赖任何绝对路径。
+Skill 路径引用均采用**相对本 skill 根目录**的形式（`法帖/xxx.md`、`assets/xxx.jsx`、`scripts/xxx.sh`）——agent 或用户按自身安装位置解析，不依赖任何绝对路径。
 
 ## 产出要求
 
@@ -830,7 +830,7 @@ Skill 路径引用均采用**相对本 skill 根目录**的形式（`references/
 - **Placeholder优于烂实现**：诚实留白，不编造。
 - **反AI slop时时警醒**：每个渐变/emoji/圆角border accent之前先问——这真的必要吗？
 - **涉及具体品牌**：走「核心资产协议」（§1.a）——Logo（必需）+ 产品图（实体产品必需）+ UI 截图（数字产品必需），色值只是辅助。**不要用 CSS 剪影代替真实产品图**。
-- **做动画之前**：必读 `references/animation-pitfalls.md`——里面 14 条规则每条都来自真实踩过的坑，跳过会让你重做 1-3 轮。
+- **做动画之前**：必读 `法帖/animation-pitfalls.md`——里面 14 条规则每条都来自真实踩过的坑，跳过会让你重做 1-3 轮。
 - **手写 Stage / Sprite**（不用 `assets/animations.jsx`）：必须实现两件事——(a) tick 第一帧同步设 `window.__ready = true` (b) 检测 `window.__recording === true` 时强制 loop=false。否则录视频必出问题。
-- **做带解说的动画**（≥1 分钟，长概念视频）：**整片是一个连续的运动叙事，不是一组独立场景**。选 1-2 个 hero element 跨 scene 持续存在，scene 之间 morph 不切。每个 Scene 各自独立 layout + cue 用 fade-up + 整页 opacity 切换 = 带配音的 PowerPoint = 质感归零。完整规则见 `references/voiceover-pipeline.md` 「铁律」章节。这条规则**强调多少遍都不为过**。
-- **做 launch film / 品牌宣传片**（20-30 秒级，用户提「Apple 级别」「超级碗品质感」「10x 细节」）：**先写万字 director's notes 再动手做动画**——5 大部分结构（Statement / Visual System / Story Arc / Storyboard / Manifest），12-15 镜 shot-by-shot spec，每镜含 10 字段（含 anti-slop 自检 + why this shot exists）。完整流程 + 触发判断 + 多视角并行策略见 `references/launch-film-director-notes.md`。**实战教训**：跳过这步 = 程序员视角动画（节奏匀速、缺 climax、slogan 撞、缺叙事弧）；走完这步 = 一次过、每帧 pause 都耐看。
+- **做带解说的动画**（≥1 分钟，长概念视频）：**整片是一个连续的运动叙事，不是一组独立场景**。选 1-2 个 hero element 跨 scene 持续存在，scene 之间 morph 不切。每个 Scene 各自独立 layout + cue 用 fade-up + 整页 opacity 切换 = 带配音的 PowerPoint = 质感归零。完整规则见 `法帖/voiceover-pipeline.md` 「铁律」章节。这条规则**强调多少遍都不为过**。
+- **做 launch film / 品牌宣传片**（20-30 秒级，用户提「Apple 级别」「超级碗品质感」「10x 细节」）：**先写万字 director's notes 再动手做动画**——5 大部分结构（Statement / Visual System / Story Arc / Storyboard / Manifest），12-15 镜 shot-by-shot spec，每镜含 10 字段（含 anti-slop 自检 + why this shot exists）。完整流程 + 触发判断 + 多视角并行策略见 `法帖/launch-film-director-notes.md`。**实战教训**：跳过这步 = 程序员视角动画（节奏匀速、缺 climax、slogan 撞、缺叙事弧）；走完这步 = 一次过、每帧 pause 都耐看。

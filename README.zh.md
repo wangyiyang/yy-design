@@ -149,9 +149,9 @@ yy-design/
 ├── SKILL.md                 # agent 读的主文档
 ├── README.md / README.zh.md # 英文/中文说明
 ├── assets/                  # 组件、设备框、BGM、预制样例
-├── references/              # 按任务类型的深入文档
+├── 法帖/              # 按任务类型的深入文档
 ├── scripts/                 # 导出工具链（渲染、转码、配乐、TTS）
-└── demos/                   # 能力演示 GIF/MP4/HTML
+└── 帖/                   # 能力演示 GIF/MP4/HTML
 ```
 
 ---

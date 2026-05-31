@@ -28,7 +28,7 @@
  *     intro.mp3
  *     what-is.mp3
  *   voiceover.mp3       拼接全部 scene 的整段人声
- *   timeline.json       schema 见 references/voiceover-pipeline.md
+ *   timeline.json       schema 见 法帖/voiceover-pipeline.md
  *
  * 依赖：tts-doubao.mjs、ffmpeg、ffprobe
  */

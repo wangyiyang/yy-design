@@ -10,7 +10,7 @@
  *   - 文字是真文本框，PPT 里直接双击能编辑
  *   - body 尺寸 960pt × 540pt（LAYOUT_WIDE，13.333″ × 7.5″）
  *
- * ⚠️ HTML 必须符合 4 条硬约束（见 references/editable-pptx.md）：
+ * ⚠️ HTML 必须符合 4 条硬约束（见 法帖/editable-pptx.md）：
  *   1. 文字包在 <p>/<h1>-<h6> 里（div 不能直接放文字）
  *   2. 不用 CSS 渐变
  *   3. <p>/<h*> 不能有 background/border/shadow（放外层 div）
@@ -42,7 +42,7 @@ function parseArgs() {
   if (!args.slides || !args.out) {
     console.error('用法: node export_deck_pptx.mjs --slides <dir> --out <file.pptx>');
     console.error('');
-    console.error('⚠️ HTML 必须符合 4 条硬约束（见 references/editable-pptx.md）。');
+    console.error('⚠️ HTML 必须符合 4 条硬约束（见 法帖/editable-pptx.md）。');
     console.error('   视觉自由度优先的场景请改用 export_deck_pdf.mjs 导出 PDF。');
     process.exit(1);
   }
@@ -93,7 +93,7 @@ async function main() {
 
   if (errors.length) {
     console.error(`\n⚠️ ${errors.length} 张 slide 转换失败。常见原因：HTML 不符合 4 条硬约束。`);
-    console.error(`  详见 references/editable-pptx.md 的「常见错误速查」。`);
+    console.error(`  详见 法帖/editable-pptx.md 的「常见错误速查」。`);
     if (errors.length === files.length) {
       console.error(`✗ 全部失败，不生成 PPTX。`);
       process.exit(1);

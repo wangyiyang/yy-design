@@ -4,7 +4,7 @@
  *
  * 用法：
  *   node scripts/render-hyperframes.mjs <composition-dir> [options]
- *   node scripts/render-hyperframes.mjs demos/hero-animation-v10-en/ --output hero.mp4
+ *   node scripts/render-hyperframes.mjs 帖/hero-animation-v10-en/ --output hero.mp4
  *
  * 选项：
  *   --output <path>     输出文件路径（默认 <composition-dir>/output.mp4）

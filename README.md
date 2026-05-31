@@ -145,9 +145,9 @@ yy-design/
 ├── SKILL.md                 # Agent-facing spec (Chinese)
 ├── README.md / README.zh.md # This file / Chinese version
 ├── assets/                  # Components, frames, BGM tracks, showcases
-├── references/              # Deep-dive docs by task type
+├── 法帖/              # Deep-dive docs by task type
 ├── scripts/                 # Export toolchain (render, convert, music, TTS)
-└── demos/                   # Capability demos with GIF/MP4/HTML
+└── 帖/                   # Capability demos with GIF/MP4/HTML
 ```
 
 ---
