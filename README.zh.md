@@ -48,13 +48,10 @@ npx skills add wangyiyang/yy-design
 ---
 
 <p align="center">
-  <img src="https://github.com/wangyiyang/yy-design/releases/download/v2.0/hero-animation-v10-en.gif" alt="YY Design Hero Animation" width="100%">
+  <img src="assets/previews/hero-ink-brand.png" alt="YY Design · 水墨品牌动画" width="100%">
 </p>
-
 <p align="center"><sub>
-  ▲ 这段动画本身就是 yy-design 做的 ·
-  <a href="https://www.wangyiyang.cc/yy-design-hero/">HTML 互动版</a> ·
-  <a href="https://github.com/wangyiyang/yy-design/releases/download/v2.0/hero-animation-v10-en.mp4">MP4 下载</a>
+  ▲ <a href="帖/hero-ink-brand.html">HTML 互动版</a> · 4 场景水墨动效：墨晕 → 笔迹 → 禅圆 → 印章
 </sub></p>
 
 ---
@@ -78,39 +75,39 @@ npx skills add wangyiyang/yy-design
 
 ### iOS 原型
 
-<p align="center"><img src="https://github.com/wangyiyang/yy-design/releases/download/v2.0/c1-ios-prototype.gif" width="100%"></p>
+<p align="center"><img src="assets/previews/c1-ios-prototype-en.png" alt="iOS 书法练习原型" width="100%"></p>
 
-像素级 iPhone 15 Pro 机身。状态驱动的多屏导航。真实图片来源。Playwright 自动点击测试。
+像素级 iPhone 15 Pro 机身。状态驱动的多屏导航。书法练习主题 UI，VI 配色。Playwright 自动点击测试。
 
 ### 动画引擎
 
-<p align="center"><img src="https://github.com/wangyiyang/yy-design/releases/download/v2.0/c3-motion-design.gif" width="100%"></p>
+<p align="center"><img src="assets/previews/c3-motion-design-en.png" alt="水墨动效引擎" width="100%"></p>
 
-Stage + Sprite 时间片段模型。`useTime` / `useSprite` / `interpolate` / `Easing` 四个 API 覆盖所有动画场景。一条命令导出 MP4 / GIF / 60fps / 带 BGM 成片。
+Stage + Sprite 时间片段模型，内置水墨动效预设：`ink-reveal` / `brush-stroke` / `seal-stamp` / `paper-fade` / `enso-draw`。一条命令导出 MP4 / GIF / 60fps / 带 BGM 成片。
 
 ### 幻灯片 → 可编辑 PPTX
 
-<p align="center"><img src="https://github.com/wangyiyang/yy-design/releases/download/v2.0/c2-slides-pptx.gif" width="100%"></p>
+<p align="center"><img src="assets/previews/c2-slides-pptx-en.png" alt="品牌介绍幻灯片" width="100%"></p>
 
-HTML deck 浏览器演讲。`html2pptx.js` 读 DOM computedStyle 逐元素翻译成 PowerPoint 对象——导出的是真文本框，不是贴图。
+HTML deck 浏览器演讲，内置水墨排版组件。`html2pptx.js` 读 DOM computedStyle 逐元素翻译成 PowerPoint 对象——导出的是真文本框，不是贴图。
 
 ### 设计方向顾问
 
-<p align="center"><img src="https://github.com/wangyiyang/yy-design/releases/download/v2.0/w3-fallback-advisor.gif" width="100%"></p>
+<p align="center"><img src="assets/previews/w3-fallback-advisor-en.png" alt="设计方向顾问" width="100%"></p>
 
-需求模糊时不硬猜：从 5 流派 × 20 种设计哲学里推荐 3 个方向，并行生成 demo，让你选。
+需求模糊时不硬猜：从 5 流派 × 20 种设计哲学里推荐 3 个方向，默认东方极简优先（Kenya Hara → 原研哉 → 翊行代码墨）。并行生成 demo，让你选。
 
 ### 信息图
 
-<p align="center"><img src="https://github.com/wangyiyang/yy-design/releases/download/v2.0/c5-infographic.gif" width="100%"></p>
+<p align="center"><img src="assets/previews/c5-infographic-en.png" alt="品牌数据信息图" width="100%"></p>
 
-杂志级排版。CSS Grid 精准分栏。真数据驱动。可导矢量 PDF / 300dpi PNG / SVG。
+杂志级排版，水墨排版组件。CSS Grid 精准分栏。品牌数据驱动。可导矢量 PDF / 300dpi PNG / SVG。
 
 ### 专家评审
 
-<p align="center"><img src="https://github.com/wangyiyang/yy-design/releases/download/v2.0/c6-expert-review.gif" width="100%"></p>
+<p align="center"><img src="assets/previews/c6-expert-review-en.png" alt="五维品牌评审" width="100%"></p>
 
-哲学一致性 · 视觉层级 · 细节执行 · 功能性 · 创新性，各 0–10 分。雷达图 + Keep/Fix/Quick Wins 清单。
+5 个通用维度（哲学一致性 · 视觉层级 · 细节执行 · 功能性 · 创新性）+ 3 个品牌审计维度（留白比例 · 朱红点数量 · 字体合规）。雷达图 + Keep/Fix/Quick Wins 清单。
 
 ---
 

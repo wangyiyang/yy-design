@@ -48,10 +48,11 @@ No GUI. No plugins. Just conversation.
 ---
 
 <p align="center">
-  <video src="https://github.com/wangyiyang/yy-design/releases/download/v2.0/hero-animation-v10-en.mp4" autoplay muted loop playsinline width="100%">
-    <a href="https://github.com/wangyiyang/yy-design/releases/download/v2.0/hero-animation-v10-en.mp4">Download MP4</a>
-  </video>
+  <img src="assets/previews/hero-ink-brand.png" alt="YY Design · 水墨品牌动画" width="100%">
 </p>
+<p align="center"><sub>
+  ▲ <a href="帖/hero-ink-brand.html">HTML 互动版</a> · 4 场景水墨动效：墨晕 → 笔迹 → 禅圆 → 印章
+</sub></p>
 
 ---
 
@@ -74,39 +75,39 @@ Every visual below was produced by yy-design itself — no external design tools
 
 ### iOS Prototype
 
-<p align="center"><img src="https://github.com/wangyiyang/yy-design/releases/download/v2.0/c1-ios-prototype-en.gif" width="100%"></p>
+<p align="center"><img src="assets/previews/c1-ios-prototype-en.png" alt="iOS 书法练习原型" width="100%"></p>
 
-Pixel-accurate iPhone 15 Pro frame. State-driven navigation across multiple screens. Real images from Wikimedia/Unsplash. Playwright click-tests before delivery.
+Pixel-accurate iPhone 15 Pro frame. State-driven navigation across multiple screens. Ink-practice themed UI with VI palette. Playwright click-tests before delivery.
 
 ### Motion Design
 
-<p align="center"><img src="https://github.com/wangyiyang/yy-design/releases/download/v2.0/c3-motion-design-en.gif" width="100%"></p>
+<p align="center"><img src="assets/previews/c3-motion-design-en.png" alt="水墨动效引擎" width="100%"></p>
 
-Stage + Sprite timeline model. Four APIs (`useTime`, `useSprite`, `interpolate`, `Easing`) handle all animation. One command exports MP4 / GIF / 60fps / BGM-scored video.
+Stage + Sprite timeline model with ink-motion presets: `ink-reveal`, `brush-stroke`, `seal-stamp`, `paper-fade`, `enso-draw`. One command exports MP4 / GIF / 60fps / BGM-scored video.
 
 ### Slides → Editable PPTX
 
-<p align="center"><img src="https://github.com/wangyiyang/yy-design/releases/download/v2.0/c2-slides-pptx-en.gif" width="100%"></p>
+<p align="center"><img src="assets/previews/c2-slides-pptx-en.png" alt="品牌介绍幻灯片" width="100%"></p>
 
-HTML decks for browser presentation. `html2pptx.js` translates DOM computed styles into PowerPoint objects — exports contain real text frames, not flattened images.
+HTML decks for browser presentation with ink-typography components. `html2pptx.js` translates DOM computed styles into PowerPoint objects — exports contain real text frames, not flattened images.
 
 ### Design Direction Advisor
 
-<p align="center"><img src="https://github.com/wangyiyang/yy-design/releases/download/v2.0/w3-fallback-advisor-en.gif" width="100%"></p>
+<p align="center"><img src="assets/previews/w3-fallback-advisor-en.png" alt="设计方向顾问" width="100%"></p>
 
-When the brief is vague: recommends 3 directions from 5 schools × 20 design philosophies, generates visual demos of each in parallel, lets you pick.
+When the brief is vague: recommends 3 directions from 5 schools × 20 design philosophies, with Orient-First default (Kenya Hara → Kenya Hara → Yixing Ink). Generates visual demos of each in parallel, lets you pick.
 
 ### Infographic
 
-<p align="center"><img src="https://github.com/wangyiyang/yy-design/releases/download/v2.0/c5-infographic-en.gif" width="100%"></p>
+<p align="center"><img src="assets/previews/c5-infographic-en.png" alt="品牌数据信息图" width="100%"></p>
 
-Magazine-grade typography. CSS Grid layout. Real data. Exports to vector PDF, 300dpi PNG, or SVG.
+Magazine-grade typography with ink-layout components. CSS Grid layout. Real brand data. Exports to vector PDF, 300dpi PNG, or SVG.
 
 ### Expert Critique
 
-<p align="center"><img src="https://github.com/wangyiyang/yy-design/releases/download/v2.0/c6-expert-review-en.gif" width="100%"></p>
+<p align="center"><img src="assets/previews/c6-expert-review-en.png" alt="五维品牌评审" width="100%"></p>
 
-Scores across 5 dimensions (philosophy · hierarchy · craft · function · innovation). Radar chart + actionable Keep/Fix/Quick Wins list.
+Scores across 8 dimensions — 5 general (philosophy · hierarchy · craft · function · innovation) + 3 brand audit (whitespace ratio · vermillion dot count · font compliance). Radar chart + actionable Keep/Fix/Quick Wins list.
 
 ---
 
