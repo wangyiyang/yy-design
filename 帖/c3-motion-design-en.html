@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>yy-design · c3 motion design (EN)</title>
+<title>YY Design · 水墨动效引擎</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..700&family=Noto+Serif+SC:wght@300;400;500;600;700&family=Inter:wght@100;200;300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -18,7 +18,7 @@
   --hair-strong: rgba(255,255,255,0.22);
   --accent: #C0392B;
   --accent-deep: #C0392B;
-  --accent-dim: rgba(217,119,87,0.25);
+  --accent-dim: rgba(192,57,43,0.25);
   --serif-cn: "Noto Serif SC", "Songti SC", "STSong", serif;
   --serif-en: "Source Serif 4", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
   --sans: "Inter", -apple-system, "Noto Sans SC", "Noto Sans SC", "PingFang SC", "HarmonyOS Sans SC", system-ui, sans-serif;
@@ -148,7 +148,7 @@ html, body {
   position: absolute;
   top: 0; left: 0;
   height: 100%;
-  background: linear-gradient(90deg, var(--accent) 0%, rgba(217,119,87,0.4) 100%);
+  background: linear-gradient(90deg, var(--accent) 0%, rgba(192,57,43,0.4) 100%);
   width: 0%;
   will-change: width;
 }
@@ -184,7 +184,7 @@ html, body {
   transform: translateX(-1px);
   will-change: transform;
   z-index: 10;
-  box-shadow: 0 0 20px rgba(217,119,87,0.5);
+  box-shadow: 0 0 20px rgba(192,57,43,0.5);
 }
 .playhead::before {
   content: '';
@@ -195,7 +195,7 @@ html, body {
   width: 14px; height: 14px;
   background: var(--accent);
   border-radius: 50%;
-  box-shadow: 0 0 16px rgba(217,119,87,0.6);
+  box-shadow: 0 0 16px rgba(192,57,43,0.6);
 }
 .playhead::after {
   content: '';
@@ -231,7 +231,7 @@ html, body {
 .api-capsule.lit {
   color: var(--accent);
   border-color: var(--accent);
-  box-shadow: 0 0 30px rgba(217,119,87,0.35);
+  box-shadow: 0 0 30px rgba(192,57,43,0.35);
 }
 .api-capsule .tiny {
   font-size: 10px;
@@ -331,14 +331,14 @@ html, body {
   transform: translateX(-50%) rotate(0deg);
   border-radius: 2px;
   will-change: transform;
-  box-shadow: 0 0 10px rgba(217,119,87,0.4);
+  box-shadow: 0 0 10px rgba(192,57,43,0.4);
 }
 .viz-clock .center-dot {
   width: 12px; height: 12px;
   border-radius: 50%;
   background: var(--accent);
   z-index: 5;
-  box-shadow: 0 0 10px rgba(217,119,87,0.6);
+  box-shadow: 0 0 10px rgba(192,57,43,0.6);
 }
 .viz-clock-label {
   position: absolute;
@@ -375,7 +375,7 @@ html, body {
   background: var(--accent);
   border-radius: 4px;
   will-change: width, height, background, border-radius, transform;
-  box-shadow: 0 0 40px rgba(217,119,87,0.25);
+  box-shadow: 0 0 40px rgba(192,57,43,0.25);
 }
 .morph-label {
   position: absolute;
@@ -434,7 +434,7 @@ html, body {
   border-radius: 50%;
   background: var(--accent);
   transform: translate(-50%, -50%);
-  box-shadow: 0 0 14px rgba(217,119,87,0.6);
+  box-shadow: 0 0 14px rgba(192,57,43,0.6);
   will-change: left, top;
 }
 
@@ -478,7 +478,7 @@ html, body {
   justify-content: center;
 }
 .scene-intro .title {
-  font-family: var(--serif-en);
+  font-family: var(--serif-cn);
   font-size: 128px;
   font-weight: 300;
   letter-spacing: -0.025em;
