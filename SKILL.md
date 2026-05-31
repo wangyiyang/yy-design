@@ -79,6 +79,20 @@ email: wangyiyang.kk@gmail.com
 
 ---
 
+## 快捷指令
+
+当你想跳过 clarifying questions 直接出稿，或在交付时一键盖印：
+
+| 指令 | 效果 |
+|------|------|
+| `一笔[类型]` | 跳过问题，用 best judgment 直接做。例：`一笔做个海报` |
+| `速写[主题]` | 5 分钟出草图（灰框 placeholder + reasoning）。例：`速写首页布局` |
+| `钤印` | 当前作品导出并加盖 `{翊}` 水印。例：`做完了，钤印` |
+
+**shortcut 是 overlay，不是替换原有流程。** 不说 shortcut → 仍走完整「一笔工作流」（起稿→着色→审帖→钤印）。说 shortcut → 压缩步骤。
+
+---
+
 ## 核心哲学（优先级从高到低）
 
 ### 1. 从existing context出发，不要凭空画
