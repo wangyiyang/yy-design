@@ -134,3 +134,44 @@ describe('post-process', () => {
     assert(!result.includes('wangyiyang.cc'));
   });
 });
+
+import { lint } from '../scripts/lib/linter.mjs';
+
+describe('linter', () => {
+  it('warns on too many vermillion spans', () => {
+    const html = '<p><span style="color:#C0392B;">1</span></p>'.repeat(7);
+    const warnings = lint(html);
+    assert(warnings.some(w => w.includes('朱红') && w.includes('7')));
+  });
+
+  it('warns on too many strong tags', () => {
+    const html = '<strong>1</strong>'.repeat(5);
+    const warnings = lint(html);
+    assert(warnings.some(w => w.includes('加粗')));
+  });
+
+  it('reports unauthorized colors', () => {
+    const html = '<p style="color:#FF5733;">text</p>';
+    const warnings = lint(html);
+    assert(warnings.some(w => w.includes('未授权颜色')));
+  });
+
+  it('warns on paragraphs without margin', () => {
+    const html = '<p>no margin</p>';
+    const warnings = lint(html);
+    assert(warnings.some(w => w.includes('margin')));
+  });
+
+  it('warns on complex mermaid SVG', () => {
+    const nodes = '<rect/>'.repeat(60);
+    const html = `<svg>${nodes}</svg>`;
+    const warnings = lint(html);
+    assert(warnings.some(w => w.includes('mermaid') && w.includes('拥挤')));
+  });
+
+  it('passes clean HTML', () => {
+    const html = '<p style="margin:0 0 1em;color:#0A0A0A;">Clean</p>';
+    const warnings = lint(html);
+    assert.strictEqual(warnings.length, 0);
+  });
+});
