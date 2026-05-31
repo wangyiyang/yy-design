@@ -621,7 +621,7 @@ Screen 组件接 callback props（`onEnter`、`onClose`、`onTabChange`、`onOpe
 
 ## 工作流程
 
-### 标准流程（用TaskCreate追踪）
+### 一笔工作流（用TaskCreate追踪）
 
 1. **理解需求**：
    - 🔍 **0. 事实验证（涉及具体产品/技术时必做，优先级最高）**：任务涉及具体产品/技术/事件（DJI Pocket 4、Gemini 3 Pro、Nano Banana Pro、某新 SDK 等）时，**第一个动作**是 `WebSearch` 验证其存在性、发布状态、最新版本、关键规格。把事实写入 `product-facts.md`。详见「核心原则 #0」。**这步做在问 clarifying questions 之前**——事实错了问什么都歪。
@@ -649,13 +649,13 @@ Screen 组件接 callback props（`onEnter`、`onClose`、`onTabChange`、`onOpe
 
    🛑 **检查点2：四问答案 + 系统口头说出来等用户点头，再动手写代码**。方向错了晚改比早改贵 100 倍。
 4. **构建文件夹结构**：`项目名/` 下放主HTML、需要的assets拷贝（不要bulk copy >20个文件）。
-5. **Junior pass**：HTML里写assumptions+placeholders+reasoning comments。
+5. **起稿**：HTML里写assumptions+placeholders+reasoning comments。
    🛑 **检查点3：尽早show给用户（哪怕只是灰色方块+标签），等反馈再写组件**。
-6. **Full pass**：填placeholder，做variations，加Tweaks。做到一半再show一次，不要等全做完。
-7. **验证**：用Playwright截图（见 `references/verification.md`），检查控制台错误，发给用户。
+6. **着色**：填placeholder，做variations，加Tweaks。做到一半再show一次，不要等全做完。
+7. **审帖**：用Playwright截图（见 `references/verification.md`），检查控制台错误，发给用户。
    🛑 **检查点4：交付前自己肉眼过一遍浏览器**。AI写的代码经常有interaction bug。
 8. **总结**：极简，只说caveats和next steps。
-9. **（默认）导出视频 · 必带 SFX + BGM**：动画 HTML 的**默认交付形态是带音频的 MP4**，不是纯画面。无声版本等于半成品——用户潜意识感知「画在动但没声音响应」，廉价感的根源就在这里。流水线：
+9. **（默认）钤印视频 · 必带 SFX + BGM**：动画 HTML 的**默认交付形态是带音频的 MP4**，不是纯画面。无声版本等于半成品——用户潜意识感知「画在动但没声音响应」，廉价感的根源就在这里。流水线：
    - `npx hyperframes render` 渲染 MP4（30/60fps 可选，**不是成品**直到加了音频）
    - `scripts/convert-formats.sh` 派生 GIF（60fps 源自动跳过帧复制）
    - `scripts/add-music.sh` 加 BGM（6 首场景化配乐：tech/ad/educational/tutorial + alt 变体）
@@ -671,7 +671,7 @@ Screen 组件接 callback props（`onEnter`、`onClose`、`onTabChange`、`onOpe
    - **写动画 HTML**：用 `assets/narration_stage.jsx`（NarrationStage + Scene + Cue + useNarration + useSceneFade + **Subtitles**）→ hero 直接放 `<NarrationStage>` 子级，不进 Scene；`<Subtitles />` 默认带（B 站风·深墨字+白光晕，按 timeline.chunks 自动切 ≤12 字短行不跨句号）
    - **录最终 MP4**：`bash scripts/render-narration.sh demo.html --timeline=_narration/timeline.json [--bgm-mood=educational]` → 自动录无声 MP4 + 混入人声 + 可选 BGM
    - **失败模式 #1（必须避免）**：每个 Scene 各自独立 layout + cue 用 fade-up + scene 切换整页 opacity 切换 = **带配音的 PowerPoint** = 质感归零。完整规则见 `references/voiceover-pipeline.md` 头部「铁律」章节。
-10. **（可选）专家评审**：用户若提「评审」「好不好看」「review」「打分」，或你对产出有疑问想主动质检，按 `references/critique-guide.md` 走 5 维度评审——哲学一致性 / 视觉层级 / 细节执行 / 功能性 / 创新性各 0-10 分，输出总评 + Keep（做得好的）+ Fix（严重程度 ⚠️致命 / ⚡重要 / 💡优化）+ Quick Wins（5 分钟能做的前 3 件事）。评审设计不评设计师。
+10. **（可选）品评**：用户若提「评审」「好不好看」「review」「打分」，或你对产出有疑问想主动质检，按 `references/critique-guide.md` 走 5 维度评审——哲学一致性 / 视觉层级 / 细节执行 / 功能性 / 创新性各 0-10 分，输出总评 + Keep（做得好的）+ Fix（严重程度 ⚠️致命 / ⚡重要 / 💡优化）+ Quick Wins（5 分钟能做的前 3 件事）。评审设计不评设计师。
 
 **检查点原则**：碰到🛑就停下，明确告诉用户"我做了X，下一步打算Y，你确认吗？"然后真的**等**。不要说完自己就开始做。
 
@@ -693,7 +693,7 @@ Screen 组件接 callback props（`onEnter`、`onClose`、`onTabChange`、`onOpe
 | 用户拒绝回答问题清单 | 用户说"不要问了，直接做" | 尊重节奏，用best judgment做1个主方案+1个差异明显的变体，交付时**明确标注assumption**，方便用户定位要改哪里 |
 | Design context矛盾 | 用户给的参考图和品牌规范打架 | 停下，指出具体矛盾（"截图里字体是衬线，规范说用sans"），让用户选一个 |
 | Starter component加载失败 | 控制台404/integrity mismatch | 先查`references/react-setup.md`常见报错表；还不行降级纯HTML+CSS不用React，保证产出可用 |
-| 时间紧迫要快交付 | 用户说"30分钟内要" | 跳过Junior pass直接Full pass，只做1个方案，交付时**明确标注"未经early validation"**，提醒用户质量可能打折 |
+| 时间紧迫要快交付 | 用户说"30分钟内要" | 跳过起稿直接着色，只做1个方案，交付时**明确标注"未经early validation"**，提醒用户质量可能打折 |
 | SKILL.md体积超限 | 新写HTML>1000行 | 按`references/react-setup.md`的拆分策略拆成多jsx文件，末尾`Object.assign(window,...)`共享 |
 | 克制原则 vs 产品所需密度冲突 | 产品核心卖点是 AI 智能 / 数据可视化 / 上下文感知（如番茄钟、Dashboard、Tracker、AI agent、Copilot、记账、健康监测）| 按「品位锚点」表格走**高密度型**信息密度：每屏 ≥ 3 处产品差异化信息。装饰性 icon 照样忌讳——加的是**有内容的**密度，不是装饰 |
 
