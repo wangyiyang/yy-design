@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>YY Design · Here's to the Agents (v10)</title>
+<title>YY Design · Code, one stroke at a time (v10)</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..700&family=Noto+Serif+SC:wght@300;400;500;600&family=Inter:wght@100;200;300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -15,22 +15,22 @@
     --muted: rgba(255,255,255,0.40);
     --dim: rgba(255,255,255,0.18);
     --hairline: rgba(255,255,255,0.12);
-    --accent: #C0392B;          /* terracotta — 致敬 Anthropic 血统 */
-    --accent-deep: #B85D3D;
+    --accent: #C0392B;          /* vermillion — 致敬 YY Design 血统 */
+    --accent-deep: #C0392B;
 
-    /* Claude Design palette — Act 0 专用 */
-    --cd-bg: #F5F4F0;
-    --cd-panel: #FFFFFF;
-    --cd-ink: #1A1918;
-    --cd-dim: #8B867E;
+    /* YY Design palette — Act 0 专用 */
+    --cd-bg: #FAFAFA;
+    --cd-panel: #FAFAFA;
+    --cd-ink: #0A0A0A;
+    --cd-dim: #757575;
     --cd-hair: rgba(0,0,0,0.08);
     --cd-hair-strong: rgba(0,0,0,0.16);
-    --cd-green: #2D4A3A;
-    --cd-green-deep: #1E3428;
-    --cd-green-soft: #3F5E4D;
+    --cd-green: #303030;
+    --cd-green-deep: #1A1A1A;
+    --cd-green-soft: #424242;
 
-    --serif-en: "Source Serif 4", "Tiempos Headline", Georgia, serif;
-    --sans: "Inter", -apple-system, "PingFang SC", "HarmonyOS Sans SC", system-ui, sans-serif;
+    --serif-en: "Source Serif 4", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+    --sans: "Inter", -apple-system, "Noto Sans SC", "Noto Sans SC", "PingFang SC", "HarmonyOS Sans SC", system-ui, sans-serif;
     --mono: "JetBrains Mono", "SF Mono", ui-monospace, monospace;
   }
   html, body {
@@ -207,8 +207,8 @@
     width: 13px; height: 13px; border-radius: 50%;
     background: var(--hairline);
   }
-  .tty-head .d.red { background: #5a2a2a; }
-  .tty-head .d.yellow { background: #5a4a2a; }
+  .tty-head .d.red { background: #6E1E18; }
+  .tty-head .d.yellow { background: #B8860B; }
   .tty-head .d.green { background: #2a5a35; }
   .tty-title {
     margin-left: 16px;
@@ -388,7 +388,7 @@
   }
   .watermark.visible { opacity: 1; }
 
-  /* ============ Act 0 — Claude Design 致敬（+讽刺） ============ */
+  /* ============ Act 0 — YY Design 致敬（+讽刺） ============ */
   .act0 {
     background: #0a0a0a;
   }
@@ -411,24 +411,24 @@
     display: flex; align-items: center;
     height: 48px;
     padding: 0 18px;
-    background: #EDEBE5;
+    background: #E0E0E0;
     border-bottom: 1px solid var(--cd-hair);
     gap: 14px;
   }
   .cd-traffic { display: flex; gap: 8px; }
   .cd-traffic .d {
     width: 12px; height: 12px; border-radius: 50%;
-    background: #D9D4CB;
+    background: #BDBDBD;
   }
-  .cd-traffic .d.r { background: #E8A5A0; }
-  .cd-traffic .d.y { background: #E8D0A0; }
-  .cd-traffic .d.g { background: #A5D0B0; }
+  .cd-traffic .d.r { background: #F5C6C2; }
+  .cd-traffic .d.y { background: #B8860B; }
+  .cd-traffic .d.g { background: #BDBDBD; }
   .cd-urlbar {
     flex: 1;
     max-width: 520px;
     margin: 0 auto;
     height: 28px;
-    background: #F9F7F2;
+    background: #FAFAFA;
     border: 1px solid var(--cd-hair);
     border-radius: 6px;
     display: flex; align-items: center; justify-content: center;
@@ -475,7 +475,7 @@
     white-space: nowrap;
   }
   .cd-tab.active {
-    background: #FFFFFF;
+    background: #FAFAFA;
     color: var(--cd-ink);
     font-weight: 500;
     box-shadow: 0 1px 2px rgba(0,0,0,0.04);
@@ -494,7 +494,7 @@
   .cd-topbar-right .btn {
     padding: 6px 12px;
     background: var(--cd-ink);
-    color: #FFFFFF;
+    color: #FAFAFA;
     border-radius: 6px;
     font-weight: 500;
   }
@@ -536,7 +536,7 @@
   }
   .cd-avatar.claude {
     background: var(--cd-ink);
-    color: #FFFFFF;
+    color: #FAFAFA;
   }
   .cd-bubble {
     font-family: var(--sans);
@@ -550,7 +550,7 @@
   .cd-tweaks {
     margin-top: auto;
     padding: 16px 18px;
-    background: #FFFFFF;
+    background: #FAFAFA;
     border: 1px solid var(--cd-hair);
     border-radius: 10px;
   }
@@ -587,7 +587,7 @@
     position: absolute;
     top: 50%;
     width: 16px; height: 16px;
-    background: #FFFFFF;
+    background: #FAFAFA;
     border: 1.5px solid var(--cd-ink);
     border-radius: 50%;
     transform: translate(-50%, -50%);
@@ -610,7 +610,7 @@
     margin-top: 14px;
     height: 40px;
     padding: 0 14px;
-    background: #FFFFFF;
+    background: #FAFAFA;
     border: 1px solid var(--cd-hair);
     border-radius: 8px;
     display: flex; align-items: center;
@@ -621,7 +621,7 @@
 
   /* Canvas panel */
   .cd-canvas {
-    background: #FAF9F5;
+    background: #FAFAFA;
     padding: 40px;
     overflow: hidden;
     display: flex; align-items: center; justify-content: center;
@@ -633,7 +633,7 @@
     background: var(--cd-green);
     border-radius: 8px;
     padding: 48px 56px;
-    color: #F5F2E8;
+    color: #FAFAFA;
     display: grid;
     grid-template-columns: 1.2fr 1fr;
     gap: 48px;
@@ -681,7 +681,7 @@
     width: 0; height: 0;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
-    border-bottom: 20px solid #F5F2E8;
+    border-bottom: 20px solid #FAFAFA;
     position: relative;
   }
   .cd-pine::after {
@@ -690,7 +690,7 @@
     bottom: -24px; left: 50%;
     transform: translateX(-50%);
     width: 3px; height: 6px;
-    background: #F5F2E8;
+    background: #FAFAFA;
   }
   .cd-schedule {
     background: rgba(245,242,232,0.08);
@@ -762,7 +762,7 @@
 
   <div class="watermark" id="watermark">Created by YY-Design</div>
 
-  <!-- ========== Act 0: Claude Design 致敬 ========== -->
+  <!-- ========== Act 0: YY Design 致敬 ========== -->
   <div class="scene act0" id="act0ClaudeDesign">
     <div class="cd-browser" id="cdBrowser">
       <!-- Chrome bar -->
@@ -800,10 +800,10 @@
             <div class="cd-tweak-row">
               <div class="cd-tweak-label">Accent</div>
               <div class="cd-color-dots">
-                <div class="cd-color-dot" style="background:#2D4A3A;" id="cdDot1"></div>
+                <div class="cd-color-dot" style="background:#303030;" id="cdDot1"></div>
                 <div class="cd-color-dot active" style="background:#C0392B;" id="cdDot2"></div>
                 <div class="cd-color-dot" style="background:#3F5E8A;" id="cdDot3"></div>
-                <div class="cd-color-dot" style="background:#8B6F4A;" id="cdDot4"></div>
+                <div class="cd-color-dot" style="background:#B8860B;" id="cdDot4"></div>
               </div>
             </div>
             <div class="cd-tweak-row">
@@ -820,7 +820,7 @@
         <div class="cd-canvas">
           <div class="cd-poster" id="cdPoster">
             <div class="cd-poster-left">
-              <div class="cd-poster-eyebrow">Anthropic Labs · Planning Day</div>
+              <div class="cd-poster-eyebrow">YY Design Labs · Planning Day</div>
               <div class="cd-poster-title">HEMLARK<br/>RETREAT '26</div>
               <div class="cd-poster-sub">June 14 · Full Day<br/>Pine Valley Lodge</div>
               <div class="cd-poster-pines">
@@ -861,7 +861,7 @@
   </div>
 
   <div class="scene act1" id="act1b">
-    <!-- "Not the ones who click." + abstract mouse -->
+    <!-- "Not the ones who rush." + abstract mouse -->
     <div class="gui-glyph click" id="glyphClick" style="left: 50%; top: 62%; transform: translate(-50%, -50%);">
       <svg viewBox="0 0 24 24" fill="none">
         <path d="M4 2l6 18 3-8 8-3L4 2z" stroke="rgba(255,255,255,0.55)" stroke-width="1.4" fill="rgba(255,255,255,0.12)" stroke-linejoin="round"/>
@@ -1013,7 +1013,7 @@
   const T = {
     DURATION: 30.0,
 
-    // ===== Act 0: Claude Design 致敬 (0 - 4s) =====
+    // ===== Act 0: YY Design 致敬 (0 - 4s) =====
     a0_in:   [0.3, 1.2],       // browser fade + scale in
     a0_hold: [1.2, 3.4],       // tweaks 自动动
     a0_out:  [3.4, 4.0],       // browser 退场
@@ -1031,11 +1031,11 @@
     a05_out:  [4.9, 5.3],
 
     // ===== Act 1 (shifted +5s) =====
-    a1a_in:  [5.3, 6.3],       // "Here's to the Agents."
+    a1a_in:  [5.3, 6.3],       // "Code, one stroke at a time."
     a1a_hold:[6.3, 7.8],
     a1a_out: [7.8, 8.3],
 
-    a1b_in:  [8.2, 8.9],       // "Not the ones who click."
+    a1b_in:  [8.2, 8.9],       // "Not the ones who rush."
     a1b_hold:[8.9, 10.3],
     a1b_out: [10.3, 10.8],
 
@@ -1062,7 +1062,7 @@
     stmt2:    [23.7, 25.4],    // "ship while you're in a meeting"
 
     // ===== Act 3 (shifted +5s) =====
-    a3med_in: [26.1, 27.0],    // "Agent is the new medium"
+    a3med_in: [26.1, 27.0],    // "Ink is the new medium"
     a3med_hold:[27.0, 28.0],
     a3med_out:[28.0, 28.4],
 
@@ -1140,7 +1140,7 @@
 
   // ---------- Render ----------
   function render(t) {
-    // ============ Act 0: Claude Design 致敬 ============
+    // ============ Act 0: YY Design 致敬 ============
     if (t < T.a0_out[1]) {
       let op;
       if (t < T.a0_in[1]) op = lerp(t, T.a0_in[0], T.a0_in[1], 0, 1, expoOut);
@@ -1182,7 +1182,7 @@
       } else {
         cdDot1.classList.remove('active');
         cdDot2.classList.add('active');
-        cdPoster.style.background = '#B85D3D';
+        cdPoster.style.background = '#C0392B';
       }
 
       // Caption "It's beautiful."
@@ -1219,7 +1219,7 @@
       showScene('a05', 0);
     }
 
-    // ============ Act 1a: "Here's to the Agents." ============
+    // ============ Act 1a: "Code, one stroke at a time." ============
     if (t >= T.a1a_in[0] - 0.1 && t < T.a1a_out[1]) {
       let op;
       if (t < T.a1a_in[1]) op = lerp(t, T.a1a_in[0], T.a1a_in[1], 0, 1, expoOut);
@@ -1227,7 +1227,7 @@
       else op = lerp(t, T.a1a_out[0], T.a1a_out[1], 1, 0, easeOut);
       showScene('a1a', op);
 
-      // Weight morph 100 → 400 on "Here's to the Agents."
+      // Weight morph 100 → 400 on "Code, one stroke at a time."
       const morph = expoOut(clampLerp(t, T.a1a_in[0], T.a1a_in[1] + 0.6));
       const w = 100 + (400 - 100) * morph;
       heroLine.style.fontVariationSettings = `"wght" ${w.toFixed(0)}`;
@@ -1240,7 +1240,7 @@
       showScene('a1a', 0);
     }
 
-    // ============ Act 1b: Not the ones who click. ============
+    // ============ Act 1b: Not the ones who rush. ============
     if (t >= T.a1b_in[0] - 0.1 && t < T.a1b_out[1]) {
       let op;
       if (t < T.a1b_in[1]) op = lerp(t, T.a1b_in[0], T.a1b_in[1], 0, 1, expoOut);

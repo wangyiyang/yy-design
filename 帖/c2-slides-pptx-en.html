@@ -16,11 +16,11 @@
     --dim: rgba(255,255,255,0.18);
     --hairline: rgba(255,255,255,0.12);
     --accent: #C0392B;
-    --accent-deep: #B85D3D;
-    --cd-bg: #F5F4F0;
-    --cd-panel: #FFFFFF;
-    --cd-ink: #1A1918;
-    --cd-dim: #8B867E;
+    --accent-deep: #C0392B;
+    --cd-bg: #FAFAFA;
+    --cd-panel: #FAFAFA;
+    --cd-ink: #0A0A0A;
+    --cd-dim: #757575;
     --cd-hair: rgba(0,0,0,0.08);
 
     --serif-cn: "Source Serif 4", Georgia, serif;
@@ -293,7 +293,7 @@
   }
   .ppt-titlebar {
     height: 32px;
-    background: #C44A36;
+    background: #C0392B;
     display: flex;
     align-items: center;
     padding: 0 14px;
@@ -310,7 +310,7 @@
     border-radius: 2px;
     display: inline-flex;
     align-items: center; justify-content: center;
-    color: #C44A36;
+    color: #C0392B;
     font-weight: 700;
     font-size: 11px;
     font-family: var(--sans);
@@ -689,7 +689,7 @@
         <div class="cursor" id="cursor">
           <svg viewBox="0 0 22 30" fill="none">
             <path d="M2 2 L2 22 L8 17 L12 26 L16 24 L12 15 L20 14 Z"
-                  fill="#1A1918" stroke="#fff" stroke-width="1.2" stroke-linejoin="round"/>
+                  fill="#0A0A0A" stroke="#fff" stroke-width="1.2" stroke-linejoin="round"/>
           </svg>
         </div>
         <!-- Double-click ripple -->
@@ -996,7 +996,7 @@
     caret.style.opacity = caretOp;
 
     /* ======= Brand Reveal (米色面板 · hero-v10 signature) ======= */
-    // Panel rises from bottom (米色面板 #F5F4F0)
+    // Panel rises from bottom (米色面板 #FAFAFA)
     const panelP = clampLerp(t, T.panelRise[0], T.panelRise[1]);
     panel.style.transform = `translateY(${(1 - expoOut(panelP)) * 100}%)`;
 

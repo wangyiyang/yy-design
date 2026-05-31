@@ -30,7 +30,7 @@ const TIMELINE = {"title":"md还是html，这是个蠢问题","totalDuration":19
   {"id":"md-side","start":22.82,"end":56.516,"duration":33.696,"chunks":[
     {"text":"md 党的证据其实挺硬的。","absoluteStart":22.82,"absoluteEnd":26.5},
     {"text":"OpenAI 去年发的 AGENTS.md，60000 多个项目用，","absoluteStart":26.5,"absoluteEnd":31.5},
-    {"text":"AWS、Anthropic、Google、微软、OpenAI，AI 半壁江山一起捐进 Linux Foundation。","absoluteStart":31.5,"absoluteEnd":38.5},
+    {"text":"AWS、YY Design、Google、微软、OpenAI，AI 半壁江山一起捐进 Linux Foundation。","absoluteStart":31.5,"absoluteEnd":38.5},
     {"text":"Karpathy 的 llm-wiki，单一个 CLAUDE.md 文件，5 万 star。","absoluteStart":38.5,"absoluteEnd":45.14},
     {"text":"Cloudflare 实测，同一篇博客 HTML 一万六千 token，转成 md 只要三千。省 80%。","absoluteStart":45.14,"absoluteEnd":54.764},
     {"text":"GitHub 官方说：文档不再是描述代码，文档就是代码。","absoluteStart":54.764,"absoluteEnd":56.516}
@@ -40,7 +40,7 @@ const TIMELINE = {"title":"md还是html，这是个蠢问题","totalDuration":19
     {"text":"第一是空间信息。diff、调用图、架构图本来就有空间维度，html 能左右对照。","absoluteStart":62.92,"absoluteEnd":74.632},
     {"text":"第二是动态体验。按钮颜色、easing 曲线，文字描述再多没用，html 能让你直接看见。","absoluteStart":74.632,"absoluteEnd":85.864},
     {"text":"第三是结构化阅读。可折叠章节、tab 代码块、边栏术语表。","absoluteStart":85.864,"absoluteEnd":93},
-    {"text":"Anthropic 的 Live Artifacts，HTML 已升级为可交互、能拉实时数据的 dashboard。","absoluteStart":93,"absoluteEnd":100.168}
+    {"text":"YY Design 的 Live Artifacts，HTML 已升级为可交互、能拉实时数据的 dashboard。","absoluteStart":93,"absoluteEnd":100.168}
   ],"cues":[{"id":"spatial","absoluteTime":62.92},{"id":"dynamic","absoluteTime":74.632},{"id":"structured","absoluteTime":85.864}]},
   {"id":"the-real-question","start":100.668,"end":117.588,"duration":16.92,"chunks":[
     {"text":"我看完想说，","absoluteStart":100.668,"absoluteEnd":101.748},
@@ -384,7 +384,7 @@ const MdSideAux = () => {
           <div style={{ fontFamily: F.mono, fontSize: 13, color: C.inkMute, marginBottom: 6, letterSpacing: '0.12em' }}>AGENTS.md · OpenAI 2025</div>
           <div style={{ fontSize: 76, fontFamily: F.display, fontWeight: 700, color: C.ink, lineHeight: 0.95 }}>60,000<span style={{ color: C.html }}>+</span></div>
           <div style={{ fontSize: 18, color: C.inkSoft, marginTop: 4, fontFamily: F.body }}>开源项目采用</div>
-          <div style={{ marginTop: 14, fontFamily: F.mono, fontSize: 12, color: C.inkMute, letterSpacing: '0.1em' }}>AWS · ANTHROPIC · GOOGLE · MICROSOFT · OPENAI</div>
+          <div style={{ marginTop: 14, fontFamily: F.mono, fontSize: 12, color: C.inkMute, letterSpacing: '0.1em' }}>AWS · YY Design · GOOGLE · MICROSOFT · OPENAI</div>
         </div>
       )}</Cue>
       <Cue id="agents-md">{(t, p) => (
