@@ -1,190 +1,28 @@
-<sub>🌐 <a href="README.md">English</a> · <b>中文</b></sub>
+<sub><a href="README.md">English</a> · <b>中文</b></sub>
 
-<div align="center">
+# YY Design（已归档）
 
-<img src="assets/yixing-logo-master.svg" alt="{翊} · 翊行代码" width="120">
+> [!IMPORTANT]
+> 本仓库已迁移至 [wangyiyang/design-agent-skills](https://github.com/wangyiyang/design-agent-skills)，`yy-design` 的后续开发与发布均在新仓库进行。
 
-# YY Design
+`yy-design` 现作为 Design Agent Skills 集合中的一个子 skill 维护。
 
-**一句话，让 agent 交付成品设计。**
-
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Agent-Agnostic](https://img.shields.io/badge/Agent-Agnostic-blueviolet)](https://skills.sh)
-[![Skills](https://img.shields.io/badge/skills.sh-Compatible-green)](https://skills.sh)
-
-</div>
-
----
-
-## 这是什么
-
-YY Design 是一支笔——一句话，一笔设计。装上它，说出你的意图，然后看着你的想法像墨落在纸上一样成形：克制、安静、 unmistakably yours。
-
-它是一个 [skill](https://skills.sh)——装进 AI 编程 agent 里的结构化 prompt 包。装好之后，你用自然语言描述需求，agent 直接交付成品：水墨动画、可点击原型、书法排版幻灯片、信息图、海报。
-
-产出不是「AI 味」的东西。它有设计立场、有排印细节、能读懂你的品牌——墨黑配朱红，80% 留白，一笔落成。
+## 安装
 
 ```bash
-npx skills add wangyiyang/yy-design
+npx skills add wangyiyang/design-agent-skills --skill yy-design
 ```
 
-兼容 Claude Code、Cursor、Codex、Trae、Hermes、OpenClaw——任何支持 markdown skill 的 agent。
-
----
-
-## 30 秒上手
-
-装好之后直接对 agent 说话：
-
-```
-「做个冥想 App 的 iOS 原型，4 个屏幕要能点击切换」
-「把这段产品逻辑做成 60 秒动画，导出 MP4 和 GIF」
-「我要做 pitch deck，给我 3 个不同风格方向的 demo」
-「对这个页面做 5 维度设计评审，给我改进清单」
-```
-
-没有界面、没有插件、没有 Figma。纯对话。
-
----
-
-<p align="center">
-  <img src="assets/gifs/hero-ink-brand.gif" alt="YY Design · 水墨品牌动画" width="100%">
-</p>
-<p align="center"><sub>
-  ▲ <a href="帖/hero-ink-brand.html">HTML 互动版</a> · 4 场景水墨动效：墨晕 → 笔迹 → 禅圆 → 印章
-</sub></p>
-
----
-
-## 能力一览
-
-| 你说的 | 你拿到的 | 耗时 |
-|---|---|---|
-| App 原型 | 单文件 HTML，真机框，可点击导航，Playwright 自动测试 | 10–15 min |
-| 演讲幻灯片 | HTML deck + 可编辑 PPTX（真文本框，不是贴图） | 15–25 min |
-| 动画/视频 | MP4 + GIF + 可选 BGM，25fps 或 60fps 插帧 | 8–12 min |
-| 信息图 | 印刷级排版，CSS Grid，可导 PDF/PNG/SVG | 10 min |
-| 设计探索 | 3 个不同流派的方向 + 并行生成 demo 对比 | 5–10 min |
-| 设计评审 | 5 维度雷达图 + Keep/Fix/Quick Wins 清单 | 3 min |
-
----
-
-## 作品展示
-
-以下每一个动画都是 yy-design 自己产出的，没有用任何外部设计工具。
-
-### iOS 原型
-
-<p align="center"><img src="assets/gifs/c1-ios-prototype.gif" alt="iOS 书法练习原型" width="100%"></p>
-
-像素级 iPhone 15 Pro 机身。状态驱动的多屏导航。书法练习主题 UI，VI 配色。Playwright 自动点击测试。
-
-### 动画引擎
-
-<p align="center"><img src="assets/gifs/c3-motion-design.gif" alt="水墨动效引擎" width="100%"></p>
-
-Stage + Sprite 时间片段模型，内置水墨动效预设：`ink-reveal` / `brush-stroke` / `seal-stamp` / `paper-fade` / `enso-draw`。一条命令导出 MP4 / GIF / 60fps / 带 BGM 成片。
-
-### 幻灯片 → 可编辑 PPTX
-
-<p align="center"><img src="assets/gifs/c2-slides-pptx.gif" alt="品牌介绍幻灯片" width="100%"></p>
-
-HTML deck 浏览器演讲，内置水墨排版组件。`html2pptx.js` 读 DOM computedStyle 逐元素翻译成 PowerPoint 对象——导出的是真文本框，不是贴图。
-
-### 设计方向顾问
-
-<p align="center"><img src="assets/gifs/w3-fallback-advisor.gif" alt="设计方向顾问" width="100%"></p>
-
-需求模糊时不硬猜：从 5 流派 × 20 种设计哲学里推荐 3 个方向，默认东方极简优先（Kenya Hara → 原研哉 → 翊行代码墨）。并行生成 demo，让你选。
-
-### 信息图
-
-<p align="center"><img src="assets/gifs/c5-infographic.gif" alt="品牌数据信息图" width="100%"></p>
-
-杂志级排版，水墨排版组件。CSS Grid 精准分栏。品牌数据驱动。可导矢量 PDF / 300dpi PNG / SVG。
-
-### 专家评审
-
-<p align="center"><img src="assets/gifs/c6-expert-review.gif" alt="五维品牌评审" width="100%"></p>
-
-5 个通用维度（哲学一致性 · 视觉层级 · 细节执行 · 功能性 · 创新性）+ 3 个品牌审计维度（留白比例 · 朱红点数量 · 字体合规）。雷达图 + Keep/Fix/Quick Wins 清单。
-
----
-
-## 工作原理
-
-三个机制让产出质量稳定：
-
-**1. 品牌资产协议**
-
-涉及具体品牌时强制执行 5 步：问用户要现有素材 → 搜官方品牌页 → 下载资产（三条兜底路径）→ 从真实文件提取色值（绝不凭记忆猜）→ 固化为 `brand-spec.md`。消灭 AI 设计的头号失败模式：猜品牌色。
-
-**2. 设计方向顾问**
-
-需求模糊时不硬猜——进入顾问模式。从不同设计流派推荐 3 个方向，并行生成 demo，等你选定再动手。
-
-**3. 反 AI slop 规则**
-
-明确禁止让 AI 产出一眼假的视觉套路：紫渐变、emoji 图标、圆角卡片+左 border、SVG 画人、Inter 做标题。替代方案：`text-wrap: pretty`、CSS Grid、衬线 display 字体、oklch 色彩空间。
-
----
-
-## Star 趋势
-
-<p align="center">
-  <a href="https://star-history.com/#wangyiyang/yy-design&Date">
-    <img src="https://api.star-history.com/svg?repos=wangyiyang/yy-design&type=Date" alt="Star History" width="80%">
-  </a>
-</p>
-
----
-
-## 仓库结构
-
-```
-yy-design/
-├── SKILL.md                 # agent 读的主文档
-├── README.md / README.zh.md # 英文/中文说明
-├── assets/                  # 组件、设备框、BGM、预制样例
-├── 法帖/              # 按任务类型的深入文档
-├── scripts/                 # 导出工具链（渲染、转码、配乐、TTS、公众号渲染）
-└── 帖/                   # 能力演示 GIF/MP4/HTML
-```
-
----
-
-## 公众号文章渲染
-
-`scripts/yy-wechat-render.mjs` — 将 Markdown 渲染为符合翊行代码 VI 的内联样式 HTML，可直接粘贴到公众号编辑器。
+为 Codex 全局安装：
 
 ```bash
-node scripts/yy-wechat-render.mjs --md article.md --out article.html
+npx skills add wangyiyang/design-agent-skills --skill yy-design -g -a codex -y
 ```
 
-输出：
-- `article.html` — 带内联样式的完整 HTML（可浏览器预览）
-- `article-copy.html` — 一键复制按钮，粘贴到公众号编辑器
+## 为什么保留本仓库
 
-支持：标题/正文/引用/列表/代码块/图片/mermaid 图表/铁律校验
+本仓库作为只读的历史、版本发布和早期设计产物记录予以保留。请前往 [design-agent-skills](https://github.com/wangyiyang/design-agent-skills) 提交 Issue、参与贡献或关注后续更新。
 
----
+## 许可证
 
-## 局限
-
-- 不能导出到 Figma/Keynote 做图层级编辑。产出以 HTML 为主。
-- 复杂 3D、物理模拟、粒子系统超出边界。
-- 没有品牌素材从零设计，质量会掉到 ~60 分。skill 设计上就是要基于已有品牌上下文工作。
-
----
-
-## 协议
-
-[MIT](LICENSE)，2026-05-14 起生效。个人、商用、修改、再分发，随意。
-
----
-
-## 作者
-
-**王翊仰 (Ian / YY)** · [@wangyiyang](https://github.com/wangyiyang) · [wangyiyang.cc](https://wangyiyang.cc) · wangyiyang.kk@gmail.com
-
-<img src="assets/yixing-wechat-qrcode.jpg" alt="微信公众号" width="120">
+[MIT](LICENSE)
